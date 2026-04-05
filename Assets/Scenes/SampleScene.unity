@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   _speed: 7
-  _rotationSpeed: 0
+  _rotationSpeed: 720
 --- !u!61 &473611218
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -239,7 +239,6 @@ Transform:
   m_LocalScale: {x: 0.23389125, y: 0.23249026, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 519420032}
   - {fileID: 1381964132}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -290,7 +289,7 @@ GameObject:
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!81 &519420029
 AudioListener:
@@ -353,7 +352,7 @@ Camera:
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 2
+  m_ClearFlags: 4
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -379,7 +378,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 12.32
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -403,13 +402,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.1694374, y: -2.5008016, z: -10}
-  m_LocalScale: {x: 3.563622, y: 3.206156, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.14, y: 0.17, z: -22.021969}
+  m_LocalScale: {x: 27.4, y: 30.672817, z: 43.64186}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 473611221}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: -0, y: 0, z: 0}
 --- !u!1 &525309396
 GameObject:
   m_ObjectHideFlags: 0
@@ -1008,7 +1007,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 2115554313829263360, guid: 9691854e99ac3094c982ea44449a7622, type: 3}
+  m_Sprite: {fileID: -5746551405872176565, guid: 6dfab838349c47143b3512113063c476, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1027,8 +1026,8 @@ Transform:
   m_GameObject: {fileID: 619986855}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.2573334, y: 0.2563, z: 1}
+  m_LocalPosition: {x: 0.3141, y: 0.3332, z: 0}
+  m_LocalScale: {x: 0.5076416, y: 0.5176235, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 585712858}
@@ -1059,8 +1058,8 @@ Transform:
   m_GameObject: {fileID: 1381964131}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 1.425, y: 1.474, z: 0}
+  m_LocalScale: {x: 2.113, y: 1.896, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 473611221}
@@ -1114,7 +1113,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 2
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -2240617083630914169, guid: c3807b03bc76d8e4788064c654053442, type: 3}
+  m_Sprite: {fileID: 7157534591932003398, guid: 58d44cd0eb82a574bb9a5e9d87349f12, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1387,7 +1386,7 @@ Transform:
   m_GameObject: {fileID: 1628514688}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.19, y: 0.81, z: 0}
+  m_LocalPosition: {x: 1.19, y: 0.92, z: 0}
   m_LocalScale: {x: 3.65, y: 4.2822485, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1785,7 +1784,7 @@ Transform:
   m_GameObject: {fileID: 2091178165}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20.72, y: -5.45, z: 0}
+  m_LocalPosition: {x: 20.79, y: -5.35, z: 0}
   m_LocalScale: {x: 2.1716354, y: 3.422437, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1795,6 +1794,7 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 519420032}
   - {fileID: 619394802}
   - {fileID: 473611221}
   - {fileID: 585712858}
