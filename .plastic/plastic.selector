@@ -1,3 +1,4 @@
-repository "UNDEAD DESCENT 2026-04-02_16-27-57/UNDEAD DESCENT@11270625845503@cloud"
+repository "2D Movement Test/UNDEAD DESCENT@20067145116031@cloud"
   path "/"
-    smartbranch "/main"
+    br "/main"
+    co "/main"
