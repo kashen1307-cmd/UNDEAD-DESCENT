@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 _movementInput;
     private Vector2 _smoothedMovementInput;
     private Vector2 movementInputSmoothVelocity;
+    public GameObject MainCamera;
 
     private void Awake()
     {
@@ -25,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
     {
         SetPlayerVelocity();
         RotateInDirectionOfInput();
+        MainCamera.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
     }
 
     private void SetPlayerVelocity()
