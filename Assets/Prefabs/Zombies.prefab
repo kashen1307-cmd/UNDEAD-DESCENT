@@ -104,6 +104,7 @@ GameObject:
   - component: {fileID: 1296537083052414267}
   - component: {fileID: 8289091495869006013}
   - component: {fileID: 3001960279447359227}
+  - component: {fileID: -3149318221877746530}
   m_Layer: 0
   m_Name: Zombies
   m_TagString: Untagged
@@ -227,3 +228,16 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.3818383, y: 1.875982}
   m_EdgeRadius: 0
+--- !u!114 &-3149318221877746530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4171154286991678266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c62398c0fda35184ea24f6a2cad7fab8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyAttack
+  _damageAmount: 10
