@@ -25,7 +25,7 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         SetPlayerVelocity();
-        RotateInDirectionOfInput();
+        //RotateInDirectionOfInput();
         MainCamera.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
     }
 
@@ -40,7 +40,7 @@ public class PlayerMovement : MonoBehaviour
         _rigidbody.linearVelocity = _smoothedMovementInput * _speed; ;
     }
 
-    private void RotateInDirectionOfInput()
+    /*private void RotateInDirectionOfInput()
     {
         if ( _movementInput != Vector2.zero)
         {
@@ -50,6 +50,7 @@ public class PlayerMovement : MonoBehaviour
             _rigidbody.MoveRotation(rotation);
         }
     }
+    */
 
     private void OnMove(InputValue inputValue)
     {
