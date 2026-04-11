@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
     public float _speed;
 
     [SerializeField]
-    private float _rotationSpeed;
+    
 
     private Rigidbody2D _rigidbody;
     private Vector2 _movementInput;
@@ -26,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
     {
         SetPlayerVelocity();
         //RotateInDirectionOfInput();
-        MainCamera.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+        //MainCamera.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
     }
 
     private void SetPlayerVelocity()
@@ -40,17 +40,6 @@ public class PlayerMovement : MonoBehaviour
         _rigidbody.linearVelocity = _smoothedMovementInput * _speed; ;
     }
 
-    /*private void RotateInDirectionOfInput()
-    {
-        if ( _movementInput != Vector2.zero)
-        {
-            Quaternion targetRotation = Quaternion.LookRotation(transform.forward, _smoothedMovementInput);
-            Quaternion rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, _rotationSpeed * Time.deltaTime);
-
-            _rigidbody.MoveRotation(rotation);
-        }
-    }
-    */
 
     private void OnMove(InputValue inputValue)
     {
