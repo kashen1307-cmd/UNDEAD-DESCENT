@@ -343,7 +343,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   _speed: 7
-  _rotationSpeed: 720
+  _rigidbody: {fileID: 0}
   MainCamera: {fileID: 519420028}
 --- !u!61 &473611218
 BoxCollider2D:
@@ -1044,17 +1044,12 @@ Transform:
   m_GameObject: {fileID: 525309396}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-<<<<<<< HEAD
-  m_LocalPosition: {x: 18.12, y: -5.86, z: 0}
-  m_LocalScale: {x: 3.665349, y: 6.9534264, z: 0.99411}
-=======
-  m_LocalPosition: {x: 12.83, y: 8.78, z: 0}
-  m_LocalScale: {x: 3.6870658, y: 4.2822485, z: 1}
->>>>>>> 196cd20ae2e3e84791eab25bc29896bd00e19ea0
+  m_LocalPosition: {x: 21.98, y: 9.2, z: 0}
+  m_LocalScale: {x: 3.6217155, y: 6.73884, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -2440,17 +2435,12 @@ Transform:
   m_GameObject: {fileID: 2091178165}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-<<<<<<< HEAD
-  m_LocalPosition: {x: 6.22, y: 13.7, z: 0}
-  m_LocalScale: {x: 2.1716354, y: 6.276749, z: 1}
-=======
-  m_LocalPosition: {x: 6.71, y: 28.52, z: 0}
-  m_LocalScale: {x: 2.1716354, y: 3.422437, z: 1}
->>>>>>> 196cd20ae2e3e84791eab25bc29896bd00e19ea0
+  m_LocalPosition: {x: 11.33, y: 29.6, z: 0}
+  m_LocalScale: {x: 2.5168827, y: 5.770236, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &5545823163452009405
 PrefabInstance:
   m_ObjectHideFlags: 0
