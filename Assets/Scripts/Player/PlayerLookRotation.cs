@@ -10,6 +10,8 @@ public class PlayerLookRotation : MonoBehaviour
 
     InputSystem_Actions inputSystem;
 
+    private float rotationOffset = -90f; // Adjust this value based on your sprite's orientation
+
     void Awake()
     {
         mainCamera = Camera.main;
@@ -54,7 +56,7 @@ public class PlayerLookRotation : MonoBehaviour
         Vector3 rotateDirection = (worldPosition - transform.position).normalized;   
         rotateDirection.z = 0; 
 
-        float angle = Mathf.Atan2(rotateDirection.y, rotateDirection.x) * Mathf.Rad2Deg;  // when angle is converted to radians, the values are (y,x) rather than (x,y)
+        float angle = Mathf.Atan2(rotateDirection.y, rotateDirection.x) * Mathf.Rad2Deg + rotationOffset;  // when angle is converted to radians, the values are (y,x) rather than (x,y)
         transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));    
     }
 }
