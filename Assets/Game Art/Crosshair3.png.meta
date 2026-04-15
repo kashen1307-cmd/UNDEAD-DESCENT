@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 6dfab838349c47143b3512113063c476
+guid: ae16d3d8bdbab4e4aacfa83f1d3128fd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5746551405872176565
-    second: Screenshot 2026-04-05 130233_0
+      213: 3249536345133783737
+    second: Crosshair3_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,27 +96,66 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Screenshot 2026-04-05 130233_0
+      name: Crosshair3_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 251
-        height: 255
+        x: 15
+        y: 25
+        width: 69
+        height: 67
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b42a77161f52040b0800000000000000
-      internalID: -5746551405872176565
+      spriteID: 9ba9b60d61ca81d20800000000000000
+      internalID: 3249536345133783737
       vertices: []
       indices: 
       edges: []
@@ -125,7 +164,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 2de6629be7121d048b496d92b4ca9241
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Screenshot 2026-04-05 130233_0: -5746551405872176565
+      Crosshair3_0: 3249536345133783737
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
