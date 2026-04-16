@@ -14,7 +14,14 @@ public class EnemyMovement : MonoBehaviour
     private PlayerAwarenessController _playerAwarenessController;
     private Vector2 _targetDirection;
     private float _changeDirectionCooldown;
+    private EnemySpawner _spawner;
 
+    public void SetSpawner(EnemySpawner spawner)
+    {
+        _spawner = spawner;
+    }
+
+    
 
     private void Awake()
     {

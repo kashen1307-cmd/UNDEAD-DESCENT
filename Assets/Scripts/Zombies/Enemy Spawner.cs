@@ -12,6 +12,9 @@ public class EnemySpawner : MonoBehaviour
     private float _maximumSpawnTime;
 
     private float _timeUntilSpawn;
+    [SerializeField] private int _maxTotalEnemies = 15;
+
+    private int _totalSpawned = 0;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
@@ -24,9 +27,16 @@ public class EnemySpawner : MonoBehaviour
     {
         _timeUntilSpawn -= Time.deltaTime;
 
-        if (_timeUntilSpawn <= 0)
+        if (_timeUntilSpawn <= 0 && _totalSpawned < _maxTotalEnemies)
         {
-            Instantiate(_enemyPrefab, transform.position, Quaternion.identity);
+           GameObject enemy = Instantiate(_enemyPrefab, transform.position, Quaternion.identity);
+
+
+            _totalSpawned++;
+
+            // Tell enemy who spawned it
+            _enemyPrefab.GetComponent<EnemyMovement>().SetSpawner(this);
+
             SetTimeUntilSpawn();
         }
     }
@@ -35,4 +45,5 @@ public class EnemySpawner : MonoBehaviour
     {
         _timeUntilSpawn = Random.Range(_minimumSpawnTime, _maximumSpawnTime);
     }
+
 }
