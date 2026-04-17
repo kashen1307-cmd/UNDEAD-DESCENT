@@ -4,6 +4,7 @@ public class Bullet : MonoBehaviour
 {
     public float speed = 20f;
     public Rigidbody2D rb;
+    public GameObject Zombies;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -29,9 +30,9 @@ public class Bullet : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Zombies"))
+        if (Zombies.tag == "EnemyMovement")
         {
-            Destroy(collision.gameObject); // Deletes the enemy
+            Destroy(Zombies); // Deletes the enemy
             Destroy(gameObject);           // Deletes the bullet
         }
     }
