@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SceneChanger : MonoBehaviour
+public class SceneChanger2 : MonoBehaviour
 {
     public string sceneToLoad;
 
@@ -16,5 +16,5 @@ public class SceneChanger : MonoBehaviour
             SceneManager.LoadScene(sceneToLoad);
         }
     }
-   
+
 }

@@ -6,11 +6,17 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Main Menu.unity
+    guid: 8a7f40ddc9ffcf04ebec4ba4cc0021ab
+  - enabled: 1
     path: Assets/Scenes/GameFloor1.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
-    path: Assets/Scenes/GameFloor2.unity
+    path: Assets/Scenes/Staircase1.unity
     guid: 41fe7c986b68d504bb0293a55aee34c3
+  - enabled: 1
+    path: Assets/Scenes/GameFloor2.unity
+    guid: 14b2dc084e8487b45834e75ab416d096
   - enabled: 1
     path: Assets/Scenes/DeathScreen.unity
     guid: f317c16a1ded6f6478de4f9e5798fd18

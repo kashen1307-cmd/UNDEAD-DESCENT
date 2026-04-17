@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public float speed = 20f;
+    public float speed = 10f;
     public Rigidbody2D rb;
     public GameObject Enemy;
 
@@ -23,17 +23,13 @@ public class Bullet : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
-        // Handle damage or effects here
-        Debug.Log(hitInfo.name);
-        Destroy(gameObject);
-    }
+        if (hitInfo.CompareTag("Enemy"))
+        {
+            Destroy(hitInfo.gameObject); // only enemies
+           
+        }
 
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        Destroy(collision.gameObject);
-
- 
-            Destroy(gameObject); // Deletes the bullet
+        Destroy(gameObject);         // destroy bullet
     }
 }
 
