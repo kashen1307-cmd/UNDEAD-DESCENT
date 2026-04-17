@@ -5,8 +5,6 @@ using UnityEngine.SceneManagement;
 public class SceneChanger : MonoBehaviour
 {
     public string sceneToLoad;
-    public Animator fadeAnim;
-    public float fadeTime = .5f;
 
 
 
@@ -15,14 +13,8 @@ public class SceneChanger : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
-            fadeAnim.Play("Animation");
-            StartCoroutine(DelayFade());
+            SceneManager.LoadScene(sceneToLoad);
         }
     }
-
-    IEnumerator DelayFade()
-    {
-        yield return new WaitForSeconds(fadeTime);
-        SceneManager.LoadScene(sceneToLoad);
-    }
+   
 }
