@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Shop
   - Enemy
+  - AreaReveal
   layers:
   - Default
   - TransparentFX

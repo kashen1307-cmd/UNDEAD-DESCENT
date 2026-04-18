@@ -5,13 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class DeathScreen : MonoBehaviour
 {
-    public void Play()
+    public void Retry()
     {
         SceneManager.LoadScene("GameFloor1");
     }
 
-    public void Exit()
+    public void ExitToMainMenu()
     {
-        Application.Quit();
+        SceneManager.LoadScene("Main Menu");
     }
 }

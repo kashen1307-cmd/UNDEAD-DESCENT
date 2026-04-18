@@ -9,9 +9,9 @@ public class Bullet : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        // Move the bullet forward based on its rotation
+        
         rb.linearVelocity = transform.right * speed;
-        // Destroy bullet after 2 seconds to clean up the scene
+        
         Destroy(gameObject, 2f);
     }
 
@@ -23,13 +23,18 @@ public class Bullet : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
+        if (hitInfo.CompareTag("AreaReveal"))
+            return;
+
+
         if (hitInfo.CompareTag("Enemy"))
         {
-            Destroy(hitInfo.gameObject); // only enemies
+            Destroy(hitInfo.gameObject); 
            
         }
 
-        Destroy(gameObject);         // destroy bullet
+        Destroy(gameObject);         
+       
     }
 }
 
