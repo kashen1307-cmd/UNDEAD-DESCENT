@@ -45,4 +45,10 @@ public class PlayerMovement : MonoBehaviour
     {
         _movementInput = inputValue.Get<Vector2>();
     }
+
+    public void IncreaseSpeed(float speedAmount)
+{
+    _speed += speedAmount; // Match this variable name to whatever your teammate used!
+    Debug.Log("Speed Increased! New Speed: " + _speed);
+}
 }
