@@ -11,8 +11,13 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField]
     private float _maximumSpawnTime;
 
+    [SerializeField]
     private float _timeUntilSpawn;
-    [SerializeField] private int _maxTotalEnemies = 15;
+
+    [SerializeField] 
+    private int _maxTotalEnemies = 15;
+
+    
 
     private int _totalSpawned = 0;
 
@@ -31,6 +36,7 @@ public class EnemySpawner : MonoBehaviour
         {
            GameObject enemy = Instantiate(_enemyPrefab, transform.position, Quaternion.identity);
 
+            
 
             _totalSpawned++;
 

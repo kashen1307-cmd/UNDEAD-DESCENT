@@ -16,6 +16,8 @@ public class EnemyMovement : MonoBehaviour
     private float _changeDirectionCooldown;
     private EnemySpawner _spawner;
 
+   
+
     public void SetSpawner(EnemySpawner spawner)
     {
         _spawner = spawner;
