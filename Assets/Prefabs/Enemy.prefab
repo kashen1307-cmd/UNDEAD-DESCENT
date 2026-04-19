@@ -154,7 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a8ca40f5db7ecf42b66f81b3e6a4d90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAwarenessController
-  playerAwarenessDistance: 5
+  playerAwarenessDistance: 6
 --- !u!50 &8289091495869006013
 Rigidbody2D:
   serializedVersion: 5
