@@ -90,4 +90,6 @@ public class EnemyMovement : MonoBehaviour
         _rigidbody.linearVelocity = transform.up * _speed;       
     }
 
+    
+
 }

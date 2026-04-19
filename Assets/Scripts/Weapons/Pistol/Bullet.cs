@@ -6,6 +6,8 @@ public class Bullet : MonoBehaviour
     public Rigidbody2D rb;
     public GameObject Enemy;
 
+    private bool isDead = false;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -34,9 +36,14 @@ public class Bullet : MonoBehaviour
             Destroy(hitInfo.gameObject);
             EnemyCounterUI.enemiesAlive--;
 
+            if (EnemyCounterUI.enemiesAlive < 0)
+            {
+                EnemyCounterUI.enemiesAlive = 0;
+            }
         }
 
-        Destroy(gameObject);         
+    
+            Destroy(gameObject);         
        
     }
 }

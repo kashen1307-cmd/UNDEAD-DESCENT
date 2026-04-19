@@ -6,7 +6,7 @@ using UnityEngine;
 public class WeaponPickup : MonoBehaviour
 {
 
-    public GameObject handWeaponPrefab; // The gun that shoots (e.g., your new Shotgun prefab)
+    public GameObject handWeaponPrefab; // The gun that shoots  new Shotgun prefab)
     public GameObject myPickupPrefab;   // This exact floor prefab itself
 
     public GameObject interactPrompt; // Optional "Press E to Swap" text    
