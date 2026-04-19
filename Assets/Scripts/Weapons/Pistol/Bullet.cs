@@ -23,8 +23,10 @@ public class Bullet : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
-        if (hitInfo.CompareTag("AreaReveal"))
-            return;
+        if (hitInfo.CompareTag("AreaReveal") || hitInfo.CompareTag("Player") || hitInfo.CompareTag("Bullet"))
+    {
+        return; 
+    }
 
 
         if (hitInfo.CompareTag("Enemy"))
