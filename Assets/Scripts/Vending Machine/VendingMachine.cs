@@ -1,11 +1,10 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class VendingMachine : MonoBehaviour
 {
     public GameObject shopUI;
-
     public GameObject interactPrompt;
-
     private bool isPlayerInRange = false;
 
     void Update()
@@ -14,6 +13,17 @@ public class VendingMachine : MonoBehaviour
         {
             bool isShopOpen = shopUI.activeSelf;
             shopUI.SetActive(!isShopOpen);
+
+            if (!isShopOpen)
+            {
+                Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.None;
+            }
+            else
+            {
+                Cursor.visible = false;
+                Cursor.lockState = CursorLockMode.Confined;
+            }
             
             // NEW: Hide the prompt if the shop opens. Show it if they close the shop with E.
             if (interactPrompt != null)
@@ -47,9 +57,19 @@ public class VendingMachine : MonoBehaviour
             {
                 interactPrompt.SetActive(false);
             }
+            
+            if (shopUI != null)
+            {
+                shopUI.SetActive(false);
+            } 
+          
+            Time.timeScale = 1f;
+
+            Cursor.lockState = CursorLockMode.Confined;
+            Cursor.visible = false;
+
         }
 
-        shopUI.SetActive(false);
-        Time.timeScale = 1f;    
+            
     }
 }
