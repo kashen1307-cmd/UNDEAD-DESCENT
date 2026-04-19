@@ -77,13 +77,11 @@ public class PlayerHealthController : MonoBehaviour
 
     public void SmallItemHeal(float healAmount)
     {
-        // Add the health using your teammate's exact variable name
+        
         _currentHealth += healAmount;
         
-        // Prevent it from going over the maximum
         _currentHealth = Mathf.Clamp(_currentHealth, 0, _maximumHealth);
-        
-        // CRITICAL: Tell the teammate's UI to update the health bar!
+    
         OnHealthChanged?.Invoke();
         
         Debug.Log("Player Healed! Current Health is now: " + _currentHealth);

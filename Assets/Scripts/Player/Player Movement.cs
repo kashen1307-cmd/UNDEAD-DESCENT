@@ -25,8 +25,6 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         SetPlayerVelocity();
-        //RotateInDirectionOfInput();
-        //MainCamera.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
     }
 
     private void SetPlayerVelocity()
@@ -48,7 +46,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void IncreaseSpeed(float speedAmount)
 {
-    _speed += speedAmount; // Match this variable name to whatever your teammate used!
+    _speed += speedAmount; 
     Debug.Log("Speed Increased! New Speed: " + _speed);
 }
 }
