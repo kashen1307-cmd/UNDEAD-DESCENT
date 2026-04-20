@@ -34,17 +34,28 @@ public class WeaponPickup : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+
         if (collision.CompareTag("Player"))
         {
             isPlayerInRange = true;
             playerSwapper = collision.GetComponent<WeaponSwapper>();
-            
-            if (interactPrompt != null) interactPrompt.SetActive(true);
+
+            if (playerSwapper != null)
+            {
+                isPlayerInRange = true;
+
+
+
+                if (interactPrompt != null) interactPrompt.SetActive(true);
+            }
+
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+
+
         if (collision.CompareTag("Player"))
         {
             isPlayerInRange = false;

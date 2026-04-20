@@ -9,13 +9,14 @@ public class PlayerMovement : MonoBehaviour
     public float _speed;
 
     [SerializeField]
-    
-
     private Rigidbody2D _rigidbody;
+
     private Vector2 _movementInput;
     private Vector2 _smoothedMovementInput;
     private Vector2 movementInputSmoothVelocity;
+
     public GameObject MainCamera;
+
 
     private void Awake()
     {

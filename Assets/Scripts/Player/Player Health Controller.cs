@@ -10,6 +10,11 @@ public class PlayerHealthController : MonoBehaviour
     [SerializeField]
     private float _maximumHealth;
 
+    [SerializeField] 
+    private EnemySpawner spawner;
+
+
+
     public float RemainingHealthPercantage
     {
         get
@@ -51,6 +56,7 @@ public class PlayerHealthController : MonoBehaviour
         if (_currentHealth == 0)
         {
             OnDied.Invoke();
+   
         }
         else
         {

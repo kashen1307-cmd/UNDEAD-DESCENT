@@ -19,7 +19,10 @@ public class EnemySpawner : MonoBehaviour
 
     
 
+
     private int _totalSpawned = 0;
+
+   
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
