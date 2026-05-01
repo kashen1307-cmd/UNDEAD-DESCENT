@@ -15,7 +15,18 @@ public class EnemyMovement : MonoBehaviour
     private float _changeDirectionCooldown;
     private EnemySpawner _spawner;
 
-    
+    [SerializeField] 
+    private SpriteRenderer _spriteRenderer;
+
+    private void UpdateSpriteDirection()
+    {
+        if (_targetDirection.x > 0.1f)
+            _spriteRenderer.flipX = false;
+        else if (_targetDirection.x < -0.1f)
+            _spriteRenderer.flipX = true;
+    }
+
+
 
 
 
@@ -44,7 +55,8 @@ public class EnemyMovement : MonoBehaviour
     {
         UpdateTargetDirection();
         SetVelocity();
-        
+        UpdateSpriteDirection();
+
     }
 
 
@@ -78,7 +90,13 @@ public class EnemyMovement : MonoBehaviour
         // Only wander if NOT chasing player
         if (!_playerAwarenessController.AwareOfPlayer)
         {
-            PickNewRandomDirection();
+            float randomAngleOffset = Random.Range(-90f, 90f);
+            float baseAngle = Mathf.Atan2(_targetDirection.y, _targetDirection.x) * Mathf.Rad2Deg;
+
+            float newAngle = baseAngle + randomAngleOffset;
+            float rad = newAngle * Mathf.Deg2Rad;
+
+            _targetDirection = new Vector2(Mathf.Cos(rad), Mathf.Sin(rad)).normalized;
         }
     }
 

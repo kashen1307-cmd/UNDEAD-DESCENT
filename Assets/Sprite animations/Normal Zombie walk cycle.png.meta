@@ -11,6 +11,9 @@ TextureImporter:
   - first:
       213: -2217849499846781402
     second: Normal Zombie walk cycle_2
+  - first:
+      213: -3346510020690237569
+    second: Normal Zombie walk cycle_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -43,7 +46,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -57,7 +60,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -81,7 +84,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -109,10 +112,10 @@ TextureImporter:
       name: Normal Zombie walk cycle_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 961
-        width: 993
-        height: 2039
+        x: 22
+        y: 1074
+        width: 659
+        height: 1032
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,20 +134,20 @@ TextureImporter:
       name: Normal Zombie walk cycle_1
       rect:
         serializedVersion: 2
-        x: 993
-        y: 961
-        width: 993
-        height: 2039
+        x: 768
+        y: 1074
+        width: 706
+        height: 1032
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 590f26844ab3ed14e9cec269f621301f
-      internalID: -684674420
+      spriteID: 66cbb2e002ca7e130800000000000000
+      internalID: 3596032081155308646
       vertices: []
       indices: 
       edges: []
@@ -153,20 +156,42 @@ TextureImporter:
       name: Normal Zombie walk cycle_2
       rect:
         serializedVersion: 2
-        x: 1986
-        y: 961
-        width: 993
-        height: 2039
+        x: 1554
+        y: 1077
+        width: 706
+        height: 1032
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 809dca7761917b24eb3461d270460b50
-      internalID: -219319553
+      spriteID: 626da5c61ad9831e0800000000000000
+      internalID: -2217849499846781402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Normal Zombie walk cycle_3
+      rect:
+        serializedVersion: 2
+        x: 2273
+        y: 1069
+        width: 704
+        height: 1035
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f772973eddece81d0800000000000000
+      internalID: -3346510020690237569
       vertices: []
       indices: 
       edges: []
@@ -175,7 +200,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 7b2de1790c916644aa17224ec5a0e40f
+    spriteID: 3411df4a83a1cfa4e95eb1749e0d1cfb
     internalID: 0
     vertices: []
     indices: 
@@ -185,11 +210,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":993.0,"y":2039.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":740.0,"y":2152.0},"gridSpriteOffset":{"x":40.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       Normal Zombie walk cycle_0: 5841628889410918933
-      Normal Zombie walk cycle_1: -684674420
-      Normal Zombie walk cycle_2: -219319553
+      Normal Zombie walk cycle_1: 3596032081155308646
+      Normal Zombie walk cycle_2: -2217849499846781402
+      Normal Zombie walk cycle_3: -3346510020690237569
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
