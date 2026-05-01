@@ -175,6 +175,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerHealthController
   _currentHealth: 100
   _maximumHealth: 100
+  spawner: {fileID: 0}
   OnDied:
     m_PersistentCalls:
       m_Calls:
@@ -268,7 +269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bc77cce6a0d4c54c93ebbeef5ceb903, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerDamagedInvincibility
-  _invincibilityDuration: 2
+  _invincibilityDuration: 1
 --- !u!114 &972153771825587352
 MonoBehaviour:
   m_ObjectHideFlags: 0
