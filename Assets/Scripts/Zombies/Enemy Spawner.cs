@@ -45,7 +45,7 @@ public class EnemySpawner : MonoBehaviour
             _totalSpawned++;
 
             // Tell enemy who spawned it
-            _enemyPrefab.GetComponent<EnemyMovement>().SetSpawner(this);
+            enemy.GetComponent<EnemyMovement>().SetSpawner(this);
 
             SetTimeUntilSpawn();
         }
