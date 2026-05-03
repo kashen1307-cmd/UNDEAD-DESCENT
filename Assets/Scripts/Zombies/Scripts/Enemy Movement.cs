@@ -98,6 +98,14 @@ public class EnemyMovement : MonoBehaviour
 
             _targetDirection = new Vector2(Mathf.Cos(rad), Mathf.Sin(rad)).normalized;
         }
+
+        if (collision.gameObject.CompareTag("Barrier"))
+        {
+            Vector2 normal = collision.GetContact(0).normal;
+
+            // reflect direction off wall
+            _targetDirection = Vector2.Reflect(_targetDirection, normal).normalized;
+        }
     }
 
 

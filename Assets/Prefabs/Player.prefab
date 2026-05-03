@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   _speed: 7.5
-  _rigidbody: {fileID: 0}
+  _rigidbody: {fileID: 5890054088092925569}
   MainCamera: {fileID: 0}
 --- !u!114 &2966999989448039558
 MonoBehaviour:

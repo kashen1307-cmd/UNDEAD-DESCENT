@@ -2,11 +2,8 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject _enemyPrefab;
-
     [SerializeField] 
-    private GameObject SpittingEnemy;
+    private GameObject[] enemyPrefabs;
 
     [SerializeField] 
     private bool spawnsSpitters;
@@ -45,9 +42,9 @@ public class EnemySpawner : MonoBehaviour
 
         if (_timeUntilSpawn <= 0 && _totalSpawned < _maxTotalEnemies)
         {
-            GameObject prefabToSpawn = spawnsSpitters ? SpittingEnemy : _enemyPrefab;
+            GameObject prefabToSpawn = enemyPrefabs[Random.Range(0, enemyPrefabs.Length)];
 
-            GameObject enemy = Instantiate(prefabToSpawn, transform.position, Quaternion.identity);
+            GameObject enemy = Instantiate(prefabToSpawn, transform.position, Quaternion.identity); ;
 
             EnemyCounterUI.enemiesAlive++;
 
@@ -55,16 +52,18 @@ public class EnemySpawner : MonoBehaviour
             _totalSpawned++;
 
             // Tell enemy who spawned it
-            var movement = enemy.GetComponent<EnemyMovement>();
-            if (movement != null)
+            var normal = enemy.GetComponent<EnemyMovement>();
+            if (normal != null)
             {
-                movement.SetSpawner(this);
+                normal.SetSpawner(this);
             }
 
+            var spitter = enemy.GetComponent<SpitterMovement>();
+      
             SetTimeUntilSpawn();
         }
+        
 
-        Debug.Log("Spawning: " + SpittingEnemy);
     }
 
 

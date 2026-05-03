@@ -12,11 +12,30 @@ public class SpitterMovement : MonoBehaviour
     private float maxDistance = 8f;
 
     [SerializeField] 
+    private Transform firePoint;
+    
+
+    [SerializeField] 
     private SpriteRenderer spriteRenderer;
 
     private Transform player;
     private Rigidbody2D rb;
 
+
+
+
+    void UpdateFacing(Vector2 direction)
+    {
+        bool facingRight = direction.x > 0;
+
+        spriteRenderer.flipX = !facingRight;
+
+        firePoint.localPosition = new Vector3(
+            Mathf.Abs(firePoint.localPosition.x) * (facingRight ? 1 : -1),
+            firePoint.localPosition.y,
+            firePoint.localPosition.z
+        );
+    }
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -36,20 +55,21 @@ public class SpitterMovement : MonoBehaviour
 
         if (distance > maxDistance)
         {
-            rb.linearVelocity = dir * speed; // chase
+            rb.linearVelocity = dir * speed;
         }
         else if (distance < minDistance)
         {
-            rb.linearVelocity = -dir * speed; // back away
+            rb.linearVelocity = -dir * speed;
         }
         else
         {
-            rb.linearVelocity = Vector2.zero; // attack range
+            rb.linearVelocity = Vector2.zero;
         }
 
-        if (dir.x > 0.1f)
-            spriteRenderer.flipX = false;
-        else if (dir.x < -0.1f)
-            spriteRenderer.flipX = true;
+        UpdateFacing(dir); // ✅ THIS IS THE KEY FIX
+    }
+    void OnDestroy()
+    {
+        Debug.Log(gameObject.name + " was destroyed");
     }
 }

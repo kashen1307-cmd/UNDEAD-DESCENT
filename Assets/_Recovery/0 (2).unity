@@ -2142,7 +2142,7 @@ GameObject:
   - component: {fileID: 525309404}
   m_Layer: 8
   m_Name: Floor1
-  m_TagString: Barrier
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5225,14 +5225,6 @@ PrefabInstance:
       propertyPath: _minimumSpawnTime
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 5948129609216178184, guid: c0171b09b4846e94abd5004ca6efbbaa, type: 3}
-      propertyPath: enemyPrefabs.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5948129609216178184, guid: c0171b09b4846e94abd5004ca6efbbaa, type: 3}
-      propertyPath: 'enemyPrefabs.Array.data[1]'
-      value: 
-      objectReference: {fileID: 6678397693245582774, guid: b465bdc51c7a4de4f90ca7147f4b7ec8, type: 3}
     - target: {fileID: 7209802049777233596, guid: c0171b09b4846e94abd5004ca6efbbaa, type: 3}
       propertyPath: m_LocalPosition.x
       value: -10.3

@@ -44,7 +44,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37d0443aaeae5484e958fc1892e3ca07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemySpawner
-  _enemyPrefab: {fileID: 4171154286991678266, guid: afa864b6a54d1f340b41fa84a40192fa, type: 3}
+  enemyPrefabs:
+  - {fileID: 4171154286991678266, guid: afa864b6a54d1f340b41fa84a40192fa, type: 3}
+  spawnsSpitters: 1
   _minimumSpawnTime: 5
   _maximumSpawnTime: 8
+  _timeUntilSpawn: 0
   _maxTotalEnemies: 3

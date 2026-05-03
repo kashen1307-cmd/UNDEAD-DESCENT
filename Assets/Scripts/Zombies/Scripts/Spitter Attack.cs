@@ -2,11 +2,20 @@ using UnityEngine;
 
 public class SpitterAttack : MonoBehaviour
 {
-    [SerializeField] private GameObject projectilePrefab;
-    [SerializeField] private Transform firePoint;
-    [SerializeField] private float attackRange = 6f;
-    [SerializeField] private float cooldown = 2f;
-    [SerializeField] private Animator animator;
+    [SerializeField] 
+    private GameObject projectilePrefab;
+
+    [SerializeField] 
+    private Transform firePoint;
+
+    [SerializeField] 
+    private float attackRange = 6f;
+
+    [SerializeField] 
+    private float cooldown = 2f;
+
+    [SerializeField] 
+    private Animator animator;
 
     private Transform player;
     private float lastAttackTime;
