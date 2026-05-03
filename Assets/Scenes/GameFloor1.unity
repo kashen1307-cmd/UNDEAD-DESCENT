@@ -5202,6 +5202,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 1044399096}
     m_Modifications:
     - target: {fileID: 5948129609216178184, guid: c0171b09b4846e94abd5004ca6efbbaa, type: 3}
+      propertyPath: _enemyPrefab
+      value: 
+      objectReference: {fileID: 4171154286991678266, guid: afa864b6a54d1f340b41fa84a40192fa, type: 3}
+    - target: {fileID: 5948129609216178184, guid: c0171b09b4846e94abd5004ca6efbbaa, type: 3}
+      propertyPath: SpittingEnemy
+      value: 
+      objectReference: {fileID: 6678397693245582774, guid: b465bdc51c7a4de4f90ca7147f4b7ec8, type: 3}
+    - target: {fileID: 5948129609216178184, guid: c0171b09b4846e94abd5004ca6efbbaa, type: 3}
+      propertyPath: spawnsSpitters
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5948129609216178184, guid: c0171b09b4846e94abd5004ca6efbbaa, type: 3}
       propertyPath: _maxTotalEnemies
       value: 3
       objectReference: {fileID: 0}

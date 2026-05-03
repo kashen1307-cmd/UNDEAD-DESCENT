@@ -1,22 +1,16 @@
 fileFormatVersion: 2
-guid: 4770193787249fe40922faae7a72f0b0
+guid: 35533e0402868744c9ded53fdaf995dd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2509867014342162028
-    second: Normal Zombie Attack.anim_0
+      213: -1479177484369496824
+    second: Spitting Zombie_Attack_Animation_0
   - first:
-      213: 1038708123449581984
-    second: Normal Zombie Attack.anim_1
+      213: -1987336600922708434
+    second: Spitting Zombie_Attack_Animation_1
   - first:
-      213: 2560623955538338105
-    second: Normal Zombie Attack.anim_2
-  - first:
-      213: 1757821520887812655
-    second: Normal Zombie Attack.anim_3
-  - first:
-      213: -7315732006857343240
-    second: Normal Zombie Attack.anim_4
+      213: -5961737762209045699
+    second: Spitting Zombie_Attack_Animation_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -63,7 +57,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 17
+  spritePixelsToUnits: 39
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -112,13 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Normal Zombie Attack.anim_0
+      name: Spitting Zombie_Attack_Animation_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 125
-        width: 376
-        height: 550
+        x: 38
+        y: 337
+        width: 563
+        height: 826
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -127,20 +121,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c66b55f60c6d4d220800000000000000
-      internalID: 2509867014342162028
+      spriteID: 805766c3ae7e87be0800000000000000
+      internalID: -1479177484369496824
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Normal Zombie Attack.anim_1
+      name: Spitting Zombie_Attack_Animation_1
       rect:
         serializedVersion: 2
-        x: 500
-        y: 125
-        width: 326
-        height: 627
+        x: 713
+        y: 337
+        width: 561
+        height: 826
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -149,20 +143,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0a16683f88b3a6e00800000000000000
-      internalID: 1038708123449581984
+      spriteID: e26aedc04ef8b64e0800000000000000
+      internalID: -1987336600922708434
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Normal Zombie Attack.anim_2
+      name: Spitting Zombie_Attack_Animation_2
       rect:
         serializedVersion: 2
-        x: 998
-        y: 124
-        width: 428
-        height: 550
+        x: 1387
+        y: 337
+        width: 714
+        height: 826
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,52 +165,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 931e739bbe9298320800000000000000
-      internalID: 2560623955538338105
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Normal Zombie Attack.anim_3
-      rect:
-        serializedVersion: 2
-        x: 1449
-        y: 125
-        width: 552
-        height: 526
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f221e032c59056810800000000000000
-      internalID: 1757821520887812655
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Normal Zombie Attack.anim_4
-      rect:
-        serializedVersion: 2
-        x: 2099
-        y: 125
-        width: 426
-        height: 501
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8feff4b008c497a90800000000000000
-      internalID: -7315732006857343240
+      spriteID: d336f778717a34da0800000000000000
+      internalID: -5961737762209045699
       vertices: []
       indices: 
       edges: []
@@ -225,7 +175,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 9e34f391c3398ed46a0c89879f5b0c06
+    spriteID: bde4419491df92a419f2359019eb9fa8
     internalID: 0
     vertices: []
     indices: 
@@ -235,13 +185,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":1838.0,"y":2742.0},"gridSpriteOffset":{"x":30.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Normal Zombie Attack.anim_0: 2509867014342162028
-      Normal Zombie Attack.anim_1: 1038708123449581984
-      Normal Zombie Attack.anim_2: 2560623955538338105
-      Normal Zombie Attack.anim_3: 1757821520887812655
-      Normal Zombie Attack.anim_4: -7315732006857343240
+      Spitting Zombie_Attack_Animation_0: -1479177484369496824
+      Spitting Zombie_Attack_Animation_1: -1987336600922708434
+      Spitting Zombie_Attack_Animation_2: -5961737762209045699
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

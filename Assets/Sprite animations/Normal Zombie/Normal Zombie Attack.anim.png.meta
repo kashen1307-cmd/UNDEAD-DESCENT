@@ -1,19 +1,22 @@
 fileFormatVersion: 2
-guid: 45e6df3e501e81743976ed6d99e243c0
+guid: e3ae97fdb7c80a14ead1d4fa5aaef0ff
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5841628889410918933
-    second: Normal Zombie walk cycle_0
+      213: 2509867014342162028
+    second: Normal Zombie Attack.anim_0
   - first:
-      213: 3596032081155308646
-    second: Normal Zombie walk cycle_1
+      213: 1038708123449581984
+    second: Normal Zombie Attack.anim_1
   - first:
-      213: -2217849499846781402
-    second: Normal Zombie walk cycle_2
+      213: 2560623955538338105
+    second: Normal Zombie Attack.anim_2
   - first:
-      213: -3346510020690237569
-    second: Normal Zombie walk cycle_3
+      213: 1757821520887812655
+    second: Normal Zombie Attack.anim_3
+  - first:
+      213: -7315732006857343240
+    second: Normal Zombie Attack.anim_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -60,7 +63,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 17
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -109,13 +112,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Normal Zombie walk cycle_0
+      name: Normal Zombie Attack.anim_0
       rect:
         serializedVersion: 2
-        x: 22
-        y: 1074
-        width: 659
-        height: 1032
+        x: 0
+        y: 125
+        width: 376
+        height: 550
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,74 +127,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 51a5ffe4682a11150800000000000000
-      internalID: 5841628889410918933
+      spriteID: c66b55f60c6d4d220800000000000000
+      internalID: 2509867014342162028
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Normal Zombie walk cycle_1
+      name: Normal Zombie Attack.anim_1
       rect:
         serializedVersion: 2
-        x: 768
-        y: 1074
-        width: 706
-        height: 1032
+        x: 500
+        y: 125
+        width: 326
+        height: 627
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 3711ae3b63c51bf408ecfc0a69a5853d
-      internalID: 3596032081155308646
+      spriteID: 0a16683f88b3a6e00800000000000000
+      internalID: 1038708123449581984
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Normal Zombie walk cycle_2
+      name: Normal Zombie Attack.anim_2
       rect:
         serializedVersion: 2
-        x: 1554
-        y: 1077
-        width: 706
-        height: 1032
+        x: 999
+        y: 125
+        width: 428
+        height: 550
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 9f67ea57d38aee3489349b7475570be5
-      internalID: -2217849499846781402
+      spriteID: 931e739bbe9298320800000000000000
+      internalID: 2560623955538338105
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Normal Zombie walk cycle_3
+      name: Normal Zombie Attack.anim_3
       rect:
         serializedVersion: 2
-        x: 2273
-        y: 1069
-        width: 704
-        height: 1035
+        x: 1449
+        y: 125
+        width: 552
+        height: 526
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 358c0f14be7d9574bae61bfa69cc5fb2
-      internalID: -3346510020690237569
+      spriteID: f221e032c59056810800000000000000
+      internalID: 1757821520887812655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Normal Zombie Attack.anim_4
+      rect:
+        serializedVersion: 2
+        x: 2099
+        y: 125
+        width: 426
+        height: 501
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8feff4b008c497a90800000000000000
+      internalID: -7315732006857343240
       vertices: []
       indices: 
       edges: []
@@ -200,7 +225,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: cadbf6139f1f6b9478e276074c8e0c3f
+    spriteID: 9e34f391c3398ed46a0c89879f5b0c06
     internalID: 0
     vertices: []
     indices: 
@@ -210,12 +235,13 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":1838.0,"y":2742.0},"gridSpriteOffset":{"x":30.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Normal Zombie walk cycle_0: 5841628889410918933
-      Normal Zombie walk cycle_1: 3596032081155308646
-      Normal Zombie walk cycle_2: -2217849499846781402
-      Normal Zombie walk cycle_3: -3346510020690237569
+      Normal Zombie Attack.anim_0: 2509867014342162028
+      Normal Zombie Attack.anim_1: 1038708123449581984
+      Normal Zombie Attack.anim_2: 2560623955538338105
+      Normal Zombie Attack.anim_3: 1757821520887812655
+      Normal Zombie Attack.anim_4: -7315732006857343240
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

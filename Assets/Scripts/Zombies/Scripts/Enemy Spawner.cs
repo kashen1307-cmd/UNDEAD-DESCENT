@@ -5,6 +5,12 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField]
     private GameObject _enemyPrefab;
 
+    [SerializeField] 
+    private GameObject SpittingEnemy;
+
+    [SerializeField] 
+    private bool spawnsSpitters;
+
     [SerializeField]
     private float _minimumSpawnTime;
 
@@ -22,7 +28,9 @@ public class EnemySpawner : MonoBehaviour
 
     private int _totalSpawned = 0;
 
-   
+    
+
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
@@ -37,7 +45,9 @@ public class EnemySpawner : MonoBehaviour
 
         if (_timeUntilSpawn <= 0 && _totalSpawned < _maxTotalEnemies)
         {
-           GameObject enemy = Instantiate(_enemyPrefab, transform.position, Quaternion.identity);
+            GameObject prefabToSpawn = spawnsSpitters ? SpittingEnemy : _enemyPrefab;
+
+            GameObject enemy = Instantiate(prefabToSpawn, transform.position, Quaternion.identity);
 
             EnemyCounterUI.enemiesAlive++;
 
@@ -45,11 +55,18 @@ public class EnemySpawner : MonoBehaviour
             _totalSpawned++;
 
             // Tell enemy who spawned it
-            enemy.GetComponent<EnemyMovement>().SetSpawner(this);
+            var movement = enemy.GetComponent<EnemyMovement>();
+            if (movement != null)
+            {
+                movement.SetSpawner(this);
+            }
 
             SetTimeUntilSpawn();
         }
+
+        Debug.Log("Spawning: " + SpittingEnemy);
     }
+
 
     private void SetTimeUntilSpawn()
     {

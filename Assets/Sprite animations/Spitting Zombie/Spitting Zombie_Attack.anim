@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Normal Zombie Walk
+  m_Name: Spitting Zombie_Attack
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,13 +21,13 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: 5841628889410918933, guid: 45e6df3e501e81743976ed6d99e243c0, type: 3}
-    - time: 0.21666667
-      value: {fileID: 3596032081155308646, guid: 45e6df3e501e81743976ed6d99e243c0, type: 3}
-    - time: 0.51666665
-      value: {fileID: -2217849499846781402, guid: 45e6df3e501e81743976ed6d99e243c0, type: 3}
-    - time: 0.73333335
-      value: {fileID: -3346510020690237569, guid: 45e6df3e501e81743976ed6d99e243c0, type: 3}
+      value: {fileID: -1987336600922708434, guid: 35533e0402868744c9ded53fdaf995dd, type: 3}
+    - time: 0.2
+      value: {fileID: -1987336600922708434, guid: 35533e0402868744c9ded53fdaf995dd, type: 3}
+    - time: 0.45
+      value: {fileID: -5961737762209045699, guid: 35533e0402868744c9ded53fdaf995dd, type: 3}
+    - time: 0.71666664
+      value: {fileID: -5961737762209045699, guid: 35533e0402868744c9ded53fdaf995dd, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -50,16 +50,16 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: 5841628889410918933, guid: 45e6df3e501e81743976ed6d99e243c0, type: 3}
-    - {fileID: 3596032081155308646, guid: 45e6df3e501e81743976ed6d99e243c0, type: 3}
-    - {fileID: -2217849499846781402, guid: 45e6df3e501e81743976ed6d99e243c0, type: 3}
-    - {fileID: -3346510020690237569, guid: 45e6df3e501e81743976ed6d99e243c0, type: 3}
+    - {fileID: -1987336600922708434, guid: 35533e0402868744c9ded53fdaf995dd, type: 3}
+    - {fileID: -1987336600922708434, guid: 35533e0402868744c9ded53fdaf995dd, type: 3}
+    - {fileID: -5961737762209045699, guid: 35533e0402868744c9ded53fdaf995dd, type: 3}
+    - {fileID: -5961737762209045699, guid: 35533e0402868744c9ded53fdaf995dd, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.75
+    m_StopTime: 0.7333333
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -78,4 +78,11 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 0.46666667
+    functionName: Shoot
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
