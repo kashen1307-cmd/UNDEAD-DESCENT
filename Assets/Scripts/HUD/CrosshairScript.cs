@@ -20,10 +20,9 @@ public class CrosshairScript : MonoBehaviour
     {
         if (Time.timeScale > 0)
         {
-             Vector2 mousecursorPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            transform.position = mousecursorPosition; // Move the crosshair to the mouse position
+            Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            mousePos.z = 0f; 
+            transform.position = mousePos;
         }
-        
-       
     }
 }

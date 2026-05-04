@@ -7386,6 +7386,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1503539367556355109, guid: 5d49cd91776f9a245aae30034fa83464, type: 3}
+      propertyPath: fireRate
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2384916488510680865, guid: 5d49cd91776f9a245aae30034fa83464, type: 3}
       propertyPath: OnDied.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 

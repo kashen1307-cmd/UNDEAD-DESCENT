@@ -2,29 +2,23 @@ using UnityEngine;
 
 public class Firing : MonoBehaviour
 {
-
     public Transform firePoint;
     public GameObject bulletPrefab;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
+    public float fireRate = 5f; // bullets per second
+    private float nextFireTime = 0f;
 
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
-        { // Default is Left Mouse Button
-            Shoot();
-        }
-
-        void Shoot()
+        if (Input.GetButton("Fire1") && Time.time >= nextFireTime)
         {
-            // Instantiate the bullet at the FirePoint's position and rotation
-            Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+            Shoot();
+            nextFireTime = Time.time + 1f / fireRate;
         }
     }
-}
 
+    void Shoot()
+    {
+        Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+    }
+}

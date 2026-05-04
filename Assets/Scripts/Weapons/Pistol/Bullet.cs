@@ -6,6 +6,8 @@ public class Bullet : MonoBehaviour
     public Rigidbody2D rb;
     public GameObject Enemy;
 
+    public int damage = 1;
+
     private bool isDead = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -23,24 +25,22 @@ public class Bullet : MonoBehaviour
 
     }
 
+    
+
+ 
+
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
-        if (hitInfo.CompareTag("AreaReveal") || hitInfo.CompareTag("Player") || hitInfo.CompareTag("Bullet"))
-    {
-        return; 
-    }
+        EnemyHealth enemy = hitInfo.GetComponent<EnemyHealth>();
 
-
-        if (hitInfo.CompareTag("Enemy"))
+        if (enemy != null)
         {
-            Destroy(hitInfo.gameObject);
-            
+            enemy.TakeDamage(damage); // 👈 use variable instead of hardcoded value
         }
 
-    
-            Destroy(gameObject);         
-       
+        Destroy(gameObject);
     }
 }
+
 
 

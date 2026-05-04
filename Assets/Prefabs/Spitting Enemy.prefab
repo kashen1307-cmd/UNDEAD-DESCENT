@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 5955381766033501381}
   - component: {fileID: 6423361620889685285}
   - component: {fileID: 4502055696643944384}
+  - component: {fileID: -3132073924210714912}
   m_Layer: 7
   m_Name: Spitting Enemy
   m_TagString: Enemy
@@ -257,3 +258,16 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &-3132073924210714912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6678397693245582774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3bdecb0f83c94e40bbe1bcd490391c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
+  maxHealth: 2
