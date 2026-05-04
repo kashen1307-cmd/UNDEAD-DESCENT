@@ -156,8 +156,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SpitterAttack
   projectilePrefab: {fileID: 7298689033032275638, guid: 6c33cfa76e36a84428725767096b0542, type: 3}
   firePoint: {fileID: 1512500958642930668}
-  attackRange: 6
-  cooldown: 2
+  attackRange: 5
+  cooldown: 1
   animator: {fileID: 6423361620889685285}
 --- !u!114 &5955381766033501381
 MonoBehaviour:
@@ -173,7 +173,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SpitterMovement
   speed: 2
   minDistance: 2
-  maxDistance: 3
+  maxDistance: 5
   firePoint: {fileID: 1512500958642930668}
   spriteRenderer: {fileID: 4502055696643944384}
 --- !u!95 &6423361620889685285

@@ -34,12 +34,7 @@ public class Bullet : MonoBehaviour
         if (hitInfo.CompareTag("Enemy"))
         {
             Destroy(hitInfo.gameObject);
-            EnemyCounterUI.enemiesAlive--;
-
-            if (EnemyCounterUI.enemiesAlive < 0)
-            {
-                EnemyCounterUI.enemiesAlive = 0;
-            }
+            
         }
 
     

@@ -3,14 +3,13 @@ using TMPro;
 
 public class EnemyCounterUI : MonoBehaviour
 {
-    [SerializeField] 
+    [SerializeField]
     private TextMeshProUGUI counterText;
-    
-    public static int enemiesAlive = 0;
 
     void Update()
     {
-        counterText.text = "Enemies Remaining: " + EnemyCounterUI.enemiesAlive;
-      
+        int enemiesAlive = GameObject.FindGameObjectsWithTag("Enemy").Length;
+
+        counterText.text = "Enemies Remaining: " + enemiesAlive;
     }
 }

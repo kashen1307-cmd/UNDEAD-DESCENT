@@ -155,7 +155,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 2.9378357, y: -0.55379677}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -165,7 +165,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 154.60852, y: 90.632614}
   m_EdgeRadius: 0
 --- !u!114 &6911451349915098255
 MonoBehaviour:
@@ -179,5 +179,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 861a2e61de8ee364ab14bceaacb115b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpitProjectile
-  damage: 10
-  speed: 5
+  damage: 15
+  speed: 8
+  lifetime: 3

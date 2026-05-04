@@ -66,10 +66,7 @@ public class SpitterMovement : MonoBehaviour
             rb.linearVelocity = Vector2.zero;
         }
 
-        UpdateFacing(dir); // ✅ THIS IS THE KEY FIX
+        UpdateFacing(dir); 
     }
-    void OnDestroy()
-    {
-        Debug.Log(gameObject.name + " was destroyed");
-    }
+    
 }

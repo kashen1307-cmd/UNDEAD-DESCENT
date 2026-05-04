@@ -46,7 +46,7 @@ public class EnemySpawner : MonoBehaviour
 
             GameObject enemy = Instantiate(prefabToSpawn, transform.position, Quaternion.identity); ;
 
-            EnemyCounterUI.enemiesAlive++;
+            
 
 
             _totalSpawned++;
