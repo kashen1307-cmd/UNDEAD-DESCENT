@@ -13,9 +13,9 @@ public class PlayerAwarenessController : MonoBehaviour
 
     private Transform player;
 
-    private void Awake()
+    void Awake()
     {
-        player = Object.FindFirstObjectByType<PlayerMovement>().transform;
+        player = GameObject.FindGameObjectWithTag("Player").transform;
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

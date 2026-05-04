@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/GameFloor2.unity
     guid: 4d4f221d44cb1664488c95d1e2b5b7a1
   - enabled: 1
+    path: Assets/Scenes/GameFloor3.unity
+    guid: 07ff6330c558cf140a0e1f1ac994f21a
+  - enabled: 1
     path: Assets/Scenes/DeathScreen.unity
     guid: f317c16a1ded6f6478de4f9e5798fd18
   - enabled: 1

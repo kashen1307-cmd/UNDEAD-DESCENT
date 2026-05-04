@@ -2619,7 +2619,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &640799007
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2632,7 +2632,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee86215d1bb3fd24ebebc59de13d176b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneChanger
-  sceneToLoad: 
+  sceneToLoad: GameFloor3
   fadeAnim: {fileID: 1283920052}
   fadeime: 0.5
   newPlayerPosition: {x: 0, y: 0}

@@ -1,49 +1,38 @@
 
 
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+
 public class GameManager : MonoBehaviour
 {
+    public static GameManager instance;
 
     [SerializeField]
     private float _timeToWaitBeforeExit;
 
-    public static GameManager instance;
 
 
 
-    [Header("Persistent Objects")]
-    public GameObject[] persistentObjects;
+    public float playerHealth;
+    public float maxHealth = 100f;
+
+    public void ResetRun()
+    {
+        playerHealth = maxHealth;
+    }
 
     private void Awake()
     {
-        if(instance != null)
+        if (instance != null)
         {
-            CleanUpAndDestroy();
+            Destroy(gameObject);
             return;
         }
 
-        else
-        {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
-            MarkPersistentObjects();
-        }
+        instance = this;
+        DontDestroyOnLoad(gameObject);
     }
 
-    private void MarkPersistentObjects()
-    {
-        foreach (GameObject obj in persistentObjects)
-        {
-            if(obj != null)
-            {
-                DontDestroyOnLoad (obj);
-            }
-        }
-    }
-
-   
     public void OnPlayerDied()
     {
         Invoke(nameof(EndGame), _timeToWaitBeforeExit);
@@ -53,15 +42,4 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene("DeathScreen");
     }
-
-    private void CleanUpAndDestroy()
-    {
-        foreach (GameObject obj in persistentObjects)
-        {
-            Destroy(obj);
-        }
-
-        Destroy(gameObject);
-    }
-
-}  
+}

@@ -1,5 +1,5 @@
 
-
+using UnityEngine.SceneManagement;
 using UnityEngine;
 using UnityEngine.Events;
 public class PlayerHealthController : MonoBehaviour
@@ -10,11 +10,7 @@ public class PlayerHealthController : MonoBehaviour
     [SerializeField]
     private float _maximumHealth;
 
-    [SerializeField] 
-    private EnemySpawner spawner;
-
-
-
+  
     public float RemainingHealthPercantage
     {
         get
@@ -31,38 +27,56 @@ public class PlayerHealthController : MonoBehaviour
 
     public UnityEvent OnHealthChanged;
 
+    public float CurrentHealth => _currentHealth;
+
+    public bool isNewRun = true;
+
+    public void ResetRun()
+    {
+        isNewRun = true;
+        _currentHealth = _maximumHealth;
+    }
+
+
+    private void Start()
+    {
+        if (GameManager.instance == null) return;
+
+        _maximumHealth = GameManager.instance.maxHealth;
+        _currentHealth = GameManager.instance.playerHealth;
+    }
+
+
+
     public void TakeDamage(float damageAmount)
     {
-        if (_currentHealth == 0)
-        {
+        if (_currentHealth <= 0 || IsInvinvcible)
             return;
-        }
-
-        if (IsInvinvcible)
-        {
-            return;
-        }
-
 
         _currentHealth -= damageAmount;
 
-        OnHealthChanged.Invoke();
-
-        if (_currentHealth < 0)
+        if (_currentHealth <= 0)
         {
             _currentHealth = 0;
+
+            GameManager.instance.playerHealth = 0;
+
+            OnHealthChanged.Invoke();
+            OnDied.Invoke();
+
+            SceneManager.LoadScene("DeathScreen");
+            return;
         }
 
-        if (_currentHealth == 0)
-        {
-            OnDied.Invoke();
-   
-        }
-        else
-        {
-            OnDamaged.Invoke();
-        }
+        OnHealthChanged.Invoke();
+        OnDamaged.Invoke();
+
+        GameManager.instance.playerHealth = _currentHealth;
     }
+
+
+
+
 
     public void AddHealth(float amountToAdd)
     {
