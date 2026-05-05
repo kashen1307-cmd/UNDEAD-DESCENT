@@ -1,19 +1,31 @@
 fileFormatVersion: 2
-guid: 5b804c1d7b0de834986fd49e57d6eac4
+guid: 8d6454d7408e9204d987c4addbc3d600
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2900687359988121822
-    second: Character Idle_0
+      213: -8129750756456199198
+    second: PistolAngles_0
   - first:
-      213: -5099688591880338989
-    second: Character Idle_1
+      213: 2145308835783112592
+    second: PistolAngles_1
   - first:
-      213: -4813545638323437427
-    second: Character Idle_2
+      213: 5142306684878380942
+    second: PistolAngles_2
   - first:
-      213: 7420777217735685765
-    second: Character Idle_3
+      213: 3869749869519819277
+    second: PistolAngles_3
+  - first:
+      213: -5617507707054279061
+    second: PistolAngles_4
+  - first:
+      213: -6511451919574361918
+    second: PistolAngles_5
+  - first:
+      213: -1875200350769007513
+    second: PistolAngles_6
+  - first:
+      213: 7254899781794254911
+    second: PistolAngles_7
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -148,13 +160,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Character Idle_0
+      name: PistolAngles_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 32
-        height: 32
+        x: 12
+        y: 39
+        width: 11
+        height: 15
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,20 +175,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 22f317fe630beb7d0800000000000000
-      internalID: -2900687359988121822
+      spriteID: 2eb07f0a2c25d2f80800000000000000
+      internalID: -8129750756456199198
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character Idle_1
+      name: PistolAngles_1
       rect:
         serializedVersion: 2
-        x: 33
-        y: 0
-        width: 31
-        height: 32
+        x: 26
+        y: 43
+        width: 11
+        height: 15
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -185,20 +197,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3d14cd7be344a39b0800000000000000
-      internalID: -5099688591880338989
+      spriteID: 097fb52150ba5cd10800000000000000
+      internalID: 2145308835783112592
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character Idle_2
+      name: PistolAngles_2
       rect:
         serializedVersion: 2
-        x: 65
-        y: 0
-        width: 31
-        height: 32
+        x: 39
+        y: 39
+        width: 11
+        height: 15
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -207,20 +219,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d80c995ceb9d23db0800000000000000
-      internalID: -4813545638323437427
+      spriteID: e8fda4e4fa42d5740800000000000000
+      internalID: 5142306684878380942
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character Idle_3
+      name: PistolAngles_3
       rect:
         serializedVersion: 2
-        x: 97
-        y: 0
-        width: 31
-        height: 32
+        x: 6
+        y: 24
+        width: 14
+        height: 11
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,8 +241,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 58672740095ebf660800000000000000
-      internalID: 7420777217735685765
+      spriteID: d02d756e00d14b530800000000000000
+      internalID: 3869749869519819277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PistolAngles_4
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 24
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b66b206d08a9a02b0800000000000000
+      internalID: -5617507707054279061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PistolAngles_5
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 10
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c81cb17afca2a5a0800000000000000
+      internalID: -6511451919574361918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PistolAngles_6
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 4
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 764b9b95733f9f5e0800000000000000
+      internalID: -1875200350769007513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PistolAngles_7
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 8
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f30d7e6d9e49ea460800000000000000
+      internalID: 7254899781794254911
       vertices: []
       indices: 
       edges: []
@@ -239,7 +339,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: c12e7b0a227413448bf6ffcbdb3eb0a8
+    spriteID: fe7df48fe3a1fee4796ba7e3aeb39200
     internalID: 0
     vertices: []
     indices: 
@@ -249,10 +349,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Character Idle_0: -2900687359988121822
-      Character Idle_1: -5099688591880338989
-      Character Idle_2: -4813545638323437427
-      Character Idle_3: 7420777217735685765
+      PistolAngles_0: -8129750756456199198
+      PistolAngles_1: 2145308835783112592
+      PistolAngles_2: 5142306684878380942
+      PistolAngles_3: 3869749869519819277
+      PistolAngles_4: -5617507707054279061
+      PistolAngles_5: -6511451919574361918
+      PistolAngles_6: -1875200350769007513
+      PistolAngles_7: 7254899781794254911
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

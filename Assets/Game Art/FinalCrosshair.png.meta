@@ -1,19 +1,10 @@
 fileFormatVersion: 2
-guid: 5b804c1d7b0de834986fd49e57d6eac4
+guid: 262db8bf77625fd42890ea0d21628939
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2900687359988121822
-    second: Character Idle_0
-  - first:
-      213: -5099688591880338989
-    second: Character Idle_1
-  - first:
-      213: -4813545638323437427
-    second: Character Idle_2
-  - first:
-      213: 7420777217735685765
-    second: Character Idle_3
+      213: -4019029821926490063
+    second: FinalCrosshair_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -148,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Character Idle_0
+      name: FinalCrosshair_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 32
-        height: 32
+        x: 22
+        y: 30
+        width: 67
+        height: 67
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,74 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 22f317fe630beb7d0800000000000000
-      internalID: -2900687359988121822
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Character Idle_1
-      rect:
-        serializedVersion: 2
-        x: 33
-        y: 0
-        width: 31
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3d14cd7be344a39b0800000000000000
-      internalID: -5099688591880338989
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Character Idle_2
-      rect:
-        serializedVersion: 2
-        x: 65
-        y: 0
-        width: 31
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d80c995ceb9d23db0800000000000000
-      internalID: -4813545638323437427
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Character Idle_3
-      rect:
-        serializedVersion: 2
-        x: 97
-        y: 0
-        width: 31
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 58672740095ebf660800000000000000
-      internalID: 7420777217735685765
+      spriteID: 130ce52bba98938c0800000000000000
+      internalID: -4019029821926490063
       vertices: []
       indices: 
       edges: []
@@ -239,7 +164,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: c12e7b0a227413448bf6ffcbdb3eb0a8
+    spriteID: 2c8fa8bb8ce8d5f42b8a04d972337298
     internalID: 0
     vertices: []
     indices: 
@@ -249,10 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Character Idle_0: -2900687359988121822
-      Character Idle_1: -5099688591880338989
-      Character Idle_2: -4813545638323437427
-      Character Idle_3: 7420777217735685765
+      FinalCrosshair_0: -4019029821926490063
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

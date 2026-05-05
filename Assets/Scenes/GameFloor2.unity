@@ -1705,9 +1705,9 @@ MonoBehaviour:
   m_ComponentVersion: 2
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.596
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 3.51
+  m_FalloffIntensity: 0.39
+  m_Color: {r: 0.9254902, g: 0.7490196, b: 0.4117647, a: 1}
+  m_Intensity: 3.2
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
   m_ApplyToSortingLayers: 000000008bf3e755
@@ -1731,7 +1731,7 @@ MonoBehaviour:
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
-  m_PointLightOuterRadius: 7.09
+  m_PointLightOuterRadius: 2.5
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
@@ -2164,7 +2164,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 50
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 3249536345133783737, guid: ae16d3d8bdbab4e4aacfa83f1d3128fd, type: 3}
+  m_Sprite: {fileID: -4019029821926490063, guid: 262db8bf77625fd42890ea0d21628939, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

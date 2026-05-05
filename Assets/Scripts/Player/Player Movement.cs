@@ -9,9 +9,12 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private Rigidbody2D _rigidbody;
 
+    private bool isRunning = false;
     private Vector2 _movementInput;
     private Vector2 _smoothedMovementInput;
     private Vector2 movementInputSmoothVelocity;
+
+    [SerializeField] private Animator animator;
 
     public GameObject MainCamera;
 
@@ -22,6 +25,17 @@ public class PlayerMovement : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody2D>();
     }
 
+    void Update()
+    {
+        if (_movementInput.magnitude > 0)
+        {
+            animator.SetBool("IsRunning", true);
+        }
+        else
+        {
+            animator.SetBool("IsRunning", false);
+        }
+    }
     private void FixedUpdate()
     {
         SetPlayerVelocity();
@@ -42,6 +56,7 @@ public class PlayerMovement : MonoBehaviour
     private void OnMove(InputValue inputValue)
     {
         _movementInput = inputValue.Get<Vector2>();
+
     }
 
     public void IncreaseSpeed(float speedAmount)
