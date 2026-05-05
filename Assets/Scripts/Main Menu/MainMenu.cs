@@ -3,10 +3,12 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    
+
     public void PlayGame()
     {
-        GameManager.instance.ResetRun();
+        if (GameManager.instance != null)
+            GameManager.instance.ResetRun();
+
         if (MusicManager.instance != null)
             MusicManager.instance.RestartMusic();
 
