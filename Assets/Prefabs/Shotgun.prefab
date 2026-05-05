@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3962068010670276052}
   - component: {fileID: 7040469292293335811}
   - component: {fileID: 2676273180668075818}
+  - component: {fileID: 3571256744103570483}
   m_Layer: 6
   m_Name: Shotgun
   m_TagString: Untagged
@@ -27,8 +28,8 @@ Transform:
   m_GameObject: {fileID: 6338035749537995973}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.9, z: 1}
+  m_LocalPosition: {x: 2, y: 0, z: 0}
+  m_LocalScale: {x: 8, y: 8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 793450176082932158}
@@ -83,8 +84,8 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 3
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.2679245, g: 0.21031958, b: 0.17541471, a: 1}
+  m_Sprite: {fileID: -2597317002392243155, guid: 8d26c544dc40690409c938afbcb26207, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -110,6 +111,41 @@ MonoBehaviour:
   pelletsPerShot: 5
   spreadAngle: 30
   fireRate: 1
+--- !u!114 &3571256744103570483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6338035749537995973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb5d8ad5c72d80644b03150363abb2f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WeaponDirectionManager
+  gunSpriteRenderer: {fileID: 7040469292293335811}
+  firePoint: {fileID: 793450176082932158}
+  angleSprites:
+  - {fileID: -2597317002392243155, guid: 8d26c544dc40690409c938afbcb26207, type: 3}
+  - {fileID: 8546541645251098688, guid: 8d26c544dc40690409c938afbcb26207, type: 3}
+  - {fileID: -846586676141412860, guid: 8d26c544dc40690409c938afbcb26207, type: 3}
+  - {fileID: 8267091798090615612, guid: 8d26c544dc40690409c938afbcb26207, type: 3}
+  - {fileID: 4320870585564303630, guid: 8d26c544dc40690409c938afbcb26207, type: 3}
+  - {fileID: -1937356434709511227, guid: 8d26c544dc40690409c938afbcb26207, type: 3}
+  - {fileID: 1473816221131986392, guid: 8d26c544dc40690409c938afbcb26207, type: 3}
+  - {fileID: -1516459012515495203, guid: 8d26c544dc40690409c938afbcb26207, type: 3}
+  weaponOrbitRadius: 0.8
+  firePointPositions:
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  sortingOrderFront: 55
+  sortingOrderBehind: 5
 --- !u!1 &8718799277022880016
 GameObject:
   m_ObjectHideFlags: 0

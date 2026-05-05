@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5895701457378100083}
   - component: {fileID: 3519007395874044087}
   - component: {fileID: 6732624150547667195}
+  - component: {fileID: 6081692904985354301}
   m_Layer: 6
   m_Name: Pistol
   m_TagString: Untagged
@@ -26,9 +27,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7667618629798454332}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.4649805, z: 0}
-  m_LocalScale: {x: 0.1166075, y: 0.38054013, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 8, y: 8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 869048001795448887}
@@ -83,8 +84,8 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 3
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: -5535809179998094845, guid: a4c64d9cc1f9e124785990d23066e977, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -108,6 +109,41 @@ MonoBehaviour:
   firePoint: {fileID: 869048001795448887}
   bulletPrefab: {fileID: 4925235700993090593, guid: b2f8aa71631cf8344bc7b7eea760f5e5, type: 3}
   fireRate: 2
+--- !u!114 &6081692904985354301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7667618629798454332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb5d8ad5c72d80644b03150363abb2f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WeaponDirectionManager
+  gunSpriteRenderer: {fileID: 3519007395874044087}
+  firePoint: {fileID: 869048001795448887}
+  angleSprites:
+  - {fileID: -5535809179998094845, guid: a4c64d9cc1f9e124785990d23066e977, type: 3}
+  - {fileID: -48329605589965235, guid: a4c64d9cc1f9e124785990d23066e977, type: 3}
+  - {fileID: 829214603470141731, guid: a4c64d9cc1f9e124785990d23066e977, type: 3}
+  - {fileID: 2359728803907520363, guid: a4c64d9cc1f9e124785990d23066e977, type: 3}
+  - {fileID: 4913054604394892030, guid: a4c64d9cc1f9e124785990d23066e977, type: 3}
+  - {fileID: -2517199944408611882, guid: a4c64d9cc1f9e124785990d23066e977, type: 3}
+  - {fileID: 1042033514830901606, guid: a4c64d9cc1f9e124785990d23066e977, type: 3}
+  - {fileID: -7317262085695168161, guid: a4c64d9cc1f9e124785990d23066e977, type: 3}
+  weaponOrbitRadius: 1
+  firePointPositions:
+  - {x: 0.075, y: 0.025}
+  - {x: 0.055, y: 0.07}
+  - {x: -0.03, y: 0.09}
+  - {x: -0.055, y: 0.07}
+  - {x: -0.075, y: 0.025}
+  - {x: -0.07, y: -0.055}
+  - {x: -0.03, y: -0.09}
+  - {x: 0.07, y: -0.055}
+  sortingOrderFront: 55
+  sortingOrderBehind: 5
 --- !u!1 &8322188886976125611
 GameObject:
   m_ObjectHideFlags: 0
@@ -133,7 +169,7 @@ Transform:
   m_GameObject: {fileID: 8322188886976125611}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.71234685, w: 0.70182765}
-  m_LocalPosition: {x: 0, y: 1.46, z: 0}
+  m_LocalPosition: {x: 0.0622, y: 0.0229, z: 0}
   m_LocalScale: {x: 6, y: 6, z: -23.321533}
   m_ConstrainProportionsScale: 0
   m_Children: []
