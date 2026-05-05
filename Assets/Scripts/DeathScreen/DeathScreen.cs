@@ -15,6 +15,9 @@ public class DeathScreen : MonoBehaviour
     {
 
         GameManager.instance.ResetRun();
+        if (MusicManager.instance != null)
+            MusicManager.instance.RestartMusic();
+
         SceneManager.LoadScene("GameFloor1");
     }
 

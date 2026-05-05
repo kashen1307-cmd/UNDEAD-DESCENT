@@ -8,6 +8,13 @@ public class Firing : MonoBehaviour
     public float fireRate = 5f; // bullets per second
     private float nextFireTime = 0f;
 
+    [SerializeField] 
+    private AudioSource gunAudio;
+
+    [SerializeField]
+    private AudioClip gunshotClip;
+
+
     void Update()
     {
         if (Input.GetButton("Fire1") && Time.time >= nextFireTime)
@@ -20,5 +27,7 @@ public class Firing : MonoBehaviour
     void Shoot()
     {
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        gunAudio.pitch = Random.Range(0.95f, 1.05f);
+        gunAudio.PlayOneShot(gunshotClip);
     }
 }

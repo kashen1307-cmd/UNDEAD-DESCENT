@@ -36,6 +36,19 @@ public class SpitterMovement : MonoBehaviour
             firePoint.localPosition.z
         );
     }
+
+    void Start()
+    {
+        AudioSource audio = GetComponent<AudioSource>();
+
+        audio.pitch = Random.Range(0.85f, 1.15f);
+        audio.volume = Random.Range(0.3f, 0.6f);
+
+        audio.loop = true;
+        audio.Play();
+    }
+
+
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();

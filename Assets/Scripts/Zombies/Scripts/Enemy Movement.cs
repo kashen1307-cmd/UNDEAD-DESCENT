@@ -48,7 +48,13 @@ public class EnemyMovement : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        AudioSource audio = GetComponent<AudioSource>();
+
+        audio.pitch = Random.Range(0.85f, 1.15f);
+        audio.volume = Random.Range(0.3f, 0.6f);
+
+        audio.loop = true;
+        audio.Play();
     }
 
     private void FixedUpdate()

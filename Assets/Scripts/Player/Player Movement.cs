@@ -9,6 +9,19 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private Rigidbody2D _rigidbody;
 
+    [SerializeField] 
+    private AudioSource footstepAudio;
+
+    [SerializeField] 
+    private AudioClip footstepClip;
+
+    [SerializeField] 
+    private float stepInterval = 0.4f;
+
+    private bool wasMoving = false;
+
+    private float stepTimer;
+
     private bool isRunning = false;
     private Vector2 _movementInput;
     private Vector2 _smoothedMovementInput;
@@ -25,16 +38,32 @@ public class PlayerMovement : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody2D>();
     }
 
+    
+
     void Update()
     {
-        if (_movementInput.magnitude > 0)
+        animator.SetBool("IsRunning", _movementInput.magnitude > 0.1f);
+
+        bool isMoving = _movementInput.magnitude > 0.1f;
+
+        if (isMoving)
         {
-            animator.SetBool("IsRunning", true);
+            if (!footstepAudio.isPlaying)
+            {
+                footstepAudio.clip = footstepClip;
+                footstepAudio.loop = true;
+                footstepAudio.Play();
+            }
         }
         else
         {
-            animator.SetBool("IsRunning", false);
+            if (footstepAudio.isPlaying)
+            {
+                footstepAudio.Stop();
+            }
         }
+
+        wasMoving = isMoving;
     }
     private void FixedUpdate()
     {
@@ -50,7 +79,11 @@ public class PlayerMovement : MonoBehaviour
                     0.1f);
 
         _rigidbody.linearVelocity = _smoothedMovementInput * _speed; ;
+
+        
     }
+
+
 
 
     private void OnMove(InputValue inputValue)
