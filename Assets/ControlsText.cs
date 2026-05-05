@@ -2,11 +2,11 @@ using UnityEngine;
 using TMPro;
 using System.Collections;
 
-public class IntroText : MonoBehaviour
-   
+public class ControlsText : MonoBehaviour
+
 {
     public GameObject textObject;
-    
+
     public float displayTime = 3f;
 
     void Start()

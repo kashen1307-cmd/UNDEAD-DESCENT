@@ -23,11 +23,16 @@ public class Firing : MonoBehaviour
             nextFireTime = Time.time + 1f / fireRate;
         }
     }
+    void StopGunSound()
+    {
+        gunAudio.Stop();
+    }
 
     void Shoot()
     {
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-        gunAudio.pitch = Random.Range(0.95f, 1.05f);
-        gunAudio.PlayOneShot(gunshotClip);
+        gunAudio.clip = gunshotClip;
+        gunAudio.Play();
+        Invoke(nameof(StopGunSound), 0.5f);
     }
 }

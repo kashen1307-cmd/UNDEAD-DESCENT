@@ -9,30 +9,30 @@ public class VendingMachine : MonoBehaviour
 
     void Update()
     {
-        if (isPlayerInRange && Input.GetKeyDown(KeyCode.E))
-        {
-            bool isShopOpen = shopUI.activeSelf;
-            shopUI.SetActive(!isShopOpen);
+        if (!isPlayerInRange) return;
 
-            if (!isShopOpen)
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (!shopUI.activeSelf)
             {
+                // OPEN SHOP
+                shopUI.SetActive(true);
+
+                Time.timeScale = 0f;
+
                 Cursor.visible = true;
                 Cursor.lockState = CursorLockMode.None;
             }
             else
             {
+                // CLOSE SHOP
+                shopUI.SetActive(false);
+
+                Time.timeScale = 1f;
+
                 Cursor.visible = false;
                 Cursor.lockState = CursorLockMode.Confined;
             }
-            
-            // NEW: Hide the prompt if the shop opens. Show it if they close the shop with E.
-            if (interactPrompt != null)
-            {
-                interactPrompt.SetActive(isShopOpen); 
-            }
-            
-            // Pause/Unpause
-            Time.timeScale = isShopOpen ? 1f : 0f;
         }
     }
 

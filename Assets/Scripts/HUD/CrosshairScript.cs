@@ -25,4 +25,9 @@ public class CrosshairScript : MonoBehaviour
             transform.position = mousePos;
         }
     }
+    void OnDisable()
+    {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+    }
 }
