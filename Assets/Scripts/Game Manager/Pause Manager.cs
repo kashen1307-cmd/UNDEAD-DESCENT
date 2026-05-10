@@ -37,12 +37,19 @@ public class PauseManager : MonoBehaviour
         pauseMenuUI.SetActive(true);  // Show the menu
         Time.timeScale = 0f;          // Freeze time perfectly to 0
         isPaused = true;
+
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
 
     // Must be 'public' so our buttons can click it!
     public void QuitGame()
     {
-        Debug.Log("Quitting game"); // This prints in the editor so you know it works
+        Debug.Log("Quitting game"); 
+        
+        Time.timeScale = 1f; 
+        isPaused = false;  
+        pauseMenuUI.SetActive(false);
         SceneManager.LoadScene("Main Menu");           // This actually closes the game when you build the .exe!
     
     }
