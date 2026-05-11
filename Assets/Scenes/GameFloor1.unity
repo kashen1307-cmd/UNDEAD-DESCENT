@@ -1333,134 +1333,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HealthbarUI
   _healthBarForegroundImage: {fileID: 1889585707}
---- !u!1 &395857102
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 395857104}
-  - component: {fileID: 395857103}
-  - component: {fileID: 395857105}
-  m_Layer: 0
-  m_Name: 'Keep zombies in level when level not active '
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!68 &395857103
-EdgeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 395857102}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
-  m_Points:
-  - {x: 0.5476904, y: -16.084328}
-  - {x: 1.0511932, y: -16.111042}
-  - {x: -1.4647884, y: -16.093365}
-  - {x: -3.832779, y: -16.087305}
-  - {x: -6.7885475, y: -16.094381}
-  - {x: -6.809681, y: 12.087696}
-  - {x: 1.1546326, y: 12.140329}
-  - {x: 1.1305084, y: 13.896011}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
---- !u!4 &395857104
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 395857102}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 22.28263, y: 10.17112, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!68 &395857105
-EdgeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 395857102}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
-  m_Points:
-  - {x: 3.0315475, y: -16.191252}
-  - {x: 11.184425, y: -16.191252}
-  - {x: 11.134409, y: 12.10741}
-  - {x: 3.1441956, y: 12.125677}
-  - {x: 3.136692, y: 13.968999}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
 --- !u!1 &415160806
 GameObject:
   m_ObjectHideFlags: 0
@@ -3246,7 +3118,7 @@ Transform:
   m_GameObject: {fileID: 913005472}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.035, y: 2.56, z: 0}
+  m_LocalPosition: {x: 0.006, y: 0.364, z: 0}
   m_LocalScale: {x: 0.044919144, y: 0.12778115, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5255,7 +5127,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1418331723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7475,7 +7347,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 1, b: 0.061501026, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -8950,11 +8822,11 @@ PrefabInstance:
       objectReference: {fileID: 6005769688435824881, guid: 4597b9e92b6a0244daf38c980d323b5d, type: 3}
     - target: {fileID: 4623430279687494252, guid: 5d49cd91776f9a245aae30034fa83464, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.42
+      value: -0.29
       objectReference: {fileID: 0}
     - target: {fileID: 4623430279687494252, guid: 5d49cd91776f9a245aae30034fa83464, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.91
+      value: -0.52
       objectReference: {fileID: 0}
     - target: {fileID: 4623430279687494252, guid: 5d49cd91776f9a245aae30034fa83464, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9231,6 +9103,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1862721240856685652, guid: d5f3e349806fb0e4f9f37f5676dc10ef, type: 3}
+      propertyPath: maxHealth
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1862721240856685652, guid: d5f3e349806fb0e4f9f37f5676dc10ef, type: 3}
+      propertyPath: playerHealth
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 2719311866171603067, guid: d5f3e349806fb0e4f9f37f5676dc10ef, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.36495
@@ -9433,6 +9313,14 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: -0.023981482
       objectReference: {fileID: 0}
+    - target: {fileID: 8725994197397896631, guid: 4597b9e92b6a0244daf38c980d323b5d, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8725994197397896631, guid: 4597b9e92b6a0244daf38c980d323b5d, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9458,7 +9346,6 @@ SceneRoots:
   - {fileID: 1013755158}
   - {fileID: 1088684826}
   - {fileID: 2097876882}
-  - {fileID: 395857104}
   - {fileID: 8059578861501580003}
   - {fileID: 8897822599938561408}
   - {fileID: 988263576}

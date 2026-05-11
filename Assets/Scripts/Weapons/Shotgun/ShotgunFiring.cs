@@ -9,6 +9,12 @@ public class ShotgunFiring : MonoBehaviour
     public float spreadAngle = 30f; // Total spread angle in degrees
     public float fireRate = 1f; // Time between shots in seconds
 
+    [SerializeField]
+    private AudioSource gunAudio;
+
+    [SerializeField]
+    private AudioClip gunshotClip;
+
     private float nextFireTime = 0f;
      
     void Update()
@@ -24,6 +30,11 @@ public class ShotgunFiring : MonoBehaviour
         }
     }
 
+    void StopGunSound()
+    {
+        gunAudio.Stop();
+    }
+
     void Shoot()
     {
         float angleStep = spreadAngle / (pelletsPerShot - 1);
@@ -35,5 +46,8 @@ public class ShotgunFiring : MonoBehaviour
             Quaternion rotation = firePoint.rotation * Quaternion.Euler(0, 0, currentAngle);
             Instantiate(bulletPrefab, firePoint.position, rotation);
         }
+        gunAudio.clip = gunshotClip;
+        gunAudio.Play();
+        Invoke(nameof(StopGunSound), 0.5f);
     }
 }
