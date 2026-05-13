@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00666edabdbe2af479c13c7d724ad7a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WeaponPickup
-  handWeaponPrefab: {fileID: 6338035749537995973, guid: 5b3fbdec4c402484883c2683ac0019f5, type: 3}
+  handWeaponPrefab: {fileID: 8299195375914859666, guid: 1511c916363636949a6db3a415245f78, type: 3}
   myPickupPrefab: {fileID: 3168093674693564188}
   interactPrompt: {fileID: 5835832616024499775}
 --- !u!1 &5835832616024499775
