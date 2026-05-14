@@ -137,6 +137,7 @@ MonoBehaviour:
   stepInterval: 0.4
   animator: {fileID: -8355509935639095874}
   MainCamera: {fileID: 0}
+  dashScript: {fileID: 0}
 --- !u!114 &2966999989448039558
 MonoBehaviour:
   m_ObjectHideFlags: 0

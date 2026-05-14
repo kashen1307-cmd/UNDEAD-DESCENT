@@ -31,7 +31,7 @@ public class PlayerMovement : MonoBehaviour
 
     public GameObject MainCamera;
 
-
+    public PlayerDash dashScript;
 
     private void Awake()
     {
@@ -67,7 +67,14 @@ public class PlayerMovement : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        SetPlayerVelocity();
+        if (dashScript != null && dashScript.isDashing == false)
+        {
+            SetPlayerVelocity();
+        }
+        else if (dashScript == null)
+        {
+            SetPlayerVelocity();
+        }
     }
 
     private void SetPlayerVelocity()
@@ -78,7 +85,7 @@ public class PlayerMovement : MonoBehaviour
                     ref movementInputSmoothVelocity,
                     0.1f);
 
-        _rigidbody.linearVelocity = _smoothedMovementInput * _speed; ;
+        _rigidbody.linearVelocity = _smoothedMovementInput * _speed; 
 
         
     }
