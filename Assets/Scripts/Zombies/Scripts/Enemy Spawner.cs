@@ -5,9 +5,6 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] 
     private GameObject[] enemyPrefabs;
 
-    [SerializeField] 
-    private bool spawnsSpitters;
-
     [SerializeField]
     private float _minimumSpawnTime;
 
@@ -21,6 +18,18 @@ public class EnemySpawner : MonoBehaviour
     private int _maxTotalEnemies = 15;
 
     
+
+    [SerializeField] 
+    private int zombieHealth = 3;
+
+   
+
+    [SerializeField] 
+    private int spitterHealth = 2;
+
+    
+
+
 
 
     private int _totalSpawned = 0;
@@ -44,9 +53,24 @@ public class EnemySpawner : MonoBehaviour
         {
             GameObject prefabToSpawn = enemyPrefabs[Random.Range(0, enemyPrefabs.Length)];
 
-            GameObject enemy = Instantiate(prefabToSpawn, transform.position, Quaternion.identity); ;
+            GameObject enemy = Instantiate(prefabToSpawn, transform.position, Quaternion.identity);
 
-            
+            EnemyHealth health = enemy.GetComponent<EnemyHealth>();
+
+            // Normal zombie
+            if (enemy.GetComponent<EnemyMovement>() != null)
+            {
+                health.SetHealth(zombieHealth);
+            }
+
+            // Spitter zombie
+            if (enemy.GetComponent<SpitterMovement>() != null)
+            {
+                health.SetHealth(spitterHealth);
+            }
+
+
+
 
 
             _totalSpawned++;

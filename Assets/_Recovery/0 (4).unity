@@ -8822,11 +8822,11 @@ PrefabInstance:
       objectReference: {fileID: 6005769688435824881, guid: 4597b9e92b6a0244daf38c980d323b5d, type: 3}
     - target: {fileID: 4623430279687494252, guid: 5d49cd91776f9a245aae30034fa83464, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.17
+      value: -0.29
       objectReference: {fileID: 0}
     - target: {fileID: 4623430279687494252, guid: 5d49cd91776f9a245aae30034fa83464, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.6
+      value: -0.52
       objectReference: {fileID: 0}
     - target: {fileID: 4623430279687494252, guid: 5d49cd91776f9a245aae30034fa83464, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8873,17 +8873,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4245750266619416390}
     - target: {fileID: 6041070903233537207, guid: 5d49cd91776f9a245aae30034fa83464, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6041070903233537207, guid: 5d49cd91776f9a245aae30034fa83464, type: 3}
       propertyPath: MainCamera
       value: 
       objectReference: {fileID: 519420028}
-    - target: {fileID: 6041070903233537207, guid: 5d49cd91776f9a245aae30034fa83464, type: 3}
-      propertyPath: dashScript
-      value: 
-      objectReference: {fileID: 4245750266619416426}
     - target: {fileID: 6041070903233537207, guid: 5d49cd91776f9a245aae30034fa83464, type: 3}
       propertyPath: footstepClip
       value: 
@@ -8914,9 +8906,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1298551685259722191, guid: 5d49cd91776f9a245aae30034fa83464, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4245750266619416401}
-    - targetCorrespondingSourceObject: {fileID: 1298551685259722191, guid: 5d49cd91776f9a245aae30034fa83464, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 4245750266619416426}
   m_SourcePrefab: {fileID: 100100000, guid: 5d49cd91776f9a245aae30034fa83464, type: 3}
 --- !u!4 &4245750266619416388 stripped
 Transform:
@@ -9025,23 +9014,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &4245750266619416426
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1342897670}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f5b1f3246ef8a9448c970f56e8d4066, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerDash
-  dashForce: 20
-  dashDuration: 0.2
-  dashCooldown: 0.5
-  dashInput: {fileID: -205058219361099194, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
-  isDashing: 0
 --- !u!1001 &5545823163452009405
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9182,10 +9154,6 @@ PrefabInstance:
     - target: {fileID: 7826602537463630428, guid: d5f3e349806fb0e4f9f37f5676dc10ef, type: 3}
       propertyPath: m_Name
       value: Game Manager
-      objectReference: {fileID: 0}
-    - target: {fileID: 7989628291393709184, guid: d5f3e349806fb0e4f9f37f5676dc10ef, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

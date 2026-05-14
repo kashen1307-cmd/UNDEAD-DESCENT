@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
 
     public void ResetRun()
     {
-        playerHealth = playerHealth;
+        playerHealth = maxHealth;
     }
 
     private void Awake()
@@ -31,6 +31,12 @@ public class GameManager : MonoBehaviour
 
         instance = this;
         DontDestroyOnLoad(gameObject);
+
+        // NEW
+        if (playerHealth <= 0)
+        {
+            playerHealth = maxHealth;
+        }
     }
 
     public void OnPlayerDied()

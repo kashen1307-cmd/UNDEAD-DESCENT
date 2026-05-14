@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 2229121283064086148}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.71234685, w: 0.70182765}
-  m_LocalPosition: {x: 0.1372, y: 0.0162, z: 0}
+  m_LocalPosition: {x: 0.2664, y: 0.0231, z: 0}
   m_LocalScale: {x: 6, y: 6, z: -23.321533}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -168,7 +168,7 @@ MonoBehaviour:
   - {fileID: -1937356434709511227, guid: 8d26c544dc40690409c938afbcb26207, type: 3}
   - {fileID: 1473816221131986392, guid: 8d26c544dc40690409c938afbcb26207, type: 3}
   - {fileID: -1516459012515495203, guid: 8d26c544dc40690409c938afbcb26207, type: 3}
-  weaponOrbitRadius: 0.8
+  weaponOrbitRadius: 0.83
   firePointPositions:
   - {x: 0, y: 0}
   - {x: 0, y: 0}

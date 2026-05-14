@@ -44,6 +44,8 @@ public class PlayerHealthController : MonoBehaviour
 
         _maximumHealth = GameManager.instance.maxHealth;
         _currentHealth = GameManager.instance.playerHealth;
+
+        OnHealthChanged.Invoke();
     }
 
 
