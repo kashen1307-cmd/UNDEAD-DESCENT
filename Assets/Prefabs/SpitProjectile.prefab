@@ -179,6 +179,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 861a2e61de8ee364ab14bceaacb115b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpitProjectile
-  damage: 15
+  damage: 10
   speed: 8
   lifetime: 3
