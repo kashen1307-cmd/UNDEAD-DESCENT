@@ -15,8 +15,13 @@ public class Firing : MonoBehaviour
     private AudioClip gunshotClip;
 
 
+
     void Update()
     {
+
+        if (Time.timeScale == 0f)
+            return;
+
         if (Input.GetButton("Fire1") && Time.time >= nextFireTime)
         {
             Shoot();

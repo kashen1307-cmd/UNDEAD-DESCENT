@@ -7,8 +7,10 @@ public class PauseManager : MonoBehaviour
     public static bool isPaused = false;
 
     public GameObject pauseMenuUI;
-    
-// Update is called once per frame
+
+    public GameObject SettingsPanel;
+
+    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -30,6 +32,18 @@ public class PauseManager : MonoBehaviour
         pauseMenuUI.SetActive(false); // Hide the menu
         Time.timeScale = 1f;          // Unfreeze time
         isPaused = false;
+    }
+
+    public void OpenSettings()
+    {
+        SettingsPanel.SetActive(true);
+        pauseMenuUI.SetActive(false);
+    }
+
+    public void CloseSettings()
+    {
+        SettingsPanel.SetActive(false);
+        pauseMenuUI.SetActive(true);
     }
 
     void Pause()
