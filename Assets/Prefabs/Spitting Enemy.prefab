@@ -178,6 +178,7 @@ MonoBehaviour:
   maxDistance: 5
   firePoint: {fileID: 1512500958642930668}
   spriteRenderer: {fileID: 4502055696643944384}
+  isStunned: 0
 --- !u!95 &6423361620889685285
 Animator:
   serializedVersion: 7
@@ -272,6 +273,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
   maxHealth: 2
+  animator: {fileID: 6423361620889685285}
+  movement: {fileID: 1098232094743026643, guid: afa864b6a54d1f340b41fa84a40192fa, type: 3}
 --- !u!82 &1641439647068718537
 AudioSource:
   m_ObjectHideFlags: 0
@@ -281,7 +284,7 @@ AudioSource:
   m_GameObject: {fileID: 6678397693245582774}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: d8d3ff1c01d8e824ea2102e294dd8b95, type: 2}
+  OutputAudioMixerGroup: {fileID: -5287931912839626583, guid: dc6523f4eb79faa4a874bfffdc94e77f, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 621f12f8c06140a4ba960f8f91c8ad35, type: 3}
   m_PlayOnAwake: 1

@@ -21,6 +21,8 @@ public class SpitterMovement : MonoBehaviour
     private Transform player;
     private Rigidbody2D rb;
 
+    public bool isStunned = false;
+
 
 
 
@@ -62,6 +64,8 @@ public class SpitterMovement : MonoBehaviour
     void FixedUpdate()
     {
         if (player == null) return;
+        if (isStunned)
+            return;
 
         Vector2 dir = (player.position - transform.position).normalized;
         float distance = Vector2.Distance(transform.position, player.position);

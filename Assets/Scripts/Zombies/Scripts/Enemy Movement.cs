@@ -7,7 +7,7 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField]
     private float _speed;
 
-    
+    public bool isStunned = false;
 
     private Rigidbody2D _rigidbody;
     private PlayerAwarenessController _playerAwarenessController;
@@ -59,6 +59,8 @@ public class EnemyMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (isStunned)
+            return;
         UpdateTargetDirection();
         SetVelocity();
         UpdateSpriteDirection();

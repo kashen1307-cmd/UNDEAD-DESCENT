@@ -125,6 +125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyMovement
   _speed: 1
+  isStunned: 0
   _spriteRenderer: {fileID: 2238186027867914736}
 --- !u!114 &-4558533562528431350
 MonoBehaviour:
@@ -167,6 +168,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
   maxHealth: 20
+  animator: {fileID: 0}
+  movement: {fileID: -3698305156702009469}
 --- !u!82 &-9121644249003275084
 AudioSource:
   m_ObjectHideFlags: 0
@@ -176,7 +179,7 @@ AudioSource:
   m_GameObject: {fileID: 1158158950495592564}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: d8d3ff1c01d8e824ea2102e294dd8b95, type: 2}
+  OutputAudioMixerGroup: {fileID: -5287931912839626583, guid: dc6523f4eb79faa4a874bfffdc94e77f, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: e2ab99b11528af64f9d15c2837f0a627, type: 3}
   m_PlayOnAwake: 1
