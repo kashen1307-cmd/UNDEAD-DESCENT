@@ -14,7 +14,15 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 1a0a755a7b008504db0a2b6a6fb05aa3, type: 2}
     - target: {fileID: 7741074492376288063, guid: c405530b3dabf984e94296513f9cd277, type: 3}
       propertyPath: m_Name
-      value: 
+      value: SpeedItemPrefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 8806997316735379820, guid: c405530b3dabf984e94296513f9cd277, type: 3}
+      propertyPath: m_Size.x
+      value: 10.3125
+      objectReference: {fileID: 0}
+    - target: {fileID: 8806997316735379820, guid: c405530b3dabf984e94296513f9cd277, type: 3}
+      propertyPath: m_Size.y
+      value: 14.346815
       objectReference: {fileID: 0}
     - target: {fileID: 8806997316735379820, guid: c405530b3dabf984e94296513f9cd277, type: 3}
       propertyPath: m_Sprite
