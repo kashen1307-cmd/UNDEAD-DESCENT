@@ -18,11 +18,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 123680364459094618, guid: ce93e34cc250fa0479637c7dcef0af73, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 0.2
+      value: 0.14
       objectReference: {fileID: 0}
     - target: {fileID: 123680364459094618, guid: ce93e34cc250fa0479637c7dcef0af73, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 0.2
+      value: 0.14
       objectReference: {fileID: 0}
     - target: {fileID: 3168093674693564188, guid: ce93e34cc250fa0479637c7dcef0af73, type: 3}
       propertyPath: m_Name
@@ -38,11 +38,11 @@ PrefabInstance:
       objectReference: {fileID: 7667618629798454332, guid: d0b22569a5da92e4b982e58f46743b3d, type: 3}
     - target: {fileID: 5456684866921988599, guid: ce93e34cc250fa0479637c7dcef0af73, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5456684866921988599, guid: ce93e34cc250fa0479637c7dcef0af73, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5456684866921988599, guid: ce93e34cc250fa0479637c7dcef0af73, type: 3}
       propertyPath: m_LocalScale.z
@@ -88,17 +88,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5835832616024499775, guid: ce93e34cc250fa0479637c7dcef0af73, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6442347068518908353, guid: ce93e34cc250fa0479637c7dcef0af73, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 9194143703153428146, guid: d31d4cb04269c3e47b3636932e83a35c, type: 3}
     - target: {fileID: 6442347068518908353, guid: ce93e34cc250fa0479637c7dcef0af73, type: 3}
       propertyPath: m_Color.b
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6442347068518908353, guid: ce93e34cc250fa0479637c7dcef0af73, type: 3}
       propertyPath: m_Color.g
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6442347068518908353, guid: ce93e34cc250fa0479637c7dcef0af73, type: 3}
       propertyPath: m_Color.r
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8604169547552658058, guid: ce93e34cc250fa0479637c7dcef0af73, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
