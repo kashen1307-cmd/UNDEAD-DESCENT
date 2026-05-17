@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: ec999fd294a403c4cb98087264d0349b
+guid: 2fae00365ffeac2418f3266672d30ec4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 957519441257185924
-    second: WallLayer for game_0
+      213: -7690256947697029909
+    second: Top Wall_0
+  - first:
+      213: -8301002121812991958
+    second: Top Wall_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -75,7 +78,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -101,7 +104,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -114,7 +117,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -127,7 +130,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -139,23 +142,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: WallLayer for game_0
+      name: Top Wall_0
       rect:
         serializedVersion: 2
-        x: 885
-        y: 1658
-        width: 1280
-        height: 108
+        x: 204
+        y: 546
+        width: 259
+        height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4824aa1dbdac94d00800000000000000
-      internalID: 957519441257185924
+      spriteID: bece9010d08b64590800000000000000
+      internalID: -7690256947697029909
       vertices: []
       indices: 
       edges: []
@@ -164,7 +167,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: e9c7e5448cc019642aa8fc71c56977b9
     internalID: 0
     vertices: []
     indices: 
@@ -174,7 +177,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      WallLayer for game_0: 957519441257185924
+      Top Wall_0: -7690256947697029909
+      Top Wall_1: -8301002121812991958
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

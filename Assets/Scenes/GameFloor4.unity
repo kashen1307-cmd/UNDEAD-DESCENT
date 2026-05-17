@@ -6379,9 +6379,9 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: 2.2324443, y: 1.6743848}
-  - {x: 1.0856717, y: 1.675061}
-  - {x: 1.0870935, y: 2.1455636}
+  - {x: 2.1524808, y: 1.7618172}
+  - {x: 1.0877756, y: 1.7603608}
+  - {x: 1.0877949, y: 2.1540933}
   - {x: 2.2463245, y: 2.1545503}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
@@ -6424,8 +6424,8 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: 2.198305, y: 1.8873874}
-  - {x: 2.2131736, y: -2.1493254}
+  - {x: 2.15083, y: 1.7622807}
+  - {x: 2.151155, y: -2.0457573}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
@@ -6467,8 +6467,8 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -0.311661, y: -2.1037045}
-  - {x: 2.2408657, y: -2.0853772}
+  - {x: -0.21125472, y: -2.0457785}
+  - {x: 2.1509457, y: -2.0460513}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
@@ -6510,8 +6510,8 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -0.24339879, y: 1.8777092}
-  - {x: -0.3050716, y: -2.1521463}
+  - {x: -0.21143584, y: 1.7625204}
+  - {x: -0.2106949, y: -2.045594}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
@@ -6553,10 +6553,10 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -0.17172952, y: 1.6741326}
-  - {x: -0.24700016, y: 1.6707104}
-  - {x: 0.8633248, y: 1.6708212}
-  - {x: 0.8661512, y: 2.1534748}
+  - {x: -0.21130261, y: 1.7615522}
+  - {x: -0.18072808, y: 1.7617813}
+  - {x: 0.8592081, y: 1.7614248}
+  - {x: 0.85850596, y: 2.1552632}
   - {x: -0.32368082, y: 2.1614084}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
@@ -6697,9 +6697,9 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 100
+  m_SortingOrder: 51
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 957519441257185924, guid: ec999fd294a403c4cb98087264d0349b, type: 3}
+  m_Sprite: {fileID: -7690256947697029909, guid: 2fae00365ffeac2418f3266672d30ec4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -6718,8 +6718,8 @@ Transform:
   m_GameObject: {fileID: 1219552945}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.129, y: 24.9137, z: 0}
-  m_LocalScale: {x: 1.5506074, y: 1.5014807, z: 1}
+  m_LocalPosition: {x: -0.124, y: 24.9137, z: 0}
+  m_LocalScale: {x: 7.7365203, y: 7.632919, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -8904,14 +8904,14 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 100
+  m_SortingOrder: 20
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 5283077369145400441, guid: b6d15346b855c494c881151b1783ddb1, type: 3}
+  m_Sprite: {fileID: -7690256947697029909, guid: 2fae00365ffeac2418f3266672d30ec4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 82.09375, y: 27.90625}
+  m_Size: {x: 40, y: 3.375}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -8925,7 +8925,7 @@ Transform:
   m_GameObject: {fileID: 1896041310}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.67, y: 26.21, z: 0}
+  m_LocalPosition: {x: -0.124, y: 0, z: 0}
   m_LocalScale: {x: 0.052765593, y: 0.03905568, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
