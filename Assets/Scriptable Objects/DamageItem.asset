@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ac36e058f18f67409dc7f33336cba83, type: 3}
-  m_Name: SpeedItem
+  m_Name: DamageItem
   m_EditorClassIdentifier: Assembly-CSharp::ItemSO
   itemName: 
-  itemDescription: Increses Movment Speed by 2.5
+  itemDescription: Increases Damage by 1
   icon: {fileID: 0}
   isCurrency: 0
   currentHealth: 0
   maxHealth: 0
-  movementSpeed: 2.5
-  damageBonus: 0
+  movementSpeed: 0
+  damageBonus: 1
   reloadSpeed: 0
   duration: 0

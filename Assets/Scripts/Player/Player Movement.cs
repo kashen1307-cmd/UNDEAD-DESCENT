@@ -5,7 +5,7 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField]
     public float _speed;
-
+    public int currentTotalDamage = 1;
     [SerializeField]
     private Rigidbody2D _rigidbody;
 

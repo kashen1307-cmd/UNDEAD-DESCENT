@@ -16,7 +16,14 @@ public class ShotgunFiring : MonoBehaviour
     private AudioClip gunshotClip;
 
     private float nextFireTime = 0f;
+
+    private PlayerMovement playerStats;
      
+    void Start()
+    {   
+        playerStats = FindAnyObjectByType<PlayerMovement>();
+    }
+    
     void Update()
     {
         if (Input.GetButtonDown("Fire1") && Time.time >= nextFireTime)
@@ -44,8 +51,14 @@ public class ShotgunFiring : MonoBehaviour
         {
             float currentAngle = startingAngle + (angleStep * i);
             Quaternion rotation = firePoint.rotation * Quaternion.Euler(0, 0, currentAngle);
-            Instantiate(bulletPrefab, firePoint.position, rotation);
+            GameObject newPellet = Instantiate(bulletPrefab, firePoint.position, rotation);
+            Bullet bulletScript = newPellet.GetComponent<Bullet>();
+            if (bulletScript != null && playerStats != null)
+            {
+                bulletScript.Setup(playerStats.currentTotalDamage);
+            }
         }
+        
         gunAudio.clip = gunshotClip;
         gunAudio.Play();
         Invoke(nameof(StopGunSound), 0.5f);

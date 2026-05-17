@@ -14,7 +14,7 @@ public class ItemSO : ScriptableObject
     public int currentHealth;
     public int maxHealth;
     public float movementSpeed;
-    public float damage;
+    public int damageBonus;
     public float reloadSpeed;
 
     [Header("Temporary Buffs")]

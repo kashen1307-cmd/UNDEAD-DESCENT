@@ -14,8 +14,13 @@ public class Firing : MonoBehaviour
     [SerializeField]
     private AudioClip gunshotClip;
 
+    private PlayerMovement playerStats;
 
-
+    void Start()
+    {
+        playerStats = FindAnyObjectByType<PlayerMovement>();
+    }
+    
     void Update()
     {
 
@@ -35,7 +40,12 @@ public class Firing : MonoBehaviour
 
     void Shoot()
     {
-        Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        GameObject newBullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        Bullet bulletScript = newBullet.GetComponent<Bullet>();
+        if (bulletScript != null && playerStats != null)
+        {
+            bulletScript.Setup(playerStats.currentTotalDamage);
+        }
         gunAudio.clip = gunshotClip;
         gunAudio.Play();
         Invoke(nameof(StopGunSound), 0.5f);

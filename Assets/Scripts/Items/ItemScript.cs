@@ -8,6 +8,8 @@ public class ItemScript : MonoBehaviour
 
     //public int quantity;
 
+    private PlayerMovement playerStats;
+
     private bool isCollected = false;
 
     private void OnValidate()
@@ -74,6 +76,21 @@ public class ItemScript : MonoBehaviour
             else
             {
                 Debug.LogWarning("PlayerMovement not found on the Player!");
+            }
+        }
+
+        if (itemSO.damageBonus != 0)
+        {
+            // We grab the PlayerMovement script because that is where our currentTotalDamage variable lives right now!
+            PlayerMovement playerStats = playerObject.GetComponent<PlayerMovement>();
+            if (playerStats != null)
+            {
+                playerStats.currentTotalDamage += itemSO.damageBonus;
+                Debug.Log("Damage Upgraded! New Damage: " + playerStats.currentTotalDamage);
+            }
+            else
+            {
+                Debug.LogWarning("PlayerMovement not found for Damage Buff!");
             }
         }
     }
