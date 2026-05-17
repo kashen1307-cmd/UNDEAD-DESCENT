@@ -16,6 +16,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageItemPrefab Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 8806997316735379820, guid: c405530b3dabf984e94296513f9cd277, type: 3}
+      propertyPath: m_Size.x
+      value: 0.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 8806997316735379820, guid: c405530b3dabf984e94296513f9cd277, type: 3}
+      propertyPath: m_Size.y
+      value: 0.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 8806997316735379820, guid: c405530b3dabf984e94296513f9cd277, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 2652832817126051637, guid: eae9ace3659c07e40b4c0c2d58e2a0cd, type: 3}
+    - target: {fileID: 8806997316735379820, guid: c405530b3dabf984e94296513f9cd277, type: 3}
+      propertyPath: m_SortingOrder
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8806997316735379820, guid: c405530b3dabf984e94296513f9cd277, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9023653241351695125, guid: c405530b3dabf984e94296513f9cd277, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9023653241351695125, guid: c405530b3dabf984e94296513f9cd277, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 9023653241351695125, guid: c405530b3dabf984e94296513f9cd277, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.2676086

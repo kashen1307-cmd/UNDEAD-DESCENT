@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ItemSO
   itemName: 
   itemDescription: Increses Movment Speed by 2.5
-  icon: {fileID: 0}
+  icon: {fileID: 9216563884979187710, guid: 838f50c05e79ded469069d4bed643e5c, type: 3}
   isCurrency: 0
   currentHealth: 0
   maxHealth: 0

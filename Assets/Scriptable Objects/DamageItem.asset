@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ItemSO
   itemName: 
   itemDescription: Increases Damage by 1
-  icon: {fileID: 0}
+  icon: {fileID: 2652832817126051637, guid: eae9ace3659c07e40b4c0c2d58e2a0cd, type: 3}
   isCurrency: 0
   currentHealth: 0
   maxHealth: 0

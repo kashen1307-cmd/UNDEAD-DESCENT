@@ -8,6 +8,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5649814630857798264, guid: c405530b3dabf984e94296513f9cd277, type: 3}
+      propertyPath: m_Radius
+      value: 0.2653799
+      objectReference: {fileID: 0}
+    - target: {fileID: 5649814630857798264, guid: c405530b3dabf984e94296513f9cd277, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.008973122
+      objectReference: {fileID: 0}
     - target: {fileID: 7110875831567966075, guid: c405530b3dabf984e94296513f9cd277, type: 3}
       propertyPath: itemSO
       value: 
@@ -15,6 +23,14 @@ PrefabInstance:
     - target: {fileID: 7741074492376288063, guid: c405530b3dabf984e94296513f9cd277, type: 3}
       propertyPath: m_Name
       value: SmallHealItemPrefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 8600307739564775621, guid: c405530b3dabf984e94296513f9cd277, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8600307739564775621, guid: c405530b3dabf984e94296513f9cd277, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 8806997316735379820, guid: c405530b3dabf984e94296513f9cd277, type: 3}
       propertyPath: m_Size.x
@@ -27,14 +43,22 @@ PrefabInstance:
     - target: {fileID: 8806997316735379820, guid: c405530b3dabf984e94296513f9cd277, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -6209003286594906732, guid: 3857724dfe09efd4286c1fc591dbb6ff, type: 3}
+      objectReference: {fileID: -4064344591082207688, guid: bdd439043f36a5344acc8f716b5f4d10, type: 3}
+    - target: {fileID: 8806997316735379820, guid: c405530b3dabf984e94296513f9cd277, type: 3}
+      propertyPath: m_SortingOrder
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 8806997316735379820, guid: c405530b3dabf984e94296513f9cd277, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9023653241351695125, guid: c405530b3dabf984e94296513f9cd277, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.64
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9023653241351695125, guid: c405530b3dabf984e94296513f9cd277, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9023653241351695125, guid: c405530b3dabf984e94296513f9cd277, type: 3}
       propertyPath: m_LocalPosition.x

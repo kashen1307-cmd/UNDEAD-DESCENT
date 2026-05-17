@@ -784,6 +784,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1757263491747106733, guid: 5d49cd91776f9a245aae30034fa83464, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 32.5
+      objectReference: {fileID: 0}
     - target: {fileID: 2384916488510680865, guid: 5d49cd91776f9a245aae30034fa83464, type: 3}
       propertyPath: OnDied.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
@@ -840,6 +844,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4964799945178080698, guid: 5d49cd91776f9a245aae30034fa83464, type: 3}
+      propertyPath: m_SortingOrder
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 6041070903233537207, guid: 5d49cd91776f9a245aae30034fa83464, type: 3}
       propertyPath: MainCamera
       value: 
@@ -848,6 +856,10 @@ PrefabInstance:
       propertyPath: dashScript
       value: 
       objectReference: {fileID: 225497612}
+    - target: {fileID: 8747317027595908201, guid: 5d49cd91776f9a245aae30034fa83464, type: 3}
+      propertyPath: m_SortingOrder
+      value: 51
+      objectReference: {fileID: 0}
     - target: {fileID: 9024357554317096041, guid: 5d49cd91776f9a245aae30034fa83464, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1014,7 +1026,7 @@ Transform:
   m_GameObject: {fileID: 254989978}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.307, z: 0}
+  m_LocalPosition: {x: 0, y: -0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1685,7 +1697,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 75
   m_TargetDisplay: 0
 --- !u!224 &342118711
 RectTransform:
@@ -1891,7 +1903,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -209, y: 84}
+  m_AnchoredPosition: {x: -160, y: 75}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &398033577
@@ -3191,7 +3203,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 633325940}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d2990154a7308964481f496eb48b40c7, type: 3}
   m_Name: 
@@ -4919,7 +4931,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 20
   m_MaskInteraction: 0
   m_Sprite: {fileID: 4046794841841233829, guid: 18112d0462f09bd4ab85a695f15f1e99, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -4940,7 +4952,7 @@ Transform:
   m_GameObject: {fileID: 948779356}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.01, y: 0.05, z: 0}
+  m_LocalPosition: {x: 0, y: 0.05, z: 0}
   m_LocalScale: {x: 0.044919144, y: 0.12778115, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9133,15 +9145,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 6155631940585149639, guid: 7698dce4410d81349b433a9f1e6603ba, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -10302,7 +10314,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 225497608}
   - {fileID: 868692883}
-  - {fileID: 342118711}
   - {fileID: 887528605}
   - {fileID: 1430816247}
   - {fileID: 161877897}
@@ -10311,6 +10322,7 @@ SceneRoots:
   - {fileID: 611756540}
   - {fileID: 442359367}
   - {fileID: 633325947}
+  - {fileID: 342118711}
   - {fileID: 816081484}
   - {fileID: 143212052}
   - {fileID: 317844439}

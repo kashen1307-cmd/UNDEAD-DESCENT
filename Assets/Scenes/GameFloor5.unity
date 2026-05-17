@@ -9969,6 +9969,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1757263491747106733, guid: 5d49cd91776f9a245aae30034fa83464, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 32.5
+      objectReference: {fileID: 0}
     - target: {fileID: 2384916488510680865, guid: 5d49cd91776f9a245aae30034fa83464, type: 3}
       propertyPath: OnDied.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
@@ -10033,6 +10037,10 @@ PrefabInstance:
       propertyPath: dashScript
       value: 
       objectReference: {fileID: 2124550455}
+    - target: {fileID: 8747317027595908201, guid: 5d49cd91776f9a245aae30034fa83464, type: 3}
+      propertyPath: m_SortingOrder
+      value: 51
+      objectReference: {fileID: 0}
     - target: {fileID: 9024357554317096041, guid: 5d49cd91776f9a245aae30034fa83464, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

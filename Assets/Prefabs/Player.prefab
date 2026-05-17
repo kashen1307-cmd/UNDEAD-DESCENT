@@ -131,6 +131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   _speed: 7.5
+  currentTotalDamage: 1
   _rigidbody: {fileID: 5890054088092925569}
   footstepAudio: {fileID: -7236298180697992005}
   footstepClip: {fileID: 8300000, guid: b07813d65d61b8544b8917eae610daa3, type: 3}
@@ -376,7 +377,7 @@ MonoBehaviour:
   playerSpriteRenderer: {fileID: 4964799945178080698}
   weaponSocket: {fileID: 5818775216395600212}
   rotateRadius: 1
-  rotateOffset: {x: -0.4, y: 0, z: 0}
+  rotateOffset: {x: 0, y: 0, z: 0}
 --- !u!82 &-7236298180697992005
 AudioSource:
   m_ObjectHideFlags: 0
