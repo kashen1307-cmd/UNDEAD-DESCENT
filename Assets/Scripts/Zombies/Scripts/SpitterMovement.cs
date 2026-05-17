@@ -2,20 +2,20 @@ using UnityEngine;
 
 public class SpitterMovement : MonoBehaviour
 {
-    [SerializeField] 
+    [SerializeField]
     private float speed = 2f;
 
-    [SerializeField] 
+    [SerializeField]
     private float minDistance = 4f;
 
-    [SerializeField] 
+    [SerializeField]
     private float maxDistance = 8f;
 
-    [SerializeField] 
+    [SerializeField]
     private Transform firePoint;
-    
 
-    [SerializeField] 
+
+    [SerializeField]
     private SpriteRenderer spriteRenderer;
 
     private Transform player;
@@ -23,7 +23,7 @@ public class SpitterMovement : MonoBehaviour
 
     public bool isStunned = false;
 
-
+    public bool isDead = false;
 
 
     void UpdateFacing(Vector2 direction)
@@ -63,27 +63,34 @@ public class SpitterMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (player == null) return;
-        if (isStunned)
-            return;
 
-        Vector2 dir = (player.position - transform.position).normalized;
-        float distance = Vector2.Distance(transform.position, player.position);
-
-        if (distance > maxDistance)
-        {
-            rb.linearVelocity = dir * speed;
-        }
-        else if (distance < minDistance)
-        {
-            rb.linearVelocity = -dir * speed;
-        }
-        else
+        if (isDead)
         {
             rb.linearVelocity = Vector2.zero;
-        }
+            return;
+            if (player == null) return;
+            if (isStunned)
+                return;
 
-        UpdateFacing(dir); 
+            Vector2 dir = (player.position - transform.position).normalized;
+            float distance = Vector2.Distance(transform.position, player.position);
+
+            if (distance > maxDistance)
+            {
+                rb.linearVelocity = dir * speed;
+            }
+            else if (distance < minDistance)
+            {
+                rb.linearVelocity = -dir * speed;
+            }
+            else
+            {
+                rb.linearVelocity = Vector2.zero;
+            }
+
+            UpdateFacing(dir);
+
+
+        }
     }
-    
 }

@@ -9,6 +9,8 @@ public class EnemyMovement : MonoBehaviour
 
     public bool isStunned = false;
 
+    public bool isDead = false;
+
     private Rigidbody2D _rigidbody;
     private PlayerAwarenessController _playerAwarenessController;
     private Vector2 _targetDirection;
@@ -59,6 +61,11 @@ public class EnemyMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (isDead)
+        {
+            _rigidbody.linearVelocity = Vector2.zero;
+            return;
+        }
         if (isStunned)
             return;
         UpdateTargetDirection();

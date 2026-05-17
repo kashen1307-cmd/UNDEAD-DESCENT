@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
@@ -27,13 +28,14 @@ public class EnemyHealth : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
-        animator.SetTrigger("Hit");
-        StartCoroutine(HitStun());
 
         if (currentHealth <= 0)
         {
             Die();
+            return;
         }
+
+        animator.SetTrigger("Hit");
     }
 
     private System.Collections.IEnumerator HitStun()
@@ -49,8 +51,22 @@ public class EnemyHealth : MonoBehaviour
 
     void Die()
     {
+        StartCoroutine(DeathRoutine());
+    }
+
+    private IEnumerator DeathRoutine()
+    {
+        EnemyMovement movement = GetComponent<EnemyMovement>();
+
+        if (movement != null)
+            movement.isDead = true;
+
+        animator.SetTrigger("Die");
+
+        yield return new WaitForSeconds(0.5f);
+
         Destroy(gameObject);
     }
 
-    
+
 }

@@ -1126,9 +1126,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8047410342c2bc1418e8ea1903f64f16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioSettings
-  musicSource: {fileID: 0}
+  musicSource: {fileID: 381085804}
   musicSlider: {fileID: 1226394730}
-  audioMixer: {fileID: 0}
+  audioMixer: {fileID: 24100000, guid: dc6523f4eb79faa4a874bfffdc94e77f, type: 2}
+  sfxSlider: {fileID: 1401015493}
 --- !u!114 &279310010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7504,17 +7505,17 @@ MonoBehaviour:
   m_FillRect: {fileID: 989923657}
   m_HandleRect: {fileID: 2060181769}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 1
+  m_MinValue: 0.001
+  m_MaxValue: 1.5
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 0.749
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1940515525}
         m_TargetAssemblyTypeName: AudioSettings, Assembly-CSharp
         m_MethodName: SetSFXVolume
-        m_Mode: 4
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -9497,6 +9498,7 @@ MonoBehaviour:
   musicSource: {fileID: 381085804}
   musicSlider: {fileID: 1401015493}
   audioMixer: {fileID: 24100000, guid: dc6523f4eb79faa4a874bfffdc94e77f, type: 2}
+  sfxSlider: {fileID: 1401015493}
 --- !u!4 &1940515526
 Transform:
   m_ObjectHideFlags: 0
