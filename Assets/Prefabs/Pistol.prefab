@@ -107,9 +107,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b9701716c1ce644cb3433406dbecc98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Firing
+  ammoText: {fileID: 0}
   firePoint: {fileID: 869048001795448887}
   bulletPrefab: {fileID: 4925235700993090593, guid: b2f8aa71631cf8344bc7b7eea760f5e5, type: 3}
   fireRate: 2
+  maxAmmo: 12
+  currentAmmo: 0
+  reloadTime: 2
   gunAudio: {fileID: -6693195097767241568}
   gunshotClip: {fileID: 8300000, guid: 0a591474061cdb14f9df5a14858d3934, type: 3}
 --- !u!114 &6081692904985354301

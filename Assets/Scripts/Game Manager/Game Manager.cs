@@ -10,7 +10,8 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private float _timeToWaitBeforeExit;
 
-
+    public GameObject savedWeaponPrefab;
+    public GameObject savedDropPrefab;
 
 
     public float playerHealth;
@@ -19,6 +20,8 @@ public class GameManager : MonoBehaviour
     public void ResetRun()
     {
         playerHealth = maxHealth;
+        savedWeaponPrefab = null;
+        savedDropPrefab = null;
     }
 
     private void Awake()

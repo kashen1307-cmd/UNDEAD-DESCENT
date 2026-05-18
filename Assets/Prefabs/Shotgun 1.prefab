@@ -143,8 +143,12 @@ MonoBehaviour:
   pelletsPerShot: 5
   spreadAngle: 30
   fireRate: 1
+  maxAmmo: 1
+  currentAmmo: 0
+  reloadTime: 2
   gunAudio: {fileID: 4167051417862038809}
   gunshotClip: {fileID: 8300000, guid: c628742a8c72c28479bebe75c4e8c0f3, type: 3}
+  ammoText: {fileID: 0}
 --- !u!114 &4448482756229155781
 MonoBehaviour:
   m_ObjectHideFlags: 0

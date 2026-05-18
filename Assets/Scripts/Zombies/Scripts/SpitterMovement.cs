@@ -63,34 +63,36 @@ public class SpitterMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-
         if (isDead)
         {
             rb.linearVelocity = Vector2.zero;
             return;
-            if (player == null) return;
-            if (isStunned)
-                return;
-
-            Vector2 dir = (player.position - transform.position).normalized;
-            float distance = Vector2.Distance(transform.position, player.position);
-
-            if (distance > maxDistance)
-            {
-                rb.linearVelocity = dir * speed;
-            }
-            else if (distance < minDistance)
-            {
-                rb.linearVelocity = -dir * speed;
-            }
-            else
-            {
-                rb.linearVelocity = Vector2.zero;
-            }
-
-            UpdateFacing(dir);
-
-
         }
+
+        if (player == null) return;
+
+        if (isStunned)
+        {
+            rb.linearVelocity = Vector2.zero;
+            return;
+        }
+
+        Vector2 dir = (player.position - transform.position).normalized;
+        float distance = Vector2.Distance(transform.position, player.position);
+
+        if (distance > maxDistance)
+        {
+            rb.linearVelocity = dir * speed;
+        }
+        else if (distance < minDistance)
+        {
+            rb.linearVelocity = -dir * speed;
+        }
+        else
+        {
+            rb.linearVelocity = Vector2.zero;
+        }
+
+        UpdateFacing(dir);
     }
 }
