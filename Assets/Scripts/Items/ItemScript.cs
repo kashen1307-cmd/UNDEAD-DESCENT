@@ -93,5 +93,17 @@ public class ItemScript : MonoBehaviour
                 Debug.LogWarning("PlayerMovement not found for Damage Buff!");
             }
         }
+
+        PlayerInventory inventory = playerObject.GetComponent<PlayerInventory>();
+        
+        if (inventory != null)
+        {
+            // Hand the blueprint (ItemSO) over to the backpack to remember it
+            inventory.AddItemToInventory(itemSO); 
+        }
+        else
+        {
+            Debug.LogWarning("PlayerInventory script not found on the Player!");
+        }
     }
 }
