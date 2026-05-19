@@ -38,9 +38,26 @@ public class Firing : MonoBehaviour
 
         currentAmmo = maxAmmo;
 
-        ammoText = GameObject.Find("AmmoText").GetComponent<TMP_Text>();
+        GameObject pistolUI =
+            GameObject.Find("AmmoText");
 
-        UpdateAmmoUI();
+        if (pistolUI != null)
+        {
+            ammoText =
+                pistolUI.GetComponent<TMPro.TMP_Text>();
+
+            pistolUI.SetActive(true);
+
+            UpdateAmmoUI();
+        }
+
+        GameObject shotgunUI =
+            GameObject.Find("AmmoTextShotgun");
+
+        if (shotgunUI != null)
+        {
+            shotgunUI.SetActive(false);
+        }
     }
 
     void UpdateAmmoUI()
@@ -116,5 +133,13 @@ public class Firing : MonoBehaviour
         gunAudio.clip = gunshotClip;
         gunAudio.Play();
         Invoke(nameof(StopGunSound), 0.5f);
+    }
+
+    void OnDestroy()
+    {
+        if (ammoText != null)
+        {
+            ammoText.gameObject.SetActive(false);
+        }
     }
 }

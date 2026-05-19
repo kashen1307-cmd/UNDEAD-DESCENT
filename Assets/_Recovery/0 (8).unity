@@ -9781,7 +9781,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Ammo Count 1/1
+  m_text: 'Ammo count 10/10
+
 
 '
   m_isRightToLeft: 0

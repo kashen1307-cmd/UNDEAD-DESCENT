@@ -13,7 +13,7 @@ public class ShotgunFiring : MonoBehaviour
     public float fireRate = 1f;
 
     [Header("Ammo")]
-    public int maxAmmo = 4;
+    public int maxAmmo = 1;
     public int currentAmmo;
     public float reloadTime = 2f;
     private bool isReloading = false;
@@ -35,7 +35,25 @@ public class ShotgunFiring : MonoBehaviour
 
         currentAmmo = maxAmmo;
 
-        ammoText = GameObject.Find("AmmoTextShotgun").GetComponent<TMP_Text>();
+        GameObject shotgunUI =
+            GameObject.Find("AmmoTextShotgun");
+
+        if (shotgunUI != null)
+        {
+            ammoText =
+                shotgunUI.GetComponent<TMPro.TMP_Text>();
+
+            shotgunUI.SetActive(true);
+            Debug.Log("Shotgun UI turned ON");
+        }
+
+        GameObject pistolUI =
+            GameObject.Find("AmmoText");
+
+        if (pistolUI != null)
+        {
+            pistolUI.SetActive(false);
+        }
 
         UpdateAmmoUI();
     }
@@ -126,5 +144,16 @@ public class ShotgunFiring : MonoBehaviour
 
         Invoke(nameof(StopGunSound), 0.5f);
     }
+
+    void OnDestroy()
+    {
+        Debug.Log("Shotgun Destroyed");
+
+        if (ammoText != null)
+        {
+            ammoText.gameObject.SetActive(false);
+        }
+    }
+
 
 }
