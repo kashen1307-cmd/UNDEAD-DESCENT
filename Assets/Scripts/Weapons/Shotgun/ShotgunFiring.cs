@@ -47,7 +47,7 @@ public class ShotgunFiring : MonoBehaviour
 
             UpdateAmmoUI();
 
-            Debug.Log("Shotgun UI Connected");
+            
         }
 
         GameObject reloadUI =
@@ -58,18 +58,24 @@ public class ShotgunFiring : MonoBehaviour
             reloadText =
                 reloadUI.GetComponent<TMP_Text>();
 
-            reloadText.gameObject.SetActive(false);
+            reloadText.text = "";
         }
     }
 
     void Update()
     {
         FindAmmoUI();
+        FindReloadUI();
         if (Time.timeScale == 0f)
             return;
 
         if (isReloading)
             return;
+
+        if (reloadText != null && currentAmmo > 0)
+        {
+            reloadText.text = "";
+        }
 
         // Manual reload
         if (Input.GetKeyDown(KeyCode.R)
@@ -79,18 +85,18 @@ public class ShotgunFiring : MonoBehaviour
             return;
         }
 
-        // Empty
+        
+        // Empty magazine
         if (currentAmmo <= 0)
         {
-            if (ammoText != null)
-                if (reloadText != null)
-                {
-                    reloadText.gameObject.SetActive(true);
-                    reloadText.text = "Press R to Reload";
-                }
+            if (reloadText != null)
+            {
+                reloadText.text = "Press R to Reload";
+            }
 
             return;
         }
+    
 
         if (Input.GetButtonDown("Fire1")
             && Time.time >= nextFireTime)
@@ -106,8 +112,7 @@ public class ShotgunFiring : MonoBehaviour
 
         if (reloadText != null)
         {
-            reloadText.gameObject.SetActive(true);
-            reloadText.text = "Reloading...";
+            reloadText.text = "";
         }
 
         yield return new WaitForSeconds(reloadTime);
@@ -116,7 +121,34 @@ public class ShotgunFiring : MonoBehaviour
         isReloading = false;
 
         UpdateAmmoUI();
+        if (reloadText != null)
+        {
+            reloadText.text = "";
+            reloadText.transform.SetAsLastSibling();
+            
+        }
     }
+
+    void FindReloadUI()
+    {
+        if (reloadText == null)
+        {
+            GameObject reloadUI =
+                GameObject.Find("ReloadText");
+
+            if (reloadUI != null)
+            {
+                reloadText =
+                    reloadUI.GetComponent<TMP_Text>();
+
+                reloadText.text = "";
+
+                
+            }
+        }
+    }
+
+
 
     void FindAmmoUI()
     {
@@ -132,7 +164,7 @@ public class ShotgunFiring : MonoBehaviour
 
                 UpdateAmmoUI();
 
-                Debug.Log("Shotgun UI Reconnected");
+                
             }
         }
     }
