@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class SpitterAttack : MonoBehaviour
 {
@@ -19,6 +20,8 @@ public class SpitterAttack : MonoBehaviour
 
     private Transform player;
     private float lastAttackTime;
+
+   
 
     void Awake()
     {
@@ -52,5 +55,7 @@ public class SpitterAttack : MonoBehaviour
 
         proj.GetComponent<SpitProjectile>().SetDirection(dir);
     }
+
+    
 }
 

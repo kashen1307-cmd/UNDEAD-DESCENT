@@ -7,6 +7,8 @@ public class Firing : MonoBehaviour
     [Header("Ammo UI")]
     public TMP_Text ammoText;
 
+    public TMP_Text reloadText;
+
     public Transform firePoint;
 
     public GameObject bulletPrefab;
@@ -32,31 +34,35 @@ public class Firing : MonoBehaviour
 
     private PlayerMovement playerStats;
 
+
     void Start()
     {
         playerStats = FindAnyObjectByType<PlayerMovement>();
 
         currentAmmo = maxAmmo;
 
-        GameObject pistolUI =
+        GameObject ammoUI =
             GameObject.Find("AmmoText");
 
-        if (pistolUI != null)
+        if (ammoUI != null)
         {
             ammoText =
-                pistolUI.GetComponent<TMPro.TMP_Text>();
-
-            pistolUI.SetActive(true);
+                ammoUI.GetComponent<TMPro.TMP_Text>();
 
             UpdateAmmoUI();
+
+            Debug.Log("Pistol UI Connected");
         }
 
-        GameObject shotgunUI =
-            GameObject.Find("AmmoTextShotgun");
+         GameObject reloadUI =
+         GameObject.Find("ReloadText");
 
-        if (shotgunUI != null)
+        if (reloadUI != null)
         {
-            shotgunUI.SetActive(false);
+            reloadText =
+                reloadUI.GetComponent<TMP_Text>();
+
+            reloadText.gameObject.SetActive(false);
         }
     }
 
@@ -70,21 +76,37 @@ public class Firing : MonoBehaviour
 
     void Update()
     {
+
+        FindAmmoUI();
         if (Time.timeScale == 0f)
             return;
 
-        // Cannot shoot while reloading
         if (isReloading)
             return;
 
-        // Auto reload when empty
-        if (currentAmmo <= 0)
+        // Manual reload
+        if (Input.GetKeyDown(KeyCode.R)
+            && currentAmmo < maxAmmo)
         {
             StartCoroutine(Reload());
             return;
         }
 
-        if (Input.GetButton("Fire1") && Time.time >= nextFireTime)
+        // Empty magazine
+        if (currentAmmo <= 0)
+        {
+            if (ammoText != null)
+                if (reloadText != null)
+                {
+                    reloadText.gameObject.SetActive(true);
+                    reloadText.text = "Press R to Reload";
+                }
+
+            return;
+        }
+
+        if (Input.GetButton("Fire1")
+            && Time.time >= nextFireTime)
         {
             Shoot();
             nextFireTime = Time.time + 1f / fireRate;
@@ -95,8 +117,11 @@ public class Firing : MonoBehaviour
     {
         isReloading = true;
 
-        if (ammoText != null)
-            ammoText.text = "Reloading...";
+        if (reloadText != null)
+{
+    reloadText.gameObject.SetActive(true);
+    reloadText.text = "Reloading...";
+}
 
         yield return new WaitForSeconds(reloadTime);
 
@@ -104,6 +129,30 @@ public class Firing : MonoBehaviour
         isReloading = false;
 
         UpdateAmmoUI();
+
+        if (reloadText != null)
+        {
+            reloadText.gameObject.SetActive(false);
+        }
+    }
+
+    void FindAmmoUI()
+    {
+        if (ammoText == null)
+        {
+            GameObject ammoUI =
+                GameObject.Find("AmmoText");
+
+            if (ammoUI != null)
+            {
+                ammoText =
+                    ammoUI.GetComponent<TMPro.TMP_Text>();
+
+                UpdateAmmoUI();
+
+                Debug.Log("Pistol UI Reconnected");
+            }
+        }
     }
 
     void StopGunSound()
@@ -135,11 +184,5 @@ public class Firing : MonoBehaviour
         Invoke(nameof(StopGunSound), 0.5f);
     }
 
-    void OnDestroy()
-    {
-        if (ammoText != null)
-        {
-            ammoText.gameObject.SetActive(false);
-        }
-    }
+    
 }

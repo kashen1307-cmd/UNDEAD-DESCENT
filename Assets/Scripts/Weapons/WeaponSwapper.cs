@@ -8,32 +8,11 @@ public class WeaponSwapper : MonoBehaviour
     public GameObject currentDropPrefab;
 
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
+    
+    
         
 
-        if (GameManager.instance.savedWeaponPrefab != null)
-        {
-            // Remove whatever weapon spawned with player
-            if (currentEquippedWeapon != null)
-            {
-                Destroy(currentEquippedWeapon);
-            }
-
-            // Spawn saved weapon
-            currentEquippedWeapon = Instantiate(
-                GameManager.instance.savedWeaponPrefab,
-                weaponSocket.position,
-                weaponSocket.rotation
-            );
-
-            currentEquippedWeapon.transform.SetParent(weaponSocket);
-            currentDropPrefab = GameManager.instance.savedDropPrefab;
-
-            Debug.Log("Equipped = " + currentEquippedWeapon.name);
-        }
-    }
+        
     public void SwapWeapon(GameObject newWeaponPrefab, GameObject newDropPrefab)
     {
         // 1. Drop the old weapon on the floor
@@ -57,8 +36,7 @@ public class WeaponSwapper : MonoBehaviour
         // 4. Update memory so the game knows what to drop next time
         currentDropPrefab = newDropPrefab;
 
-        GameManager.instance.savedWeaponPrefab = newWeaponPrefab;
-        GameManager.instance.savedDropPrefab = newDropPrefab;
+       
 
 
         

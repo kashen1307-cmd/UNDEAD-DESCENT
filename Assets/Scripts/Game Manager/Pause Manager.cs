@@ -3,14 +3,11 @@ using UnityEngine.SceneManagement;
 
 public class PauseManager : MonoBehaviour
 {
-    
     public static bool isPaused = false;
 
     public GameObject pauseMenuUI;
-
     public GameObject SettingsPanel;
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -26,12 +23,17 @@ public class PauseManager : MonoBehaviour
         }
     }
 
-    // Must be 'public' so our buttons can click it!
     public void Resume()
     {
-        pauseMenuUI.SetActive(false); // Hide the menu
-        Time.timeScale = 1f;          // Unfreeze time
+        pauseMenuUI.SetActive(false);
+
+        Time.timeScale = 1f;
+        AudioListener.pause = false;
+
         isPaused = false;
+
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Confined;
     }
 
     public void OpenSettings()
@@ -48,23 +50,27 @@ public class PauseManager : MonoBehaviour
 
     void Pause()
     {
-        pauseMenuUI.SetActive(true);  // Show the menu
-        Time.timeScale = 0f;          // Freeze time perfectly to 0
+        pauseMenuUI.SetActive(true);
+
+        Time.timeScale = 0f;
+        AudioListener.pause = true;
+
         isPaused = true;
 
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
     }
 
-    // Must be 'public' so our buttons can click it!
     public void QuitGame()
     {
-        Debug.Log("Quitting game"); 
-        
-        Time.timeScale = 1f; 
-        isPaused = false;  
+        Debug.Log("Quitting game");
+
+        Time.timeScale = 1f;
+        AudioListener.pause = false;
+
+        isPaused = false;
         pauseMenuUI.SetActive(false);
-        SceneManager.LoadScene("Main Menu");           // This actually closes the game when you build the .exe!
-    
+
+        SceneManager.LoadScene("Main Menu");
     }
 }

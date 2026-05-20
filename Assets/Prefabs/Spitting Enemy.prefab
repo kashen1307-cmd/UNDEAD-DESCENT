@@ -161,6 +161,8 @@ MonoBehaviour:
   attackRange: 5
   cooldown: 1
   animator: {fileID: 6423361620889685285}
+  attackAudio: {fileID: 1641439647068718537}
+  spitAttackClip: {fileID: 8300000, guid: ff03c92117a7c884c8f1c527f5feb7f9, type: 3}
 --- !u!114 &5955381766033501381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179,6 +181,7 @@ MonoBehaviour:
   firePoint: {fileID: 1512500958642930668}
   spriteRenderer: {fileID: 4502055696643944384}
   isStunned: 0
+  isDead: 0
 --- !u!95 &6423361620889685285
 Animator:
   serializedVersion: 7
@@ -286,7 +289,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -5287931912839626583, guid: dc6523f4eb79faa4a874bfffdc94e77f, type: 2}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 621f12f8c06140a4ba960f8f91c8ad35, type: 3}
+  m_Resource: {fileID: 8300000, guid: bdb3a4dfcd0632e40bb89619b8361ddb, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.355
   m_Pitch: 1
