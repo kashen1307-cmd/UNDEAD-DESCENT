@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6732624150547667195}
   - component: {fileID: 6081692904985354301}
   - component: {fileID: -6693195097767241568}
+  - component: {fileID: -7113403281173406230}
   m_Layer: 6
   m_Name: Pistol
   m_TagString: Untagged
@@ -108,6 +109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Firing
   ammoText: {fileID: 0}
+  reloadText: {fileID: 0}
   firePoint: {fileID: 869048001795448887}
   bulletPrefab: {fileID: 4925235700993090593, guid: b2f8aa71631cf8344bc7b7eea760f5e5, type: 3}
   fireRate: 2
@@ -248,6 +250,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-7113403281173406230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7667618629798454332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 066f28af35a392b47bbe47b266659dab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WeaponData
+  floorPickupPrefab: {fileID: 6005769688435824881, guid: 4597b9e92b6a0244daf38c980d323b5d, type: 3}
 --- !u!1 &8322188886976125611
 GameObject:
   m_ObjectHideFlags: 0

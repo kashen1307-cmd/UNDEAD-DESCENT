@@ -281,7 +281,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0469c81a69a37a540bac42bd977a66da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WeaponSwapper
-  weaponSocket: {fileID: 4623430279687494252}
+  weaponSocket: {fileID: 5818775216395600212}
   currentEquippedWeapon: {fileID: 2583494348755888354}
   currentDropPrefab: {fileID: 0}
 --- !u!95 &-8355509935639095874

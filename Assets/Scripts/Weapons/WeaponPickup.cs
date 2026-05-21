@@ -1,13 +1,10 @@
 using UnityEngine;
 
-
-
-
 public class WeaponPickup : MonoBehaviour
 {
 
     public GameObject handWeaponPrefab; // The gun that shoots  new Shotgun prefab)
-    public GameObject myPickupPrefab;   // This exact floor prefab itself
+    
 
     public GameObject interactPrompt; // Optional "Press E to Swap" text    
 
@@ -18,16 +15,25 @@ public class WeaponPickup : MonoBehaviour
 
     void Update()
     {
-        // If player is touching it and hits E
         if (isPlayerInRange && Input.GetKeyDown(KeyCode.E))
         {   
             if (playerSwapper != null)
             {
-                // Tell the player to swap, passing in the hand gun and the floor gun
-                playerSwapper.SwapWeapon(handWeaponPrefab, myPickupPrefab);
-                
-                // Destroy this pickup from the floor
-                Destroy(gameObject); 
+                // 1. Look at the safe, untouched shooting gun asset and grab its data
+                WeaponData data = handWeaponPrefab.GetComponent<WeaponData>();
+
+                if (data != null)
+                {
+                    // 2. Hand the safe blueprints to the player!
+                    playerSwapper.SwapWeapon(handWeaponPrefab, data.floorPickupPrefab);
+                    
+                    // 3. Destroy this floor clone (The memory is now safe!)
+                    Destroy(gameObject); 
+                }
+                else
+                {
+                    Debug.LogError("Hey! " + handWeaponPrefab.name + " is missing the WeaponData script!");
+                }
             }
         }
     }
@@ -39,23 +45,12 @@ public class WeaponPickup : MonoBehaviour
         {
             isPlayerInRange = true;
             playerSwapper = collision.GetComponent<WeaponSwapper>();
-
-            if (playerSwapper != null)
-            {
-                isPlayerInRange = true;
-
-
-
-                if (interactPrompt != null) interactPrompt.SetActive(true);
-            }
-
+            if (interactPrompt != null) interactPrompt.SetActive(true);
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-
-
         if (collision.CompareTag("Player"))
         {
             isPlayerInRange = false;

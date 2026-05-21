@@ -11109,7 +11109,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 2583494348755888354, guid: 5d49cd91776f9a245aae30034fa83464, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 4623430279687494252, guid: 5d49cd91776f9a245aae30034fa83464, type: 3}
       insertIndex: -1
@@ -11305,6 +11306,14 @@ PrefabInstance:
       propertyPath: playerHealth
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 1862721240856685652, guid: d5f3e349806fb0e4f9f37f5676dc10ef, type: 3}
+      propertyPath: 'savedDropPrefabs.Array.data[0]'
+      value: 
+      objectReference: {fileID: 6005769688435824881, guid: 4597b9e92b6a0244daf38c980d323b5d, type: 3}
+    - target: {fileID: 1862721240856685652, guid: d5f3e349806fb0e4f9f37f5676dc10ef, type: 3}
+      propertyPath: 'savedWeaponPrefabs.Array.data[0]'
+      value: 
+      objectReference: {fileID: 7667618629798454332, guid: d0b22569a5da92e4b982e58f46743b3d, type: 3}
     - target: {fileID: 2719311866171603067, guid: d5f3e349806fb0e4f9f37f5676dc10ef, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.40876

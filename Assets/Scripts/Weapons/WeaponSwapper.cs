@@ -4,41 +4,118 @@ public class WeaponSwapper : MonoBehaviour
 {
     
     public Transform weaponSocket;          
-    public GameObject currentEquippedWeapon; 
-    public GameObject currentDropPrefab;
+    public GameObject[] equippedGuns = new GameObject[2]; 
+    public GameObject[] floorPrefabs = new GameObject[2];
 
+    private int currentSlot = 0;
 
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        
+if (GameManager.instance != null)
+        {
+            for (int i = 0; i < 2; i++)
+            {
+                if (GameManager.instance.savedWeaponPrefabs[i] != null)
+                {
+                    // Clear out any default placeholder weapons in the hands
+                    if (i == 0 && equippedGuns[0] != null)
+                    {
+                        Destroy(equippedGuns[0]);
+                    }
+
+                    // Spawn the saved weapon
+                    GameObject spawnedGun = Instantiate(
+                        GameManager.instance.savedWeaponPrefabs[i],
+                        weaponSocket.position,
+                        weaponSocket.rotation
+                    );
+
+                    spawnedGun.transform.SetParent(weaponSocket);
+                    
+                    // Track it
+                    equippedGuns[i] = spawnedGun;
+                    floorPrefabs[i] = GameManager.instance.savedDropPrefabs[i];
+                }
+            }
+        }
+
+        UpdateWeaponVisibility();     
+    }
     
     
-        
-
-        
+    void Update()
+    {
+        // Press Q to switch between primary and secondary
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            ToggleWeaponSlot();
+        }
+    }
+    
     public void SwapWeapon(GameObject newWeaponPrefab, GameObject newDropPrefab)
     {
-        // 1. Drop the old weapon on the floor
-        if (currentDropPrefab != null)
+        if (equippedGuns[0] != null && equippedGuns[1] == null && currentSlot == 0)
         {
-            // Drop it slightly to the side so you don't instantly pick it up again
+            currentSlot = 1;
+        }
+        else if (equippedGuns[1] != null && equippedGuns[0] == null && currentSlot == 1)
+        {
+            currentSlot = 0;
+        }
+
+        // 1. Drop the active weapon onto the floor
+        if (floorPrefabs[currentSlot] != null)
+        {
             Vector3 dropPosition = transform.position + new Vector3(0.2f, -0.2f, 0f);
-            Instantiate(currentDropPrefab, dropPosition, Quaternion.identity);
+            Instantiate(floorPrefabs[currentSlot], dropPosition, Quaternion.identity);
         }
 
-        // 2. Destroy the old weapon from your hands
-        if (currentEquippedWeapon != null)
+        // 2. Delete the old gun from your hands
+        if (equippedGuns[currentSlot] != null)
         {
-            Destroy(currentEquippedWeapon);
+            Destroy(equippedGuns[currentSlot]);
         }
 
-        // 3. Spawn the new weapon and attach it to the player
-        currentEquippedWeapon = Instantiate(newWeaponPrefab, weaponSocket.position, weaponSocket.rotation);
-        currentEquippedWeapon.transform.SetParent(weaponSocket);
+        // 3. Spawn the new gun in your hands
+        GameObject newHandWeapon = Instantiate(newWeaponPrefab, weaponSocket.position, weaponSocket.rotation);
+        newHandWeapon.transform.SetParent(weaponSocket);
 
-        // 4. Update memory so the game knows what to drop next time
-        currentDropPrefab = newDropPrefab;
+        // 4. Update memory slots
+        equippedGuns[currentSlot] = newHandWeapon;
+        floorPrefabs[currentSlot] = newDropPrefab;
 
-       
+        // 5. Save to GameManager so it survives the next floor transition!
+        if (GameManager.instance != null)
+        {
+            GameManager.instance.savedWeaponPrefabs[currentSlot] = newWeaponPrefab;
+            GameManager.instance.savedDropPrefabs[currentSlot] = newDropPrefab;
+        }
 
+        UpdateWeaponVisibility();
+    }
 
-        
+    private void ToggleWeaponSlot()
+    {
+        // Only swap if the other slot actually has a gun in it
+        if (currentSlot == 0 && equippedGuns[1] != null)
+        {
+            currentSlot = 1;
+        }
+        else if (currentSlot == 1 && equippedGuns[0] != null)
+        {
+            currentSlot = 0;
+        }
+
+        UpdateWeaponVisibility();
+    }
+    
+    private void UpdateWeaponVisibility()
+    {
+        // Turn on the gun in the current slot, turn off the other one
+        if (equippedGuns[0] != null) equippedGuns[0].SetActive(currentSlot == 0);
+        if (equippedGuns[1] != null) equippedGuns[1].SetActive(currentSlot == 1);
     }
 }
+    

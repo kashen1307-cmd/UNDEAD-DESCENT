@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 8332815782533426930}
   - component: {fileID: 4448482756229155781}
   - component: {fileID: 4167051417862038809}
+  - component: {fileID: 1373236151772685669}
   m_Layer: 6
   m_Name: Shotgun 1
   m_TagString: Untagged
@@ -149,6 +150,7 @@ MonoBehaviour:
   gunAudio: {fileID: 4167051417862038809}
   gunshotClip: {fileID: 8300000, guid: c628742a8c72c28479bebe75c4e8c0f3, type: 3}
   ammoText: {fileID: 0}
+  reloadText: {fileID: 0}
 --- !u!114 &4448482756229155781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -281,3 +283,16 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1373236151772685669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8299195375914859666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 066f28af35a392b47bbe47b266659dab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WeaponData
+  floorPickupPrefab: {fileID: 3168093674693564188, guid: ce93e34cc250fa0479637c7dcef0af73, type: 3}
