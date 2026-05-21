@@ -22,6 +22,8 @@ public class PlayerMovement : MonoBehaviour
 
     private float stepTimer;
 
+    public bool canMove = true;
+
     private bool isRunning = false;
     private Vector2 _movementInput;
     private Vector2 _smoothedMovementInput;
@@ -44,7 +46,9 @@ public class PlayerMovement : MonoBehaviour
     {
         animator.SetBool("IsRunning", _movementInput.magnitude > 0.1f);
 
-        bool isMoving = _movementInput.magnitude > 0.1f;
+        bool isMoving =
+ canMove &&
+    _movementInput.magnitude > 0.1f;
 
         if (isMoving)
         {
@@ -79,6 +83,14 @@ public class PlayerMovement : MonoBehaviour
 
     private void SetPlayerVelocity()
     {
+
+        if (!canMove)
+        {
+            _rigidbody.linearVelocity = Vector2.zero;
+            return;
+        }
+
+
         _smoothedMovementInput = Vector2.SmoothDamp(
                     _smoothedMovementInput,
                     _movementInput,

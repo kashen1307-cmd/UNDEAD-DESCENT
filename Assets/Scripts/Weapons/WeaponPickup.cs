@@ -16,7 +16,15 @@ public class WeaponPickup : MonoBehaviour
     void Update()
     {
         if (isPlayerInRange && Input.GetKeyDown(KeyCode.E))
-        {   
+        {
+            IntroTutorialManager intro =
+    FindAnyObjectByType<IntroTutorialManager>();
+
+            if (intro != null)
+            {
+                intro.GunPickedUp();
+            }
+
             if (playerSwapper != null)
             {
                 // 1. Look at the safe, untouched shooting gun asset and grab its data

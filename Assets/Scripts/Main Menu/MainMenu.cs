@@ -12,7 +12,7 @@ public class MainMenu : MonoBehaviour
         if (MusicManager.instance != null)
             MusicManager.instance.RestartMusic();
 
-        SceneManager.LoadScene("GameFloor1");
+        SceneManager.LoadScene("StartScene");
     }
 
     public void QuitGame()
