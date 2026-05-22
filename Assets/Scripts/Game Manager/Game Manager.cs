@@ -9,9 +9,15 @@ public class GameManager : MonoBehaviour
 
     [SerializeField]
     private float _timeToWaitBeforeExit;
+
     public float playerHealth;
+
     public float maxHealth = 100f;
+
+    public GameObject defaultPistolPrefab;
+
     public GameObject[] savedWeaponPrefabs = new GameObject[2];
+
     public GameObject[] savedDropPrefabs = new GameObject[2];
 
     public void ResetRun()

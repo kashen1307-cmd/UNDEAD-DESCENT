@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class WeaponSwapper : MonoBehaviour
 {
@@ -12,20 +13,36 @@ public class WeaponSwapper : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
-if (GameManager.instance != null)
+        // Intro scene starts unarmed
+        if (SceneManager.GetActiveScene().name == "StartScene")
+        {
+            if (equippedGuns[0] != null)
+            {
+                Destroy(equippedGuns[0]);
+                equippedGuns[0] = null;
+            }
+
+            if (equippedGuns[1] != null)
+            {
+                Destroy(equippedGuns[1]);
+                equippedGuns[1] = null;
+            }
+
+            return;
+        }
+
+        // Normal weapon loading
+        if (GameManager.instance != null)
         {
             for (int i = 0; i < 2; i++)
             {
                 if (GameManager.instance.savedWeaponPrefabs[i] != null)
                 {
-                    // Clear out any default placeholder weapons in the hands
                     if (i == 0 && equippedGuns[0] != null)
                     {
                         Destroy(equippedGuns[0]);
                     }
 
-                    // Spawn the saved weapon
                     GameObject spawnedGun = Instantiate(
                         GameManager.instance.savedWeaponPrefabs[i],
                         weaponSocket.position,
@@ -33,18 +50,18 @@ if (GameManager.instance != null)
                     );
 
                     spawnedGun.transform.SetParent(weaponSocket);
-                    
-                    // Track it
+
                     equippedGuns[i] = spawnedGun;
-                    floorPrefabs[i] = GameManager.instance.savedDropPrefabs[i];
+                    floorPrefabs[i] =
+                        GameManager.instance.savedDropPrefabs[i];
                 }
             }
         }
 
-        UpdateWeaponVisibility();     
+        UpdateWeaponVisibility();
     }
-    
-    
+
+
     void Update()
     {
         // Press Q to switch between primary and secondary

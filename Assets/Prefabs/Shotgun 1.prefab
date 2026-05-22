@@ -144,7 +144,7 @@ MonoBehaviour:
   pelletsPerShot: 5
   spreadAngle: 30
   fireRate: 1
-  maxAmmo: 1
+  maxAmmo: 2
   currentAmmo: 0
   reloadTime: 2
   gunAudio: {fileID: 4167051417862038809}
@@ -198,7 +198,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: -5287931912839626583, guid: dc6523f4eb79faa4a874bfffdc94e77f, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

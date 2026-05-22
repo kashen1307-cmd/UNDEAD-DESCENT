@@ -62,6 +62,34 @@ public class ShotgunFiring : MonoBehaviour
         }
     }
 
+    void OnEnable()
+    {
+        FindAmmoUI();
+        FindReloadUI();
+
+        UpdateAmmoUI();
+
+        if (reloadText != null)
+        {
+            reloadText.text = "";
+        }
+    }
+
+    void OnDisable()
+    {
+        if (reloadText != null)
+        {
+            reloadText.text = "";
+        }
+
+        CancelInvoke();
+
+        if (gunAudio != null)
+        {
+            gunAudio.Stop();
+        }
+    }
+
     void Update()
     {
         FindAmmoUI();

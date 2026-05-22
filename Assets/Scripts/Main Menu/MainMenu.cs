@@ -8,9 +8,20 @@ public class MainMenu : MonoBehaviour
     {
         if (GameManager.instance != null)
             GameManager.instance.ResetRun();
+        Debug.Log(
+    "Weapon slot 0: " +
+    GameManager.instance.savedWeaponPrefabs[0]
+);
 
         if (MusicManager.instance != null)
             MusicManager.instance.RestartMusic();
+
+        // Destroy leftover persistent player
+        if (KeepPlayerAlive.instance != null)
+        {
+            Destroy(KeepPlayerAlive.instance.gameObject);
+            KeepPlayerAlive.instance = null;
+        }
 
         SceneManager.LoadScene("StartScene");
     }
