@@ -161,8 +161,6 @@ MonoBehaviour:
   attackRange: 5
   cooldown: 1
   animator: {fileID: 6423361620889685285}
-  attackAudio: {fileID: 1641439647068718537}
-  spitAttackClip: {fileID: 8300000, guid: ff03c92117a7c884c8f1c527f5feb7f9, type: 3}
 --- !u!114 &5955381766033501381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -251,7 +249,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 10
   m_MaskInteraction: 0
   m_Sprite: {fileID: -846643717275095823, guid: 4c72b65f0a5e41444bdc95406b6c399c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -276,6 +274,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
   maxHealth: 2
+  coinPrefab: {fileID: 799283753208812504, guid: 2fc3a21e77912d14fb19a45272bfe4c8, type: 3}
+  minCoinsToDrop: 1
+  maxCoinsToDrop: 3
   animator: {fileID: 6423361620889685285}
   movement: {fileID: 1098232094743026643, guid: afa864b6a54d1f340b41fa84a40192fa, type: 3}
 --- !u!82 &1641439647068718537

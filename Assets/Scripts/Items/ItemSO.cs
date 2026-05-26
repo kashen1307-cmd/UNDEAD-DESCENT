@@ -11,11 +11,13 @@ public class ItemSO : ScriptableObject
 
     [Header("Stats")]
 
+    public int itemCost;
     public int currentHealth;
     public int maxHealth;
     public float movementSpeed;
     public int damageBonus;
     public float reloadSpeed;
+    public float coinMultiplierBonus;
 
     [Header("Temporary Buffs")]
 

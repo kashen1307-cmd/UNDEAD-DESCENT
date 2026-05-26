@@ -16,9 +16,11 @@ MonoBehaviour:
   itemDescription: Heals player 25
   icon: {fileID: -4064344591082207688, guid: bdd439043f36a5344acc8f716b5f4d10, type: 3}
   isCurrency: 0
+  itemCost: 10
   currentHealth: 25
   maxHealth: 0
   movementSpeed: 0
   damageBonus: 0
   reloadSpeed: 0
+  coinMultiplierBonus: 0
   duration: 0

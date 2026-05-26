@@ -105,5 +105,16 @@ public class ItemScript : MonoBehaviour
         {
             Debug.LogWarning("PlayerInventory script not found on the Player!");
         }
+
+        if (itemSO.coinMultiplierBonus > 0f)
+        {
+            PlayerWallet wallet = playerObject.GetComponent<PlayerWallet>();
+            if (wallet != null)
+            {
+            // If the item gives 0.5f, the player now gets 1.5x coins!
+            wallet.coinMultiplier += itemSO.coinMultiplierBonus; 
+            }
+        }
+        
     }
 }

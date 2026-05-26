@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     public float playerHealth;
 
     public float maxHealth = 100f;
+    public int currentCoins = 0;
 
     public GameObject defaultPistolPrefab;
 
@@ -23,6 +24,8 @@ public class GameManager : MonoBehaviour
     public void ResetRun()
     {
         playerHealth = maxHealth;
+
+        currentCoins = 0;
 
         savedWeaponPrefabs = new GameObject[2];
         savedDropPrefabs = new GameObject[2];

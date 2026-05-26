@@ -53,6 +53,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyMovement
   _speed: 3
   isStunned: 0
+  isDead: 0
   _spriteRenderer: {fileID: 5638208139387696203}
 --- !u!114 &1296537083052414267
 MonoBehaviour:
@@ -168,6 +169,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
   maxHealth: 3
+  coinPrefab: {fileID: 799283753208812504, guid: 2fc3a21e77912d14fb19a45272bfe4c8, type: 3}
+  minCoinsToDrop: 1
+  maxCoinsToDrop: 3
   animator: {fileID: 8885861796437212595}
   movement: {fileID: 1098232094743026643}
 --- !u!82 &-7716971487312942116
@@ -370,7 +374,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 10
   m_MaskInteraction: 0
   m_Sprite: {fileID: 2509867014342162028, guid: e3ae97fdb7c80a14ead1d4fa5aaef0ff, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
