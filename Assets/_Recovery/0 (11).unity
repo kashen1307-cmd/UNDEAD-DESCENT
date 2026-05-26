@@ -256,143 +256,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3689914}
   m_CullTransparentMesh: 1
---- !u!1 &62777357
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 62777360}
-  - component: {fileID: 62777359}
-  - component: {fileID: 62777358}
-  m_Layer: 5
-  m_Name: LevelMessageText
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &62777358
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 62777357}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_text: 
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
-  m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4284538684
-  m_fontColor: {r: 0.23367335, g: 0.8742138, b: 0.37711698, a: 1}
-  m_enableVertexGradient: 1
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 0, g: 0, b: 0, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontSize: 110.28
-  m_fontSizeBase: 110.28
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
-  m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_characterHorizontalScale: 1
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_TextWrappingMode: 1
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_linkedTextComponent: {fileID: 0}
-  parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 0
-  m_ActiveFontFeatures: 6e72656b
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_EmojiFallbackSupport: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_IsTextObjectScaleStatic: 0
-  m_VertexBufferAutoSizeReduction: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!222 &62777359
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 62777357}
-  m_CullTransparentMesh: 1
---- !u!224 &62777360
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 62777357}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1715321194}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 607.95, y: 0}
-  m_SizeDelta: {x: 2249.6743, y: 198.71149}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &76832124
 GameObject:
   m_ObjectHideFlags: 0
@@ -450,7 +313,6 @@ GameObject:
   - component: {fileID: 85712753}
   - component: {fileID: 85712752}
   - component: {fileID: 85712751}
-  - component: {fileID: 85712754}
   m_Layer: 5
   m_Name: BuyButton
   m_TagString: Untagged
@@ -522,13 +384,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 85712754}
-        m_TargetAssemblyTypeName: VendingMachineButtons, Assembly-CSharp
-        m_MethodName: OnPurchaseClicked
-        m_Mode: 1
+      - m_Target: {fileID: 988263577}
+        m_TargetAssemblyTypeName: ShopManager, Assembly-CSharp
+        m_MethodName: BuyItem
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 5992149100954412948, guid: 6e3d205ddaa25934eab1a661d77ad0f2, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -572,23 +434,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 85712749}
   m_CullTransparentMesh: 1
---- !u!114 &85712754
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 85712749}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bccffe941a9682e48a0bf6f941732d80, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::VendingMachineButtons
-  itemData: {fileID: 11400000, guid: 1a0a755a7b008504db0a2b6a6fb05aa3, type: 2}
-  manualPrice: 50
-  prefabToDispense: {fileID: 5992149100954412948, guid: 6e3d205ddaa25934eab1a661d77ad0f2, type: 3}
-  priceText: {fileID: 212962723}
-  VendingMachine: {fileID: 988263577}
 --- !u!1 &145034663
 GameObject:
   m_ObjectHideFlags: 0
@@ -2039,7 +1884,6 @@ GameObject:
   - component: {fileID: 449152929}
   - component: {fileID: 449152928}
   - component: {fileID: 449152927}
-  - component: {fileID: 449152930}
   m_Layer: 5
   m_Name: BuyButton
   m_TagString: Untagged
@@ -2111,13 +1955,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 449152930}
-        m_TargetAssemblyTypeName: VendingMachineButtons, Assembly-CSharp
-        m_MethodName: OnPurchaseClicked
-        m_Mode: 1
+      - m_Target: {fileID: 988263577}
+        m_TargetAssemblyTypeName: ShopManager, Assembly-CSharp
+        m_MethodName: BuyItem
+        m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2161,23 +2005,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 449152925}
   m_CullTransparentMesh: 1
---- !u!114 &449152930
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 449152925}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bccffe941a9682e48a0bf6f941732d80, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::VendingMachineButtons
-  itemData: {fileID: 0}
-  manualPrice: 50
-  prefabToDispense: {fileID: 0}
-  priceText: {fileID: 1967711219}
-  VendingMachine: {fileID: 988263577}
 --- !u!1 &452168260
 GameObject:
   m_ObjectHideFlags: 0
@@ -2656,7 +2483,6 @@ GameObject:
   - component: {fileID: 524693694}
   - component: {fileID: 524693693}
   - component: {fileID: 524693692}
-  - component: {fileID: 524693695}
   m_Layer: 5
   m_Name: BuyButton
   m_TagString: Untagged
@@ -2728,13 +2554,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 524693695}
-        m_TargetAssemblyTypeName: VendingMachineButtons, Assembly-CSharp
-        m_MethodName: OnPurchaseClicked
-        m_Mode: 1
+      - m_Target: {fileID: 988263577}
+        m_TargetAssemblyTypeName: ShopManager, Assembly-CSharp
+        m_MethodName: BuyItem
+        m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2778,23 +2604,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 524693690}
   m_CullTransparentMesh: 1
---- !u!114 &524693695
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 524693690}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bccffe941a9682e48a0bf6f941732d80, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::VendingMachineButtons
-  itemData: {fileID: 0}
-  manualPrice: 50
-  prefabToDispense: {fileID: 0}
-  priceText: {fileID: 983595131}
-  VendingMachine: {fileID: 988263577}
 --- !u!1 &525309396
 GameObject:
   m_ObjectHideFlags: 0
@@ -2944,7 +2753,6 @@ GameObject:
   - component: {fileID: 593040228}
   - component: {fileID: 593040227}
   - component: {fileID: 593040226}
-  - component: {fileID: 593040229}
   m_Layer: 5
   m_Name: BuyButton
   m_TagString: Untagged
@@ -3016,13 +2824,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 593040229}
-        m_TargetAssemblyTypeName: VendingMachineButtons, Assembly-CSharp
-        m_MethodName: OnPurchaseClicked
-        m_Mode: 1
+      - m_Target: {fileID: 988263577}
+        m_TargetAssemblyTypeName: ShopManager, Assembly-CSharp
+        m_MethodName: BuyItem
+        m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3066,23 +2874,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 593040224}
   m_CullTransparentMesh: 1
---- !u!114 &593040229
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 593040224}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bccffe941a9682e48a0bf6f941732d80, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::VendingMachineButtons
-  itemData: {fileID: 0}
-  manualPrice: 50
-  prefabToDispense: {fileID: 0}
-  priceText: {fileID: 362190626}
-  VendingMachine: {fileID: 988263577}
 --- !u!1 &594653614
 GameObject:
   m_ObjectHideFlags: 0
@@ -3663,54 +3454,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7209802049777233596, guid: c0171b09b4846e94abd5004ca6efbbaa, type: 3}
   m_PrefabInstance: {fileID: 275156390}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &778945602
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 778945604}
-  - component: {fileID: 778945603}
-  m_Layer: 0
-  m_Name: LevelMessageManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &778945603
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 778945602}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 205784c21bfa5f74186528570dad5f66, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LevelMessageController
-  messageText: {fileID: 62777358}
-  startMessageDuration: 3
-  completeMessageDuration: 4
-  flashSpeed: 2
---- !u!4 &778945604
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 778945602}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1510.0941, y: 507.6832, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &844042274
 GameObject:
   m_ObjectHideFlags: 0
@@ -3798,7 +3541,6 @@ GameObject:
   - component: {fileID: 871836371}
   - component: {fileID: 871836370}
   - component: {fileID: 871836369}
-  - component: {fileID: 871836372}
   m_Layer: 5
   m_Name: BuyButton
   m_TagString: Untagged
@@ -3870,13 +3612,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 871836372}
-        m_TargetAssemblyTypeName: VendingMachineButtons, Assembly-CSharp
-        m_MethodName: OnPurchaseClicked
-        m_Mode: 1
+      - m_Target: {fileID: 988263577}
+        m_TargetAssemblyTypeName: ShopManager, Assembly-CSharp
+        m_MethodName: BuyItem
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 3168093674693564188, guid: ce93e34cc250fa0479637c7dcef0af73, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3920,23 +3662,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 871836367}
   m_CullTransparentMesh: 1
---- !u!114 &871836372
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 871836367}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bccffe941a9682e48a0bf6f941732d80, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::VendingMachineButtons
-  itemData: {fileID: 0}
-  manualPrice: 30
-  prefabToDispense: {fileID: 3168093674693564188, guid: ce93e34cc250fa0479637c7dcef0af73, type: 3}
-  priceText: {fileID: 1749835806}
-  VendingMachine: {fileID: 988263577}
 --- !u!1001 &886418647
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4271,7 +3996,6 @@ GameObject:
   - component: {fileID: 942026942}
   - component: {fileID: 942026941}
   - component: {fileID: 942026940}
-  - component: {fileID: 942026943}
   m_Layer: 5
   m_Name: BuyButton
   m_TagString: Untagged
@@ -4343,13 +4067,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 942026943}
-        m_TargetAssemblyTypeName: VendingMachineButtons, Assembly-CSharp
-        m_MethodName: OnPurchaseClicked
-        m_Mode: 1
+      - m_Target: {fileID: 988263577}
+        m_TargetAssemblyTypeName: ShopManager, Assembly-CSharp
+        m_MethodName: BuyItem
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 5321951409870810588, guid: 7fbd3c0719c075c44b94672c95105ac1, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -4393,23 +4117,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 942026938}
   m_CullTransparentMesh: 1
---- !u!114 &942026943
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 942026938}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bccffe941a9682e48a0bf6f941732d80, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::VendingMachineButtons
-  itemData: {fileID: 11400000, guid: 19684f97295b6344188285a4ef2c9df1, type: 2}
-  manualPrice: 50
-  prefabToDispense: {fileID: 5321951409870810588, guid: 7fbd3c0719c075c44b94672c95105ac1, type: 3}
-  priceText: {fileID: 1310298628}
-  VendingMachine: {fileID: 988263577}
 --- !u!4 &961224188 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7209802049777233596, guid: c0171b09b4846e94abd5004ca6efbbaa, type: 3}
@@ -5041,7 +4748,6 @@ GameObject:
   - component: {fileID: 1058617869}
   - component: {fileID: 1058617868}
   - component: {fileID: 1058617867}
-  - component: {fileID: 1058617870}
   m_Layer: 5
   m_Name: BuyButton
   m_TagString: Untagged
@@ -5113,13 +4819,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1058617870}
-        m_TargetAssemblyTypeName: VendingMachineButtons, Assembly-CSharp
-        m_MethodName: OnPurchaseClicked
-        m_Mode: 1
+      - m_Target: {fileID: 988263577}
+        m_TargetAssemblyTypeName: ShopManager, Assembly-CSharp
+        m_MethodName: BuyItem
+        m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -5163,23 +4869,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1058617865}
   m_CullTransparentMesh: 1
---- !u!114 &1058617870
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1058617865}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bccffe941a9682e48a0bf6f941732d80, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::VendingMachineButtons
-  itemData: {fileID: 0}
-  manualPrice: 50
-  prefabToDispense: {fileID: 0}
-  priceText: {fileID: 1420878318}
-  VendingMachine: {fileID: 988263577}
 --- !u!1 &1088684825
 GameObject:
   m_ObjectHideFlags: 0
@@ -5195,7 +4884,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1088684826
 Transform:
   m_ObjectHideFlags: 0
@@ -5316,7 +5005,6 @@ GameObject:
   - component: {fileID: 1222963425}
   - component: {fileID: 1222963424}
   - component: {fileID: 1222963423}
-  - component: {fileID: 1222963426}
   m_Layer: 5
   m_Name: BuyButton
   m_TagString: Untagged
@@ -5388,13 +5076,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1222963426}
-        m_TargetAssemblyTypeName: VendingMachineButtons, Assembly-CSharp
-        m_MethodName: OnPurchaseClicked
-        m_Mode: 1
+      - m_Target: {fileID: 988263577}
+        m_TargetAssemblyTypeName: ShopManager, Assembly-CSharp
+        m_MethodName: BuyItem
+        m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -5438,23 +5126,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1222963421}
   m_CullTransparentMesh: 1
---- !u!114 &1222963426
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1222963421}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bccffe941a9682e48a0bf6f941732d80, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::VendingMachineButtons
-  itemData: {fileID: 0}
-  manualPrice: 50
-  prefabToDispense: {fileID: 0}
-  priceText: {fileID: 1720311640}
-  VendingMachine: {fileID: 988263577}
 --- !u!1 &1254075035
 GameObject:
   m_ObjectHideFlags: 0
@@ -6230,7 +5901,6 @@ GameObject:
   - component: {fileID: 1335968090}
   - component: {fileID: 1335968089}
   - component: {fileID: 1335968088}
-  - component: {fileID: 1335968091}
   m_Layer: 5
   m_Name: BuyButton
   m_TagString: Untagged
@@ -6302,13 +5972,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1335968091}
-        m_TargetAssemblyTypeName: VendingMachineButtons, Assembly-CSharp
-        m_MethodName: OnPurchaseClicked
-        m_Mode: 1
+      - m_Target: {fileID: 988263577}
+        m_TargetAssemblyTypeName: ShopManager, Assembly-CSharp
+        m_MethodName: BuyItem
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 6031053855622827116, guid: 9fa743f8d51f64e4fadf9e648ab6023c, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -6352,23 +6022,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1335968086}
   m_CullTransparentMesh: 1
---- !u!114 &1335968091
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1335968086}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bccffe941a9682e48a0bf6f941732d80, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::VendingMachineButtons
-  itemData: {fileID: 11400000, guid: 7a711282ea97b3f4e9fb54c019dd2153, type: 2}
-  manualPrice: 50
-  prefabToDispense: {fileID: 6031053855622827116, guid: 9fa743f8d51f64e4fadf9e648ab6023c, type: 3}
-  priceText: {fileID: 1324331263}
-  VendingMachine: {fileID: 988263577}
 --- !u!1 &1342897670 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1298551685259722191, guid: 5d49cd91776f9a245aae30034fa83464, type: 3}
@@ -8298,7 +7951,6 @@ RectTransform:
   - {fileID: 380358681}
   - {fileID: 418958243}
   - {fileID: 1655979681}
-  - {fileID: 62777360}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -11319,9 +10971,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1298551685259722191, guid: 5d49cd91776f9a245aae30034fa83464, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4245750266619416426}
-    - targetCorrespondingSourceObject: {fileID: 1298551685259722191, guid: 5d49cd91776f9a245aae30034fa83464, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 4245750266619416441}
   m_SourcePrefab: {fileID: 100100000, guid: 5d49cd91776f9a245aae30034fa83464, type: 3}
 --- !u!4 &4245750266619416388 stripped
 Transform:
@@ -11355,20 +11004,6 @@ AudioSource:
   m_CorrespondingSourceObject: {fileID: -7236298180697992005, guid: 5d49cd91776f9a245aae30034fa83464, type: 3}
   m_PrefabInstance: {fileID: 2228607533158343882}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &4245750266619416441
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1342897670}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fadd79e22cfa7354b88152bf3d299fd7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerWallet
-  Coins: 0
-  coinMultiplier: 1
 --- !u!1001 &5545823163452009405
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11648,4 +11283,3 @@ SceneRoots:
   - {fileID: 1720802065}
   - {fileID: 1815367843}
   - {fileID: 249004394}
-  - {fileID: 778945604}

@@ -96,4 +96,9 @@ public class EnemySpawner : MonoBehaviour
         _timeUntilSpawn = Random.Range(_minimumSpawnTime, _maximumSpawnTime);
     }
 
+    public bool HasEnemiesRemaining()
+    {
+        return _totalSpawned < _maxTotalEnemies;
+    }
+
 }
