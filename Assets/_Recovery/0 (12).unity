@@ -3694,7 +3694,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LevelMessageController
   messageText: {fileID: 62777358}
   startMessageDuration: 3
-  completeMessageDuration: 2
+  completeMessageDuration: 4
   flashSpeed: 2
 --- !u!4 &778945604
 Transform:

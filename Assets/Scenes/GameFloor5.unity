@@ -1729,7 +1729,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LevelMessageController
   messageText: {fileID: 1304824632}
   startMessageDuration: 3
-  completeMessageDuration: 4
+  completeMessageDuration: 2
   flashSpeed: 2
 --- !u!4 &240633277
 Transform:
@@ -8915,7 +8915,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.159, g: 0.07218599, b: 0.07218599, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
