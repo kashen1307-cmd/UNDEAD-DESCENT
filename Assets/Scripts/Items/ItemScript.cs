@@ -34,6 +34,7 @@ public class ItemScript : MonoBehaviour
 
             ApplyEffect(collision.gameObject);
 
+            GameManager.instance.AddItemToInventory(itemSO);
 
             if (animator != null)
             {
@@ -114,7 +115,7 @@ public class ItemScript : MonoBehaviour
             // If the item gives 0.5f, the player now gets 1.5x coins!
             wallet.coinMultiplier += itemSO.coinMultiplierBonus; 
             }
-        }
+            }
         
     }
 }

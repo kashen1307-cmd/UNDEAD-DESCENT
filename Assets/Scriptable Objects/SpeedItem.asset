@@ -16,7 +16,7 @@ MonoBehaviour:
   itemDescription: Increses Movment Speed by 2.5
   icon: {fileID: 9216563884979187710, guid: 838f50c05e79ded469069d4bed643e5c, type: 3}
   isCurrency: 0
-  itemCost: 15
+  itemCost: 1
   currentHealth: 0
   maxHealth: 0
   movementSpeed: 2.5

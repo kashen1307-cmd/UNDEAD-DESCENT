@@ -954,6 +954,7 @@ MonoBehaviour:
   _timeToWaitBeforeExit: 1
   playerHealth: 100
   maxHealth: 100
+  currentCoins: 0
   defaultPistolPrefab: {fileID: 7667618629798454332, guid: d0b22569a5da92e4b982e58f46743b3d, type: 3}
   savedWeaponPrefabs:
   - {fileID: 0}
@@ -961,6 +962,7 @@ MonoBehaviour:
   savedDropPrefabs:
   - {fileID: 0}
   - {fileID: 0}
+  playerInventory: []
 --- !u!114 &3951253904782176444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -975,6 +977,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PauseManager
   pauseMenuUI: {fileID: 7989628291393709184}
   SettingsPanel: {fileID: 0}
+  inventoryUI: {fileID: 0}
 --- !u!1 &7989628291393709184
 GameObject:
   m_ObjectHideFlags: 0

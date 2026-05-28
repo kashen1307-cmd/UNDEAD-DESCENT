@@ -7,6 +7,7 @@ public class PauseManager : MonoBehaviour
 
     public GameObject pauseMenuUI;
     public GameObject SettingsPanel;
+    public ItemInventory inventoryUI;
 
     void Update()
     {
@@ -56,6 +57,11 @@ public class PauseManager : MonoBehaviour
         AudioListener.pause = true;
 
         isPaused = true;
+
+        if (inventoryUI != null)
+        {
+            inventoryUI.RefreshInventoryDisplay();
+        }
 
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;

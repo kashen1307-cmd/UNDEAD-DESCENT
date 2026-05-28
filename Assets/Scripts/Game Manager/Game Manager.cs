@@ -1,5 +1,5 @@
 
-
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -20,6 +20,33 @@ public class GameManager : MonoBehaviour
     public GameObject[] savedWeaponPrefabs = new GameObject[2];
 
     public GameObject[] savedDropPrefabs = new GameObject[2];
+    [System.Serializable]    
+    public class InventorySlot
+    {
+        public ItemSO itemData;
+        public int count;
+    }
+
+    public List<InventorySlot> playerInventory = new List<InventorySlot>();
+
+    public void AddItemToInventory(ItemSO newItem)
+    {
+        // Check if we already have this item
+        foreach (InventorySlot slot in playerInventory)
+        {
+            if (slot.itemData == newItem)
+            {
+                slot.count++; // Stack it!
+                return;
+            }
+        }
+
+        // If we don't have it, add a brand new slot to the list
+        InventorySlot newSlot = new InventorySlot();
+        newSlot.itemData = newItem;
+        newSlot.count = 1;
+        playerInventory.Add(newSlot);
+    }
 
     public void ResetRun()
     {
@@ -33,19 +60,18 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        if (instance != null)
+        transform.SetParent(null); 
+
+        if (instance == null)
         {
-            Destroy(gameObject);
-            return;
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+            Debug.Log("🟢 THE KING IS CROWNED: Floor 1 Manager is active and surviving.");
         }
-
-        instance = this;
-        DontDestroyOnLoad(gameObject);
-
-        // NEW
-        if (playerHealth <= 0)
+        else if (instance != this)
         {
-            playerHealth = maxHealth;
+            Debug.Log("🔴 ASSASSIN DEFEATED: Floor 2 Manager woke up and destroyed itself.");
+            Destroy(gameObject);
         }
     }
 
@@ -57,5 +83,11 @@ public class GameManager : MonoBehaviour
     private void EndGame()
     {
         SceneManager.LoadScene("DeathScreen");
+    }
+
+    void OnLevelWasLoaded(int level)
+    {
+        // This fires the exact millisecond the new scene finishes booting up
+        Debug.Log("🚪 SCENE LOADED! The current GameManager has exactly " + playerInventory.Count + " items.");
     }
 }
