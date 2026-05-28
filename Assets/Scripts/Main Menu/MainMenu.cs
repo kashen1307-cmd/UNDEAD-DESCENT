@@ -7,16 +7,28 @@ public class MainMenu : MonoBehaviour
     public void PlayGame()
     {
         if (GameManager.instance != null)
+        {
             GameManager.instance.ResetRun();
-        Debug.Log(
-    "Weapon slot 0: " +
-    GameManager.instance.savedWeaponPrefabs[0]
-);
+
+            if (GameManager.instance.savedWeaponPrefabs != null &&
+                GameManager.instance.savedWeaponPrefabs.Length > 0)
+            {
+                Debug.Log("Weapon slot 0: " +
+                    GameManager.instance.savedWeaponPrefabs[0]);
+            }
+            else
+            {
+                Debug.Log("No weapons saved");
+            }
+        }
+        else
+        {
+            Debug.LogWarning("GameManager instance is NULL");
+        }
 
         if (MusicManager.instance != null)
             MusicManager.instance.RestartMusic();
 
-        // Destroy leftover persistent player
         if (KeepPlayerAlive.instance != null)
         {
             Destroy(KeepPlayerAlive.instance.gameObject);

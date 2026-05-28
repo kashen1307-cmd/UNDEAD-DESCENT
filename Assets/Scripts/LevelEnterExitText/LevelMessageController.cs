@@ -37,7 +37,11 @@ public class LevelMessageController : MonoBehaviour
 
         yield return new WaitForSeconds(startMessageDuration);
 
-        StopCoroutine(flashRoutine);
+        if (flashRoutine != null)
+        {
+            StopCoroutine(flashRoutine);
+            flashRoutine = null;
+        }
 
         Color c = messageText.color;
         c.a = 1f;
@@ -89,9 +93,13 @@ public class LevelMessageController : MonoBehaviour
     StartCoroutine(FlashText());
 
         yield return new WaitForSeconds(
-            completeMessageDuration);
+     completeMessageDuration);
 
-        StopCoroutine(flashRoutine);
+        if (flashRoutine != null)
+        {
+            StopCoroutine(flashRoutine);
+            flashRoutine = null;
+        }
 
         Color c = messageText.color;
         c.a = 1f;

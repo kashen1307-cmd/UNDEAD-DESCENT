@@ -1,8 +1,17 @@
-using UnityEngine;
 using TMPro;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+using System.Collections;
 
-public class DialogueManager : MonoBehaviour
+public class EndSceneDialogue : MonoBehaviour
 {
+
+    public Animator fadeAnim;
+
+    public string endSceneName = "EndOfGame";
+
+    public float delayBeforeFade = 2f;
+
     public TMP_Text dialogueText;
 
     private string[] dialogueLines;
@@ -125,22 +134,24 @@ public class DialogueManager : MonoBehaviour
     {
         dialogueActive = false;
 
-        if (dialogueText != null)
-        {
+        if (dialogueBox != null)
             dialogueBox.SetActive(false);
-        }
 
         if (player != null)
-        {
             player.canMove = true;
-        }
 
-        IntroTutorialManager intro =
-            FindAnyObjectByType<IntroTutorialManager>();
+        StartCoroutine(EndSequence());
+    }
 
-        if (intro != null)
-        {
-            intro.PhoneDialogueFinished();
-        }
+    IEnumerator EndSequence()
+    {
+        yield return new WaitForSeconds(delayBeforeFade);
+
+        if (fadeAnim != null)
+            fadeAnim.Play("FadeToBlack");
+
+        yield return new WaitForSeconds(2f); // match fade animation
+
+        SceneManager.LoadScene(endSceneName);
     }
 }
