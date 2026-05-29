@@ -2,13 +2,15 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using UnityEngine.UI;
 
 public class EndSceneDialogue : MonoBehaviour
 {
-
-    public Animator fadeAnim;
-
     public string endSceneName = "EndOfGame";
+
+    public Image fadePanel;
+
+    public float fadeDuration = 2f;
 
     public float delayBeforeFade = 2f;
 
@@ -33,18 +35,32 @@ public class EndSceneDialogue : MonoBehaviour
 
     public TMP_Text nextPrompt;
 
+    [SerializeField]
+    private AudioSource textAudio;
+
+    [SerializeField]
+    private AudioClip typingClip;
+
+    [SerializeField]
+    private float typingSpeed = 0.03f;
+
+    private Coroutine typingRoutine;
+    private bool isTyping = false;
+
+    private float audioCooldown = 0f;
+
+    public float audioInterval = 0.08f;
+
     void Start()
     {
-
         GameObject box =
-    GameObject.Find("DialogueBox");
+            GameObject.Find("DialogueBox");
 
         if (box != null)
         {
             dialogueBox = box;
             dialogueBox.SetActive(false);
         }
-
 
         GameObject textObj =
             GameObject.Find("DialogueText");
@@ -61,34 +77,67 @@ public class EndSceneDialogue : MonoBehaviour
             FindAnyObjectByType<PlayerMovement>();
 
         GameObject promptObj =
-    GameObject.Find("NextPrompt");
+            GameObject.Find("NextPrompt");
 
         if (promptObj != null)
         {
             nextPrompt =
                 promptObj.GetComponent<TMP_Text>();
         }
+
+        // START DIALOGUE AFTER 1 SECOND
+        StartCoroutine(StartSceneDialogue());
     }
 
+    IEnumerator StartSceneDialogue()
+    {
+        yield return new WaitForSeconds(1f);
+
+        string[] lines =
+        {
+            "Friend: You made it!",
+            "Friend: I thought those things got you...",
+            "Player: What the hell is happening?!",
+            "Friend: I dont know man, but its bad.",
+            "Friend: We gotta get outta here ASAP!",
+            "Friend: Come on, get in the car!"
+        };
+
+        StartDialogue(lines);
+    }
 
     void Update()
     {
         if (!dialogueActive)
             return;
 
-        if (canAdvance &&
-     Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E))
         {
-            currentLine++;
+            if (isTyping)
+            {
+                StopCoroutine(typingRoutine);
+                StopTypingSound();
 
-            if (currentLine >= dialogueLines.Length)
-            {
-                EndDialogue();
+                dialogueText.text = dialogueLines[currentLine];
+
+                isTyping = false;
+                canAdvance = true;
+                return;
             }
-            else
+
+            if (canAdvance)
             {
-                dialogueText.text =
-                    dialogueLines[currentLine];
+                currentLine++;
+
+                if (currentLine >= dialogueLines.Length)
+                {
+                    EndDialogue();
+                }
+                else
+                {
+                    typingRoutine =
+                        StartCoroutine(TypeSentence(dialogueLines[currentLine]));
+                }
             }
         }
     }
@@ -113,8 +162,10 @@ public class EndSceneDialogue : MonoBehaviour
 
         if (dialogueText != null)
         {
-            dialogueText.text =
-                dialogueLines[currentLine];
+            typingRoutine =
+    StartCoroutine(
+        TypeSentence(
+            dialogueLines[currentLine]));
         }
 
         if (player != null)
@@ -130,6 +181,52 @@ public class EndSceneDialogue : MonoBehaviour
         canAdvance = true;
     }
 
+    IEnumerator TypeSentence(string sentence)
+    {
+        isTyping = true;
+        canAdvance = false;
+
+        dialogueText.text = "";
+
+        StartTypingSound();
+
+        foreach (char letter in sentence)
+        {
+            if (!textAudio.isPlaying)
+            {
+                textAudio.pitch = Random.Range(0.9f, 1.15f);
+                textAudio.Play();
+            }
+
+            dialogueText.text += letter;
+            yield return new WaitForSeconds(typingSpeed);
+        }
+
+        StopTypingSound();
+
+        isTyping = false;
+        canAdvance = true;
+    }
+
+    private void StartTypingSound()
+    {
+        if (textAudio != null && typingClip != null)
+        {
+            textAudio.clip = typingClip;
+            textAudio.loop = true;
+            textAudio.Play();
+        }
+    }
+
+    private void StopTypingSound()
+    {
+        if (textAudio != null)
+        {
+            textAudio.Stop();
+            textAudio.loop = false;
+        }
+    }
+
     void EndDialogue()
     {
         dialogueActive = false;
@@ -139,19 +236,37 @@ public class EndSceneDialogue : MonoBehaviour
 
         if (player != null)
             player.canMove = true;
+    }
 
+    public void BeginEnding()
+    {
         StartCoroutine(EndSequence());
     }
 
     IEnumerator EndSequence()
     {
-        yield return new WaitForSeconds(delayBeforeFade);
+        yield return new WaitForSeconds(
+            delayBeforeFade);
 
-        if (fadeAnim != null)
-            fadeAnim.Play("FadeToBlack");
+        float timer = 0f;
 
-        yield return new WaitForSeconds(2f); // match fade animation
+        while (timer < fadeDuration)
+        {
+            timer += Time.deltaTime;
 
-        SceneManager.LoadScene(endSceneName);
+            Color c = fadePanel.color;
+
+            c.a =
+                timer / fadeDuration;
+
+            fadePanel.color = c;
+
+            yield return null;
+        }
+
+        SceneManager.LoadScene(
+            endSceneName);
     }
+
+
 }

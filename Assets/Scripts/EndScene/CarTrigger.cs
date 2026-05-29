@@ -28,30 +28,20 @@ public class CarTrigger : MonoBehaviour
     }
 
     void Update()
+{
+    if (playerInside &&
+        Input.GetKeyDown(KeyCode.E))
     {
-        if (playerInside &&
-            Input.GetKeyDown(KeyCode.E))
+        if (carPrompt != null)
         {
-            string[] lines =
-            {
-            "Friend: You made it!",
-            "Friend: I thought those things got you...",
-            "Player: What the hell is happening!",
-            "Friend: I dont know man, but its bad, we gotta het outta here ASAP!",
-            "Friend: Come on! Get in the car!",
-            "Player: Dont have to tell me twice",
-            };
+            carPrompt.SetActive(false);
+        }
 
-            dialogue.StartDialogue(lines);
-
-            if (carPrompt != null)
-            {
-                carPrompt.SetActive(false);
-            }
+            dialogue.BeginEnding();
 
             gameObject.SetActive(false);
-        }
     }
+}
 
     void OnTriggerEnter2D(Collider2D collision)
     {

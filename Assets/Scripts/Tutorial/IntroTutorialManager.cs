@@ -6,6 +6,12 @@ public class IntroTutorialManager : MonoBehaviour
 {
     public TMP_Text tutorialText;
 
+    [SerializeField] 
+    private AudioSource phoneAudio;
+
+    [SerializeField] 
+    private AudioClip phoneRingClip;
+
     void Start()
     {
         GameObject textObj =
@@ -35,8 +41,15 @@ public class IntroTutorialManager : MonoBehaviour
 
         // Phone objective
         tutorialText.gameObject.SetActive(true);
-        tutorialText.text =
-            "Your phone is ringing...";
+        tutorialText.text = "Your phone is ringing...";
+
+        // start ringing
+        if (phoneAudio != null && phoneRingClip != null)
+        {
+            phoneAudio.clip = phoneRingClip;
+            phoneAudio.loop = true;
+            phoneAudio.Play();
+        }
 
         yield return new WaitForSeconds(3f);
 
@@ -46,6 +59,15 @@ public class IntroTutorialManager : MonoBehaviour
     public void PhoneDialogueFinished()
     {
         StartCoroutine(ShowGunText());
+    }
+
+    public void StopPhoneRing()
+    {
+        if (phoneAudio != null)
+        {
+            phoneAudio.Stop();
+            phoneAudio.loop = false;
+        }
     }
 
     IEnumerator ShowGunText()

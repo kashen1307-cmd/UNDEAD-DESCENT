@@ -24,6 +24,12 @@ public class ShotgunFiring : MonoBehaviour
     [SerializeField]
     private AudioClip gunshotClip;
 
+    [SerializeField] 
+    private AudioClip reloadClip;
+
+    [SerializeField]
+    private AudioClip emptyClickClip;
+
     private float nextFireTime = 0f;
     private PlayerMovement playerStats;
 
@@ -113,7 +119,7 @@ public class ShotgunFiring : MonoBehaviour
             return;
         }
 
-        
+
         // Empty magazine
         if (currentAmmo <= 0)
         {
@@ -122,9 +128,20 @@ public class ShotgunFiring : MonoBehaviour
                 reloadText.text = "Press R to Reload";
             }
 
+            if (Input.GetButtonDown("Fire1"))
+            {
+                if (emptyClickClip != null)
+                {
+                    gunAudio.PlayOneShot(emptyClickClip);
+
+                    CancelInvoke(nameof(StopGunSound));
+                    Invoke(nameof(StopGunSound), 0.5f);
+                }
+            }
+
             return;
         }
-    
+
 
         if (Input.GetButtonDown("Fire1")
             && Time.time >= nextFireTime)
@@ -133,6 +150,8 @@ public class ShotgunFiring : MonoBehaviour
             nextFireTime = Time.time + fireRate;
         }
     }
+
+   
 
     IEnumerator Reload()
     {
@@ -143,17 +162,23 @@ public class ShotgunFiring : MonoBehaviour
             reloadText.text = "";
         }
 
+        if (reloadClip != null)
+        {
+            gunAudio.PlayOneShot(reloadClip);
+            CancelInvoke(nameof(StopGunSound));
+            Invoke(nameof(StopGunSound), 0.5f);
+        }
+
         yield return new WaitForSeconds(reloadTime);
 
         currentAmmo = maxAmmo;
         isReloading = false;
 
         UpdateAmmoUI();
+
         if (reloadText != null)
         {
             reloadText.text = "";
-            reloadText.transform.SetAsLastSibling();
-            
         }
     }
 

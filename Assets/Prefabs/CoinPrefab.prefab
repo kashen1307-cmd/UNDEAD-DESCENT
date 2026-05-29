@@ -82,7 +82,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9824890fbf564964fa823fb469f0923a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinPickup
-  baseCoinValue: 1
+  baseCoinValue: 10
   animator: {fileID: 0}
 --- !u!1 &3700483964775326047
 GameObject:

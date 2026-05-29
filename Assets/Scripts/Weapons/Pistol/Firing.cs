@@ -32,6 +32,14 @@ public class Firing : MonoBehaviour
     [SerializeField]
     private AudioClip gunshotClip;
 
+    [SerializeField]
+    private AudioClip emptyClickClip;
+
+    [SerializeField] 
+    private AudioClip reloadClip;
+
+    private float nextEmptyClickTime = 0f;
+
     private PlayerMovement playerStats;
 
 
@@ -134,6 +142,12 @@ public class Firing : MonoBehaviour
                 reloadText.text = "Press R to Reload";
             }
 
+            if (Input.GetButtonDown("Fire1") && Time.time > nextEmptyClickTime)
+            {
+                PlayEmptyClick();
+                nextEmptyClickTime = Time.time + 0.3f; // small cooldown
+            }
+
             return;
         }
 
@@ -145,6 +159,19 @@ public class Firing : MonoBehaviour
         }
     }
 
+    void PlayEmptyClick()
+    {
+        if (gunAudio != null && emptyClickClip != null)
+        {
+            gunAudio.pitch = Random.Range(0.95f, 1.1f);
+            gunAudio.PlayOneShot(emptyClickClip);
+            CancelInvoke(nameof(StopGunSound));
+            Invoke(nameof(StopGunSound), 0.5f);
+        }
+
+    }
+
+
     IEnumerator Reload()
     {
         isReloading = true;
@@ -152,6 +179,14 @@ public class Firing : MonoBehaviour
         if (reloadText != null)
         {
             reloadText.text = "";
+        }
+
+        // 🔊 play reload sound
+        if (reloadClip != null)
+        {
+            gunAudio.PlayOneShot(reloadClip);
+            CancelInvoke(nameof(StopGunSound));
+            Invoke(nameof(StopGunSound), 0.5f);
         }
 
         yield return new WaitForSeconds(reloadTime);
@@ -163,7 +198,7 @@ public class Firing : MonoBehaviour
 
         if (reloadText != null)
         {
-            reloadText.text = ""; ;
+            reloadText.text = "";
         }
     }
 

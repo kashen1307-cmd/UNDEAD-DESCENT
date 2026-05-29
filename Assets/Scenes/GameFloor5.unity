@@ -651,7 +651,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &88863695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1574,6 +1574,7 @@ MonoBehaviour:
   startMessageDuration: 3
   completeMessageDuration: 2
   flashSpeed: 2
+  levelBlocker: {fileID: 0}
 --- !u!4 &240633277
 Transform:
   m_ObjectHideFlags: 0

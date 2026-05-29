@@ -32,6 +32,13 @@ public class PhoneTrigger : MonoBehaviour
         if (playerInside &&
             Input.GetKeyDown(KeyCode.E))
         {
+            IntroTutorialManager intro =
+    FindAnyObjectByType<IntroTutorialManager>();
+
+            if (intro != null)
+            {
+                intro.StopPhoneRing();
+            }
             string[] lines =
             {
                 "Player:   Hello",

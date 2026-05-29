@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using System.Collections;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -24,6 +25,18 @@ public class DialogueManager : MonoBehaviour
 
     public TMP_Text nextPrompt;
 
+    [SerializeField] 
+    private AudioSource textAudio;
+
+    [SerializeField] 
+    private AudioClip typingClip;
+
+    [SerializeField] 
+    private float typingSpeed = 0.03f;
+
+    private Coroutine typingRoutine;
+
+    private bool isTyping;
     void Start()
     {
 
@@ -67,19 +80,38 @@ public class DialogueManager : MonoBehaviour
         if (!dialogueActive)
             return;
 
-        if (canAdvance &&
-     Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E))
         {
-            currentLine++;
+            if (isTyping)
+            {
+                StopCoroutine(typingRoutine);
 
-            if (currentLine >= dialogueLines.Length)
-            {
-                EndDialogue();
+                if (textAudio != null)
+                {
+                    textAudio.Stop();
+                    textAudio.loop = false;
+                }
+
+                dialogueText.text = dialogueLines[currentLine];
+
+                isTyping = false;
+                canAdvance = true;
+                return;
             }
-            else
+
+            if (canAdvance)
             {
-                dialogueText.text =
-                    dialogueLines[currentLine];
+                currentLine++;
+
+                if (currentLine >= dialogueLines.Length)
+                {
+                    EndDialogue();
+                }
+                else
+                {
+                    typingRoutine =
+                        StartCoroutine(TypeSentence(dialogueLines[currentLine]));
+                }
             }
         }
     }
@@ -104,8 +136,8 @@ public class DialogueManager : MonoBehaviour
 
         if (dialogueText != null)
         {
-            dialogueText.text =
-                dialogueLines[currentLine];
+            typingRoutine =
+    StartCoroutine(TypeSentence(dialogueLines[currentLine]));
         }
 
         if (player != null)
@@ -118,6 +150,32 @@ public class DialogueManager : MonoBehaviour
 
     void EnableAdvance()
     {
+        canAdvance = true;
+    }
+
+    IEnumerator TypeSentence(string sentence)
+    {
+        isTyping = true;
+        canAdvance = false;
+
+        dialogueText.text = "";
+
+        textAudio.pitch = Random.Range(0.95f, 1.1f);
+
+        textAudio.clip = typingClip;
+        textAudio.loop = true;
+        textAudio.Play();
+
+        foreach (char letter in sentence)
+        {
+            dialogueText.text += letter;
+            yield return new WaitForSeconds(typingSpeed);
+        }
+
+        textAudio.Stop();
+        textAudio.loop = false;
+
+        isTyping = false;
         canAdvance = true;
     }
 
