@@ -8313,7 +8313,7 @@ GameObject:
   - component: {fileID: 1771086193}
   m_Layer: 0
   m_Name: Walls
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8368,9 +8368,10 @@ EdgeCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
+  m_EdgeRadius: 0.375
   m_Points:
   - {x: 2.1451128, y: 1.7551743}
+  - {x: 2.1451125, y: 1.7551742}
   - {x: 1.1038702, y: 1.7535217}
   - {x: 1.1039429, y: 1.9285603}
   - {x: 1.104599, y: 2.1477816}
@@ -8414,10 +8415,10 @@ EdgeCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
+  m_EdgeRadius: 0.375
   m_Points:
-  - {x: 2.147708, y: 1.757422}
-  - {x: 2.150482, y: -2.0432205}
+  - {x: 2.127597, y: 1.7539951}
+  - {x: 2.1293354, y: -2.023803}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
@@ -8457,10 +8458,11 @@ EdgeCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
+  m_EdgeRadius: 0.375
   m_Points:
-  - {x: -0.2097184, y: -2.0455134}
-  - {x: 2.149584, y: -2.043565}
+  - {x: -0.19056089, y: -2.0251927}
+  - {x: -0.19044307, y: -2.0245953}
+  - {x: 2.1295354, y: -2.02355}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
@@ -8500,10 +8502,11 @@ EdgeCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
+  m_EdgeRadius: 0.375
   m_Points:
-  - {x: -0.21120705, y: 1.7541375}
-  - {x: -0.2115934, y: -2.045836}
+  - {x: -0.19029407, y: 1.7534065}
+  - {x: -0.18817097, y: 1.7526231}
+  - {x: -0.18957742, y: -2.024982}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
@@ -8543,7 +8546,7 @@ EdgeCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
+  m_EdgeRadius: 0.375
   m_Points:
   - {x: -0.21115384, y: 1.7552927}
   - {x: -0.18961628, y: 1.7550809}

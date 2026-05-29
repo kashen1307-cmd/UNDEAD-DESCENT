@@ -9,6 +9,7 @@ TagManager:
   - AreaReveal
   - Bullet
   - Barrier
+  - Wall
   layers:
   - Default
   - TransparentFX
