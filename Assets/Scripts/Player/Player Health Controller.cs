@@ -2,6 +2,7 @@
 using UnityEngine.SceneManagement;
 using UnityEngine;
 using UnityEngine.Events;
+using System.Collections;
 public class PlayerHealthController : MonoBehaviour
 {
     [SerializeField]
@@ -31,6 +32,12 @@ public class PlayerHealthController : MonoBehaviour
 
     public bool isNewRun = true;
 
+    public SpriteRenderer playerSprite; // Drag your player's SpriteRenderer here!
+    public Material whiteFlashMaterial; // We will create this in Unity next!
+    private Material defaultMaterial;
+    public float invincibilityDuration = 1.5f; // Total time they are safe
+    public float blinkInterval = 0.1f; // How fast the flash is
+
     public void ResetRun()
     {
         isNewRun = true;
@@ -44,6 +51,11 @@ public class PlayerHealthController : MonoBehaviour
 
         _maximumHealth = GameManager.instance.maxHealth;
         _currentHealth = GameManager.instance.playerHealth;
+
+        if (playerSprite != null)
+        {
+            defaultMaterial = playerSprite.material; 
+        }
 
         OnHealthChanged.Invoke();
     }
@@ -74,6 +86,8 @@ public class PlayerHealthController : MonoBehaviour
         OnDamaged.Invoke();
 
         GameManager.instance.playerHealth = _currentHealth;
+
+        StartCoroutine(DamageFlashRoutine());
     }
 
 
@@ -108,4 +122,37 @@ public class PlayerHealthController : MonoBehaviour
         
         Debug.Log("Player Healed! Current Health is now: " + _currentHealth);
     }    
+
+    private IEnumerator DamageFlashRoutine()
+    {
+        // 1. Lock the door so zombies can't hurt us again
+        IsInvinvcible = true;
+
+        playerSprite.material = whiteFlashMaterial;
+        yield return new WaitForSeconds(0.15f);
+
+        playerSprite.material = defaultMaterial;
+
+        // 3. THE BLINKING LOOP (I-Frames)
+        float elapsedTime = 0.15f;
+        while (elapsedTime < invincibilityDuration)
+        {
+            // Drop alpha to 0 (invisible)
+            playerSprite.color = new Color(1f, 1f, 1f, 0f);
+            yield return new WaitForSeconds(blinkInterval);
+
+            // Return alpha to 1 (visible)
+            playerSprite.color = new Color(1f, 1f, 1f, 1f);
+            yield return new WaitForSeconds(blinkInterval);
+
+            // Add the time we just spent waiting to our timer
+            elapsedTime += (blinkInterval * 2);
+        }
+
+        // 4. THE SAFETY NET: Force the player back to perfectly visible and normal color
+        playerSprite.color = Color.white; 
+        
+        // 5. Unlock the door so we can take damage again
+        IsInvinvcible = false;
+    }
 }

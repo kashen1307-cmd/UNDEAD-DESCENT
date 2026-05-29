@@ -1977,6 +1977,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 452168260}
   m_CullTransparentMesh: 1
+--- !u!212 &479007976 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 4964799945178080698, guid: 5d49cd91776f9a245aae30034fa83464, type: 3}
+  m_PrefabInstance: {fileID: 2228607533158343882}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &494251969
 GameObject:
   m_ObjectHideFlags: 0
@@ -6109,11 +6114,6 @@ MonoBehaviour:
   prefabToDispense: {fileID: 6031053855622827116, guid: 9fa743f8d51f64e4fadf9e648ab6023c, type: 3}
   priceText: {fileID: 1324331263}
   VendingMachine: {fileID: 988263577}
---- !u!1 &1342897670 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1298551685259722191, guid: 5d49cd91776f9a245aae30034fa83464, type: 3}
-  m_PrefabInstance: {fileID: 2228607533158343882}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1352175640
 GameObject:
   m_ObjectHideFlags: 0
@@ -10442,6 +10442,26 @@ PrefabInstance:
       propertyPath: OutputAudioMixerGroup
       value: 
       objectReference: {fileID: -5287931912839626583, guid: dc6523f4eb79faa4a874bfffdc94e77f, type: 2}
+    - target: {fileID: -7223717623335990903, guid: 5d49cd91776f9a245aae30034fa83464, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 4245750266619416390}
+    - target: {fileID: -7223717623335990903, guid: 5d49cd91776f9a245aae30034fa83464, type: 3}
+      propertyPath: dashForce
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: -7223717623335990903, guid: 5d49cd91776f9a245aae30034fa83464, type: 3}
+      propertyPath: dashInput
+      value: 
+      objectReference: {fileID: -205058219361099194, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+    - target: {fileID: -7223717623335990903, guid: 5d49cd91776f9a245aae30034fa83464, type: 3}
+      propertyPath: dashDuration
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7223717623335990903, guid: 5d49cd91776f9a245aae30034fa83464, type: 3}
+      propertyPath: playerSprite
+      value: 
+      objectReference: {fileID: 479007976}
     - target: {fileID: 972153771825587352, guid: 5d49cd91776f9a245aae30034fa83464, type: 3}
       propertyPath: mainCamera
       value: 
@@ -10460,7 +10480,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1298551685259722191, guid: 5d49cd91776f9a245aae30034fa83464, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1503539367556355109, guid: 5d49cd91776f9a245aae30034fa83464, type: 3}
       propertyPath: fireRate
@@ -10657,7 +10677,7 @@ PrefabInstance:
     - target: {fileID: 6041070903233537207, guid: 5d49cd91776f9a245aae30034fa83464, type: 3}
       propertyPath: dashScript
       value: 
-      objectReference: {fileID: 4245750266619416426}
+      objectReference: {fileID: 4245750266619416445}
     - target: {fileID: 6041070903233537207, guid: 5d49cd91776f9a245aae30034fa83464, type: 3}
       propertyPath: footstepClip
       value: 
@@ -10685,13 +10705,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4623430279687494252, guid: 5d49cd91776f9a245aae30034fa83464, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1565943345}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1298551685259722191, guid: 5d49cd91776f9a245aae30034fa83464, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 4245750266619416426}
-    - targetCorrespondingSourceObject: {fileID: 1298551685259722191, guid: 5d49cd91776f9a245aae30034fa83464, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 4245750266619416441}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d49cd91776f9a245aae30034fa83464, type: 3}
 --- !u!4 &4245750266619416388 stripped
 Transform:
@@ -10703,42 +10717,22 @@ Animator:
   m_CorrespondingSourceObject: {fileID: -8355509935639095874, guid: 5d49cd91776f9a245aae30034fa83464, type: 3}
   m_PrefabInstance: {fileID: 2228607533158343882}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &4245750266619416426
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1342897670}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f5b1f3246ef8a9448c970f56e8d4066, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerDash
-  dashForce: 20
-  dashDuration: 0.2
-  dashCooldown: 1.5
-  dashInput: {fileID: -205058219361099194, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
-  isDashing: 0
 --- !u!82 &4245750266619416427 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: -7236298180697992005, guid: 5d49cd91776f9a245aae30034fa83464, type: 3}
   m_PrefabInstance: {fileID: 2228607533158343882}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &4245750266619416441
+--- !u!114 &4245750266619416445 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: -7223717623335990903, guid: 5d49cd91776f9a245aae30034fa83464, type: 3}
+  m_PrefabInstance: {fileID: 2228607533158343882}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1342897670}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fadd79e22cfa7354b88152bf3d299fd7, type: 3}
+  m_Script: {fileID: 11500000, guid: 5f5b1f3246ef8a9448c970f56e8d4066, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerWallet
-  Coins: 0
-  coinMultiplier: 1
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerDash
 --- !u!1001 &5545823163452009405
 PrefabInstance:
   m_ObjectHideFlags: 0

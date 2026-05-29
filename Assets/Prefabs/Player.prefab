@@ -246,6 +246,10 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   isNewRun: 1
+  playerSprite: {fileID: 4964799945178080698}
+  whiteFlashMaterial: {fileID: 2100000, guid: 8060b740303fe0f4eb6d1d4366672680, type: 2}
+  invincibilityDuration: 1
+  blinkInterval: 0.1
 --- !u!114 &6517405469914188058
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -499,7 +503,9 @@ MonoBehaviour:
   dashForce: 20
   dashDuration: 0.2
   dashCooldown: 1
-  dashInput: {fileID: 0}
+  animator: {fileID: -8355509935639095874}
+  playerSprite: {fileID: 4964799945178080698}
+  dashInput: {fileID: -205058219361099194, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   isDashing: 0
 --- !u!114 &-890260956920621552
 MonoBehaviour:
