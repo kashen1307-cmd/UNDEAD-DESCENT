@@ -4,23 +4,22 @@ using System.Collections;
 
 public class IntroTutorialManager : MonoBehaviour
 {
+    [Header("Tutorial UI")]
+    public GameObject tutorialBox;
     public TMP_Text tutorialText;
 
-    [SerializeField] 
+    [Header("Phone Audio")]
+    [SerializeField]
     private AudioSource phoneAudio;
 
-    [SerializeField] 
+    [SerializeField]
     private AudioClip phoneRingClip;
 
     void Start()
     {
-        GameObject textObj =
-            GameObject.Find("TutorialText");
-
-        if (textObj != null)
+        if (tutorialBox != null)
         {
-            tutorialText =
-                textObj.GetComponent<TMP_Text>();
+            tutorialBox.SetActive(false);
         }
 
         StartCoroutine(IntroSequence());
@@ -28,37 +27,51 @@ public class IntroTutorialManager : MonoBehaviour
 
     IEnumerator IntroSequence()
     {
-        // Move tutorial
-        tutorialText.gameObject.SetActive(true);
-        tutorialText.text = "Use WASD to Move";
+        yield return ShowTutorial(
+            "Use WASD to Move",
+            4f);
 
-        yield return new WaitForSeconds(4f);
-
-        tutorialText.gameObject.SetActive(false);
-
-        // Small delay
         yield return new WaitForSeconds(1f);
 
-        // Phone objective
-        tutorialText.gameObject.SetActive(true);
-        tutorialText.text = "Your phone is ringing...";
-
-        // start ringing
-        if (phoneAudio != null && phoneRingClip != null)
+        if (phoneAudio != null &&
+            phoneRingClip != null)
         {
             phoneAudio.clip = phoneRingClip;
             phoneAudio.loop = true;
             phoneAudio.Play();
         }
 
-        yield return new WaitForSeconds(3f);
+        yield return ShowTutorial(
+            "Your phone is ringing...",
+            3f);
+    }
 
-        tutorialText.gameObject.SetActive(false);
+    IEnumerator ShowTutorial(
+        string message,
+        float duration)
+    {
+        tutorialBox.SetActive(true);
+        tutorialText.text = message;
+
+        yield return new WaitForSeconds(duration);
+
+        tutorialBox.SetActive(false);
     }
 
     public void PhoneDialogueFinished()
     {
-        StartCoroutine(ShowGunText());
+        StartCoroutine(
+            ShowTutorial(
+                "Quick! Pick up your Pistol",
+                4f));
+    }
+
+    public void GunPickedUp()
+    {
+        StartCoroutine(
+            ShowTutorial(
+                "Now leave through the door and escape the building!",
+                4f));
     }
 
     public void StopPhoneRing()
@@ -68,32 +81,10 @@ public class IntroTutorialManager : MonoBehaviour
             phoneAudio.Stop();
             phoneAudio.loop = false;
         }
-    }
 
-    IEnumerator ShowGunText()
-    {
-        tutorialText.gameObject.SetActive(true);
-        tutorialText.text =
-            "Quick! Pick up your Pistol";
-
-        yield return new WaitForSeconds(4f);
-
-        tutorialText.gameObject.SetActive(false);
-    }
-
-    public void GunPickedUp()
-    {
-        StartCoroutine(ShowDoorText());
-    }
-
-    IEnumerator ShowDoorText()
-    {
-        tutorialText.gameObject.SetActive(true);
-        tutorialText.text =
-            "Now leave through the door and escape the building!";
-
-        yield return new WaitForSeconds(4f);
-
-        tutorialText.gameObject.SetActive(false);
+        if (tutorialBox != null)
+        {
+            tutorialBox.SetActive(false);
+        }
     }
 }

@@ -36,8 +36,10 @@ public class AudioSettings : MonoBehaviour
 
     public void SetSFXVolume(float volume)
     {
-        Debug.Log("SFX Volume: " + volume);
-        audioMixer.SetFloat("SFXVolume", Mathf.Log10(volume) * 20f);
+        audioMixer.SetFloat(
+        "SFXVolume",
+        Mathf.Log10(
+        Mathf.Max(volume, 0.0001f)) * 20f);
     }
 
     public void ChangeMusicVolume()

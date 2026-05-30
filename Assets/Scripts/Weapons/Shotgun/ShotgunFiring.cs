@@ -32,6 +32,9 @@ public class ShotgunFiring : MonoBehaviour
     private AudioClip reloadClip;
 
     [SerializeField]
+    private float reloadSoundDelay = 1f;
+
+    [SerializeField]
     private AudioClip emptyClickClip;
 
     private float nextFireTime = 0f;
@@ -159,6 +162,21 @@ public class ShotgunFiring : MonoBehaviour
         }
     }
 
+    IEnumerator PlayReloadSoundDelayed()
+    {
+        yield return new WaitForSeconds(
+            reloadSoundDelay);
+
+        if (gunAudio != null &&
+            reloadClip != null)
+        {
+            gunAudio.PlayOneShot(
+                reloadClip);
+            CancelInvoke(nameof(StopGunSound));
+            Invoke(nameof(StopGunSound), 0.5f);
+        }
+    }
+
 
 
     IEnumerator Reload()
@@ -170,13 +188,8 @@ public class ShotgunFiring : MonoBehaviour
             RefreshReloadUI();
         }
 
-        if (reloadClip != null)
-        {
-            gunAudio.PlayOneShot(reloadClip);
-
-            CancelInvoke(nameof(StopGunSound));
-            Invoke(nameof(StopGunSound), 0.5f);
-        }
+        StartCoroutine(
+        PlayReloadSoundDelayed());
 
         yield return new WaitForSeconds(reloadTime);
 

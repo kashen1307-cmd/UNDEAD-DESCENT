@@ -15,7 +15,7 @@ public class ARFiring : MonoBehaviour
     private bool isShooting = false;
 
     [Header("Ammo")]
-    public int maxAmmo = 30;
+    public int magazineSize = 30;
     public int currentAmmo;
 
     public int reserveAmmo = 90;
@@ -35,6 +35,9 @@ public class ARFiring : MonoBehaviour
     private AudioClip reloadClip;
 
     [SerializeField]
+    private float reloadSoundDelay = 0.5f;
+
+    [SerializeField]
     private AudioClip emptyClickClip;
 
     private PlayerMovement playerStats;
@@ -44,14 +47,34 @@ public class ARFiring : MonoBehaviour
 
     void Start()
     {
-        playerStats =
-            GetComponentInParent<PlayerMovement>();
+        playerStats = FindAnyObjectByType<PlayerMovement>();
 
-        currentAmmo = maxAmmo;
+        currentAmmo = magazineSize;
+        reserveAmmo = maxReserveAmmo - magazineSize;
 
-        FindAmmoUI();
-        FindReloadUI();
-        UpdateAmmoUI();
+        GameObject ammoUI =
+            GameObject.Find("AmmoText");
+
+        if (ammoUI != null)
+        {
+            ammoText =
+                ammoUI.GetComponent<TMPro.TMP_Text>();
+
+            UpdateAmmoUI();
+
+
+        }
+
+        GameObject reloadUI =
+        GameObject.Find("ReloadText");
+
+        if (reloadUI != null)
+        {
+            reloadText =
+                reloadUI.GetComponent<TMP_Text>();
+
+            reloadText.text = "";
+        }
     }
 
     void OnEnable()
@@ -89,55 +112,37 @@ public class ARFiring : MonoBehaviour
         if (Time.timeScale == 0f)
             return;
 
-        if (isReloading || isShooting)
-            return;
-
         FindAmmoUI();
         FindReloadUI();
 
-        // Reload
+        RefreshReloadUI(); // ALWAYS runs
+
+        if (isShooting)
+            return;
+
+        // Reload input still allowed
         if (Input.GetKeyDown(KeyCode.R)
-            && currentAmmo < maxAmmo
+            && currentAmmo < magazineSize
             && reserveAmmo > 0)
         {
             StartCoroutine(Reload());
             return;
         }
 
-        // Empty mag
+        // Empty mag logic
         if (currentAmmo <= 0)
         {
-            if (reloadText != null)
-            {
-                if (reserveAmmo > 0)
-                {
-                    reloadText.text =
-                        "Press R to Reload";
-                }
-                else
-                {
-                    reloadText.text =
-                        "Out of Ammo";
-                }
-            }
-
             if (Input.GetButtonDown("Fire1"))
             {
                 if (emptyClickClip != null)
                 {
-                    gunAudio.PlayOneShot(
-                        emptyClickClip);
+                    gunAudio.PlayOneShot(emptyClickClip);
                     CancelInvoke(nameof(StopGunSound));
                     Invoke(nameof(StopGunSound), 0.5f);
                 }
             }
 
             return;
-        }
-
-        if (reloadText != null)
-        {
-            RefreshReloadUI();
         }
 
         // Fire
@@ -161,7 +166,7 @@ public class ARFiring : MonoBehaviour
         {
             gunAudio.PlayOneShot(gunshotClip);
             CancelInvoke(nameof(StopGunSound));
-            Invoke(nameof(StopGunSound), 1f);
+            Invoke(nameof(StopGunSound), 0.3f);
         }
 
         for (int i = 0;
@@ -201,24 +206,34 @@ public class ARFiring : MonoBehaviour
         isShooting = false;
     }
 
-    IEnumerator Reload()
+    IEnumerator PlayReloadSoundDelayed()
     {
-        isReloading = true;
+        yield return new WaitForSeconds(
+            reloadSoundDelay);
 
-        if (reloadClip != null)
+        if (gunAudio != null &&
+            reloadClip != null)
         {
             gunAudio.PlayOneShot(
                 reloadClip);
             CancelInvoke(nameof(StopGunSound));
             Invoke(nameof(StopGunSound), 0.5f);
         }
+    }
+
+    IEnumerator Reload()
+    {
+        isReloading = true;
+
+        StartCoroutine(
+        PlayReloadSoundDelayed());
 
         yield return
             new WaitForSeconds(
                 reloadTime);
 
         int ammoNeeded =
-            maxAmmo - currentAmmo;
+            magazineSize - currentAmmo;
 
         int ammoToLoad =
             Mathf.Min(

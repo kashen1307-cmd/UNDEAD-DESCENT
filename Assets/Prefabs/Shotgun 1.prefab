@@ -146,10 +146,13 @@ MonoBehaviour:
   fireRate: 1
   maxAmmo: 2
   currentAmmo: 0
+  reserveAmmo: 12
+  maxReserveAmmo: 12
   reloadTime: 2
   gunAudio: {fileID: 4167051417862038809}
   gunshotClip: {fileID: 8300000, guid: c628742a8c72c28479bebe75c4e8c0f3, type: 3}
   reloadClip: {fileID: 8300000, guid: 09d1d4454bd5f7242a0b232fe8911512, type: 3}
+  reloadSoundDelay: 1.5
   emptyClickClip: {fileID: 8300000, guid: d87775ad26cfe9e429e43694fd4c02b3, type: 3}
   ammoText: {fileID: 0}
   reloadText: {fileID: 0}

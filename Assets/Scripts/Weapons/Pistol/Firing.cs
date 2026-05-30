@@ -41,6 +41,9 @@ public class Firing : MonoBehaviour
     [SerializeField] 
     private AudioClip reloadClip;
 
+    [SerializeField]
+    private float reloadSoundDelay = 0.5f;
+
     private float nextEmptyClickTime = 0f;
 
     private PlayerMovement playerStats;
@@ -180,6 +183,21 @@ public class Firing : MonoBehaviour
 
     }
 
+    IEnumerator PlayReloadSoundDelayed()
+    {
+        yield return new WaitForSeconds(
+            reloadSoundDelay);
+
+        if (gunAudio != null &&
+            reloadClip != null)
+        {
+            gunAudio.PlayOneShot(
+                reloadClip);
+            CancelInvoke(nameof(StopGunSound));
+            Invoke(nameof(StopGunSound), 0.5f);
+        }
+    }
+
 
     IEnumerator Reload()
     {
@@ -190,12 +208,8 @@ public class Firing : MonoBehaviour
             RefreshReloadUI();
         }
 
-        if (reloadClip != null)
-        {
-            gunAudio.PlayOneShot(reloadClip);
-            CancelInvoke(nameof(StopGunSound));
-            Invoke(nameof(StopGunSound), 0.5f);
-        }
+        StartCoroutine(
+        PlayReloadSoundDelayed());
 
         yield return new WaitForSeconds(reloadTime);
 

@@ -144,7 +144,7 @@ MonoBehaviour:
   burstCount: 3
   timeBetweenBurstShots: 0.1
   fireRate: 0.5
-  maxAmmo: 30
+  magazineSize: 30
   currentAmmo: 0
   reserveAmmo: 90
   maxReserveAmmo: 90
@@ -152,6 +152,7 @@ MonoBehaviour:
   gunAudio: {fileID: -321525184587066624}
   gunshotClip: {fileID: 8300000, guid: afcb81e25c1b919449c7d5d2b2cef1b9, type: 3}
   reloadClip: {fileID: 8300000, guid: 09d1d4454bd5f7242a0b232fe8911512, type: 3}
+  reloadSoundDelay: 0.5
   emptyClickClip: {fileID: 8300000, guid: d87775ad26cfe9e429e43694fd4c02b3, type: 3}
   ammoText: {fileID: 0}
   reloadText: {fileID: 0}
