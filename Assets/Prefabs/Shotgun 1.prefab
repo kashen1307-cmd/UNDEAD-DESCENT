@@ -186,7 +186,7 @@ MonoBehaviour:
   - {x: 0, y: 0}
   - {x: 0, y: 0}
   - {x: 0, y: 0}
-  sortingOrderFront: 55
+  sortingOrderFront: 30
   sortingOrderBehind: 5
 --- !u!82 &4167051417862038809
 AudioSource:

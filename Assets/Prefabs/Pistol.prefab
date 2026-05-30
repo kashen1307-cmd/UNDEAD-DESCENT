@@ -153,7 +153,7 @@ MonoBehaviour:
   - {x: -0.07, y: -0.055}
   - {x: -0.03, y: -0.09}
   - {x: 0.07, y: -0.055}
-  sortingOrderFront: 55
+  sortingOrderFront: 30
   sortingOrderBehind: 5
 --- !u!82 &-6693195097767241568
 AudioSource:

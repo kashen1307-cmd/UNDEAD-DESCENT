@@ -8,7 +8,7 @@ public class VendingMachineButtons : MonoBehaviour
     public int manualPrice = 50;           // Type the price right here!
     public GameObject prefabToDispense;
     public TextMeshProUGUI priceText;
-    public ShopManager VendingMachine;
+    public ShopManager shopManager;
     private int finalPrice;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -34,10 +34,10 @@ public class VendingMachineButtons : MonoBehaviour
 
     public void OnPurchaseClicked()
     {
-        if (VendingMachine != null && prefabToDispense != null)
+        if (shopManager != null && prefabToDispense != null)
         {
             // Tell the vending machine the price and what to spawn
-            VendingMachine.BuyItem(finalPrice, prefabToDispense);
+            shopManager.BuyItem(finalPrice, prefabToDispense);
         }
     }
 }
