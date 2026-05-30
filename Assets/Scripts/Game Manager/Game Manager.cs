@@ -66,11 +66,11 @@ public class GameManager : MonoBehaviour
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
-            Debug.Log("🟢 THE KING IS CROWNED: Floor 1 Manager is active and surviving.");
+            Debug.Log("Floor 1 Manager is active and surviving.");
         }
         else if (instance != this)
         {
-            Debug.Log("🔴 ASSASSIN DEFEATED: Floor 2 Manager woke up and destroyed itself.");
+            Debug.Log("Floor 2 Manager woke up and destroyed itself.");
             Destroy(gameObject);
         }
     }

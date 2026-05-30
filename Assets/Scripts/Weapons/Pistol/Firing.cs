@@ -18,9 +18,12 @@ public class Firing : MonoBehaviour
     private float nextFireTime = 0f;
 
     [Header("Ammo")]
-    public int maxAmmo = 12;
 
+    public int magazineSize = 6;
     public int currentAmmo;
+
+    public int maxReserveAmmo = 32;
+    public int reserveAmmo;
 
     public float reloadTime = 1.5f;
 
@@ -47,7 +50,8 @@ public class Firing : MonoBehaviour
     {
         playerStats = FindAnyObjectByType<PlayerMovement>();
 
-        currentAmmo = maxAmmo;
+        currentAmmo = magazineSize;
+        reserveAmmo = maxReserveAmmo - magazineSize;
 
         GameObject ammoUI =
             GameObject.Find("AmmoText");
@@ -80,11 +84,7 @@ public class Firing : MonoBehaviour
         FindReloadUI();
 
         UpdateAmmoUI();
-
-        if (reloadText != null)
-        {
-            reloadText.text = "";
-        }
+        RefreshReloadUI();
     }
 
     void OnDisable()
@@ -106,7 +106,8 @@ public class Firing : MonoBehaviour
     {
         if (ammoText != null)
         {
-            ammoText.text = currentAmmo + " / " + maxAmmo;
+            ammoText.text =
+            currentAmmo + " / " + reserveAmmo;
         }
     }
 
@@ -123,12 +124,13 @@ public class Firing : MonoBehaviour
 
         if (reloadText != null && currentAmmo > 0)
         {
-            reloadText.text = "";
+            RefreshReloadUI();
         }
 
         // Manual reload
         if (Input.GetKeyDown(KeyCode.R)
-            && currentAmmo < maxAmmo)
+        && currentAmmo < magazineSize
+        && reserveAmmo > 0)
         {
             StartCoroutine(Reload());
             return;
@@ -139,7 +141,14 @@ public class Firing : MonoBehaviour
         {
             if (reloadText != null)
             {
-                reloadText.text = "Press R to Reload";
+                if (reserveAmmo > 0)
+                {
+                    reloadText.text = "Press R to Reload";
+                }
+                else
+                {
+                    reloadText.text = "Out of Ammo!";
+                }
             }
 
             if (Input.GetButtonDown("Fire1") && Time.time > nextEmptyClickTime)
@@ -178,10 +187,9 @@ public class Firing : MonoBehaviour
 
         if (reloadText != null)
         {
-            reloadText.text = "";
+            RefreshReloadUI();
         }
 
-        // 🔊 play reload sound
         if (reloadClip != null)
         {
             gunAudio.PlayOneShot(reloadClip);
@@ -191,15 +199,19 @@ public class Firing : MonoBehaviour
 
         yield return new WaitForSeconds(reloadTime);
 
-        currentAmmo = maxAmmo;
+        int bulletsNeeded =
+            magazineSize - currentAmmo;
+
+        int bulletsToLoad =
+            Mathf.Min(bulletsNeeded,
+                      reserveAmmo);
+
+        currentAmmo += bulletsToLoad;
+        reserveAmmo -= bulletsToLoad;
+
         isReloading = false;
 
         UpdateAmmoUI();
-
-        if (reloadText != null)
-        {
-            reloadText.text = "";
-        }
     }
 
     void FindReloadUI()
@@ -218,6 +230,32 @@ public class Firing : MonoBehaviour
 
                 
             }
+        }
+    }
+
+    void RefreshReloadUI()
+    {
+        if (reloadText == null)
+            return;
+
+        if (isReloading)
+        {
+            reloadText.text = "Reloading...";
+        }
+        else if (currentAmmo <= 0)
+        {
+            if (reserveAmmo > 0)
+            {
+                reloadText.text = "Press R to Reload";
+            }
+            else
+            {
+                reloadText.text = "Out of Ammo";
+            }
+        }
+        else
+        {
+            reloadText.text = "";
         }
     }
 

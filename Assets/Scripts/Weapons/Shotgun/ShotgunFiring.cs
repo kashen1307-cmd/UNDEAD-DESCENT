@@ -13,8 +13,12 @@ public class ShotgunFiring : MonoBehaviour
     public float fireRate = 1f;
 
     [Header("Ammo")]
-    public int maxAmmo = 1;
+    public int maxAmmo = 2;  // shells in gun
     public int currentAmmo;
+
+    public int reserveAmmo = 12; // carried ammo
+    public int maxReserveAmmo = 12;
+
     public float reloadTime = 2f;
     private bool isReloading = false;
 
@@ -74,11 +78,7 @@ public class ShotgunFiring : MonoBehaviour
         FindReloadUI();
 
         UpdateAmmoUI();
-
-        if (reloadText != null)
-        {
-            reloadText.text = "";
-        }
+        RefreshReloadUI();
     }
 
     void OnDisable()
@@ -108,12 +108,13 @@ public class ShotgunFiring : MonoBehaviour
 
         if (reloadText != null && currentAmmo > 0)
         {
-            reloadText.text = "";
+            RefreshReloadUI();
         }
 
         // Manual reload
         if (Input.GetKeyDown(KeyCode.R)
-            && currentAmmo < maxAmmo)
+        && currentAmmo < maxAmmo
+        && reserveAmmo > 0)
         {
             StartCoroutine(Reload());
             return;
@@ -125,7 +126,14 @@ public class ShotgunFiring : MonoBehaviour
         {
             if (reloadText != null)
             {
-                reloadText.text = "Press R to Reload";
+                if (reserveAmmo > 0)
+                {
+                    reloadText.text = "Press R to Reload";
+                }
+                else
+                {
+                    reloadText.text = "Out of Ammo";
+                }
             }
 
             if (Input.GetButtonDown("Fire1"))
@@ -151,7 +159,7 @@ public class ShotgunFiring : MonoBehaviour
         }
     }
 
-   
+
 
     IEnumerator Reload()
     {
@@ -159,19 +167,28 @@ public class ShotgunFiring : MonoBehaviour
 
         if (reloadText != null)
         {
-            reloadText.text = "";
+            RefreshReloadUI();
         }
 
         if (reloadClip != null)
         {
             gunAudio.PlayOneShot(reloadClip);
+
             CancelInvoke(nameof(StopGunSound));
             Invoke(nameof(StopGunSound), 0.5f);
         }
 
         yield return new WaitForSeconds(reloadTime);
 
-        currentAmmo = maxAmmo;
+        int ammoNeeded =
+            maxAmmo - currentAmmo;
+
+        int ammoToLoad =
+            Mathf.Min(ammoNeeded, reserveAmmo);
+
+        currentAmmo += ammoToLoad;
+        reserveAmmo -= ammoToLoad;
+
         isReloading = false;
 
         UpdateAmmoUI();
@@ -201,7 +218,31 @@ public class ShotgunFiring : MonoBehaviour
         }
     }
 
+    void RefreshReloadUI()
+    {
+        if (reloadText == null)
+            return;
 
+        if (isReloading)
+        {
+            reloadText.text = "Reloading...";
+        }
+        else if (currentAmmo <= 0)
+        {
+            if (reserveAmmo > 0)
+            {
+                reloadText.text = "Press R to Reload";
+            }
+            else
+            {
+                reloadText.text = "Out of Ammo";
+            }
+        }
+        else
+        {
+            reloadText.text = "";
+        }
+    }
 
     void FindAmmoUI()
     {
@@ -226,7 +267,8 @@ public class ShotgunFiring : MonoBehaviour
     {
         if (ammoText != null)
         {
-            ammoText.text = currentAmmo + " / " + maxAmmo;
+            ammoText.text =
+                currentAmmo + " / " + reserveAmmo;
         }
     }
 

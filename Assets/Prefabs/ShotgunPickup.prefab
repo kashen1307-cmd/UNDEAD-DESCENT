@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6442347068518908353}
   - component: {fileID: 123680364459094618}
   - component: {fileID: 4198034988341785428}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: ShotgunPickup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -153,7 +153,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WeaponPickup
   handWeaponPrefab: {fileID: 8299195375914859666, guid: 1511c916363636949a6db3a415245f78, type: 3}
-  myPickupPrefab: {fileID: 3168093674693564188}
   interactPrompt: {fileID: 5835832616024499775}
 --- !u!1 &5835832616024499775
 GameObject:
@@ -167,7 +166,7 @@ GameObject:
   - component: {fileID: 7670149201195613664}
   - component: {fileID: 4415164657220322446}
   - component: {fileID: 2174968614287366646}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -268,7 +267,7 @@ GameObject:
   - component: {fileID: 4253103653190338242}
   - component: {fileID: 3438805884850718852}
   - component: {fileID: 1871318348702724724}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Interact
   m_TagString: Untagged
   m_Icon: {fileID: 0}

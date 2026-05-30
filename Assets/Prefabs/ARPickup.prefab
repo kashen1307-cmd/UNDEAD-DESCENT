@@ -16,6 +16,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ARPickup
       objectReference: {fileID: 0}
+    - target: {fileID: 3168093674693564188, guid: ce93e34cc250fa0479637c7dcef0af73, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 4198034988341785428, guid: ce93e34cc250fa0479637c7dcef0af73, type: 3}
       propertyPath: handWeaponPrefab
       value: 
@@ -60,10 +64,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5835832616024499775, guid: ce93e34cc250fa0479637c7dcef0af73, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 6442347068518908353, guid: ce93e34cc250fa0479637c7dcef0af73, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 348757803278748842, guid: e7a317155d54ecd4cb98b6cb8bc71d08, type: 3}
+    - target: {fileID: 8604169547552658058, guid: ce93e34cc250fa0479637c7dcef0af73, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

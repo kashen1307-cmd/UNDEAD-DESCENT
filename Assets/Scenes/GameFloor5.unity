@@ -1092,6 +1092,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1597105769}
     m_Modifications:
     - target: {fileID: 5948129609216178184, guid: c0171b09b4846e94abd5004ca6efbbaa, type: 3}
+      propertyPath: zombieHealth
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5948129609216178184, guid: c0171b09b4846e94abd5004ca6efbbaa, type: 3}
       propertyPath: _maxTotalEnemies
       value: 1
       objectReference: {fileID: 0}
