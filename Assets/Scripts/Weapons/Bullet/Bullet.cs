@@ -7,7 +7,7 @@ public class Bullet : MonoBehaviour
     public GameObject Enemy;
     public GameObject impactPrefab;
 
-    private int damage = 1;
+    public int damage = 1;
 
     //private bool isDead = false;
 

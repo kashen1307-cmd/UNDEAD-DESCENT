@@ -148,6 +148,7 @@ MonoBehaviour:
   currentAmmo: 0
   reserveAmmo: 12
   maxReserveAmmo: 12
+  weaponDamage: 1
   reloadTime: 2
   gunAudio: {fileID: 4167051417862038809}
   gunshotClip: {fileID: 8300000, guid: c628742a8c72c28479bebe75c4e8c0f3, type: 3}
