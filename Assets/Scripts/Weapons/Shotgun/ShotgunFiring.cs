@@ -199,6 +199,21 @@ public class ShotgunFiring : MonoBehaviour, IWeapon
         
         float actualReloadTime = reloadTime * playerMultiplier;
 
+        if (playerSwapper != null)
+        {
+            // Ask the Player to find the Canvas attached to it, instead of the gun looking for it!
+            ReloadUI playerReloadUI = playerSwapper.GetComponentInChildren<ReloadUI>();
+            
+            if (playerReloadUI != null)
+            {
+                playerReloadUI.StartReloadBar(actualReloadTime);
+            }
+            else
+            {
+                Debug.LogWarning("The Player couldn't find the ReloadUI script!");
+            }
+        }
+
         // --- REPLACE THE OLD WAIT TIMER WITH THIS ---
         yield return new WaitForSeconds(actualReloadTime);
 
@@ -243,10 +258,10 @@ public class ShotgunFiring : MonoBehaviour, IWeapon
         if (reloadText == null)
             return;
 
-        if (isReloading)
+        /*if (isReloading)
         {
             reloadText.text = "Reloading...";
-        }
+        }*/
         else if (currentAmmo <= 0)
         {
             if (reserveAmmo > 0)
