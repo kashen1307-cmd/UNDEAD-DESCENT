@@ -5,17 +5,28 @@ using UnityEngine.SceneManagement;
 
 public class AudioSettings : MonoBehaviour
 {
-    public AudioSource musicSource;
     public Slider musicSlider;
-    public AudioMixer audioMixer;
     public Slider sfxSlider;
+    public AudioMixer audioMixer;
+
+    private AudioSource musicSource;
 
     void Start()
     {
-        musicSlider.value = musicSource.volume;
+        SceneManager.sceneLoaded += OnSceneLoaded;
 
-        sfxSlider.onValueChanged.RemoveListener(SetSFXVolume);
-        sfxSlider.onValueChanged.AddListener(SetSFXVolume);
+        FindMusicSource();
+
+        if (musicSlider != null && musicSource != null)
+        {
+            musicSlider.value = musicSource.volume;
+        }
+
+        if (sfxSlider != null)
+        {
+            sfxSlider.onValueChanged.RemoveListener(SetSFXVolume);
+            sfxSlider.onValueChanged.AddListener(SetSFXVolume);
+        }
     }
 
     void OnDestroy()
@@ -25,25 +36,49 @@ public class AudioSettings : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        Slider sfxSlider = GameObject.Find("SFXSlider")?.GetComponent<Slider>();
+        FindMusicSource();
 
-        if (sfxSlider != null)
+        if (musicSlider == null)
         {
-            sfxSlider.onValueChanged.RemoveListener(SetSFXVolume);
-            sfxSlider.onValueChanged.AddListener(SetSFXVolume);
+            musicSlider =
+                GameObject.Find("MusicSlider")
+                ?.GetComponent<Slider>();
+        }
+
+        if (sfxSlider == null)
+        {
+            sfxSlider =
+                GameObject.Find("SFXSlider")
+                ?.GetComponent<Slider>();
+        }
+    }
+
+    void FindMusicSource()
+    {
+        if (MusicManager.instance != null)
+        {
+            musicSource =
+                MusicManager.instance
+                .GetComponent<AudioSource>();
         }
     }
 
     public void SetSFXVolume(float volume)
     {
         audioMixer.SetFloat(
-        "SFXVolume",
-        Mathf.Log10(
-        Mathf.Max(volume, 0.0001f)) * 20f);
+            "SFXVolume",
+            Mathf.Log10(volume) * 20f);
     }
 
     public void ChangeMusicVolume()
     {
-        musicSource.volume = musicSlider.value;
+        FindMusicSource();
+
+        if (musicSource != null &&
+            musicSlider != null)
+        {
+            musicSource.volume =
+                musicSlider.value;
+        }
     }
 }
