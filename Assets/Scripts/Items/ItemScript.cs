@@ -116,6 +116,33 @@ public class ItemScript : MonoBehaviour
             wallet.coinMultiplier += itemSO.coinMultiplierBonus; 
             }
             }
+
+
+        if (itemSO.reloadSpeedMultiplier != 0)
+        {
+            WeaponSwapper weaponSwapper = playerObject.GetComponent<WeaponSwapper>();
         
+            if (weaponSwapper != null)
+            {
+                weaponSwapper.ApplyReloadBuff(itemSO.reloadSpeedMultiplier);
+                 Debug.Log("New reload speed: " + weaponSwapper.currentReloadMultiplier);
+            }
+            else
+            {
+                Debug.LogWarning("WeaponSwapper not found on the Player!");
+            }
+        }
+
+        if (itemSO.ammoRestoreAmount > 0)
+        {
+            WeaponSwapper weaponSwapper = playerObject.GetComponent<WeaponSwapper>();
+        
+            if (weaponSwapper != null)
+            {
+                // We are about to create this method in Step 3!
+                weaponSwapper.RestoreActiveWeaponAmmo(itemSO.ammoRestoreAmount); 
+            }
+        }    
+
     }
 }

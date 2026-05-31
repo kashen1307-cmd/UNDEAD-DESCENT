@@ -143,7 +143,7 @@ MonoBehaviour:
   firePoint: {fileID: 4816117134957856537}
   burstCount: 3
   timeBetweenBurstShots: 0.1
-  fireRate: 0.5
+  fireRate: 0.2
   magazineSize: 30
   currentAmmo: 0
   reserveAmmo: 90
@@ -204,6 +204,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WeaponData
   floorPickupPrefab: {fileID: 5691627612217871358, guid: f836d0612d6a84d4c91420986c7e2eae, type: 3}
+  uiIcon: {fileID: -6340976952451373344, guid: e7a317155d54ecd4cb98b6cb8bc71d08, type: 3}
 --- !u!82 &-321525184587066624
 AudioSource:
   m_ObjectHideFlags: 0

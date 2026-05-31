@@ -2,7 +2,7 @@ using UnityEngine;
 using TMPro;
 using System.Collections;
 
-public class ShotgunFiring : MonoBehaviour
+public class ShotgunFiring : MonoBehaviour, IWeapon
 {
     public Transform firePoint;
     public GameObject bulletPrefab;
@@ -188,16 +188,23 @@ public class ShotgunFiring : MonoBehaviour
             RefreshReloadUI();
         }
 
-        StartCoroutine(
-        PlayReloadSoundDelayed());
+        StartCoroutine(PlayReloadSoundDelayed());
 
-        yield return new WaitForSeconds(reloadTime);
+        float playerMultiplier = 1f;
+        WeaponSwapper playerSwapper = GetComponentInParent<WeaponSwapper>();
+        if (playerSwapper != null)
+        {
+            playerMultiplier = playerSwapper.currentReloadMultiplier;
+        }
+        
+        float actualReloadTime = reloadTime * playerMultiplier;
 
-        int ammoNeeded =
-            maxAmmo - currentAmmo;
+        // --- REPLACE THE OLD WAIT TIMER WITH THIS ---
+        yield return new WaitForSeconds(actualReloadTime);
 
-        int ammoToLoad =
-            Mathf.Min(ammoNeeded, reserveAmmo);
+        int ammoNeeded = maxAmmo - currentAmmo;
+
+        int ammoToLoad = Mathf.Min(ammoNeeded, reserveAmmo);
 
         currentAmmo += ammoToLoad;
         reserveAmmo -= ammoToLoad;
@@ -328,7 +335,11 @@ public class ShotgunFiring : MonoBehaviour
         Invoke(nameof(StopGunSound), 0.5f);
     }
 
-   
+    public void AddAmmo(int amount)
+    {
+        reserveAmmo += amount;
+        UpdateAmmoUI(); 
+    }
 
 
 }

@@ -134,7 +134,7 @@ public class PlayerHealthController : MonoBehaviour
         playerSprite.material = defaultMaterial;
 
         // 3. THE BLINKING LOOP (I-Frames)
-        float elapsedTime = 0.15f;
+        float elapsedTime = 0.1f;
         while (elapsedTime < invincibilityDuration)
         {
             // Drop alpha to 0 (invisible)

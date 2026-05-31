@@ -2,7 +2,7 @@ using UnityEngine;
 using TMPro;
 using System.Collections;
 
-public class ARFiring : MonoBehaviour
+public class ARFiring : MonoBehaviour, IWeapon
 {
     [Header("Weapon")]
     public GameObject bulletPrefab;
@@ -225,20 +225,23 @@ public class ARFiring : MonoBehaviour
     {
         isReloading = true;
 
-        StartCoroutine(
-        PlayReloadSoundDelayed());
+        StartCoroutine(PlayReloadSoundDelayed());
 
-        yield return
-            new WaitForSeconds(
-                reloadTime);
+        float playerMultiplier = 1f;
+        WeaponSwapper playerSwapper = GetComponentInParent<WeaponSwapper>();
+        if (playerSwapper != null)
+        {
+            playerMultiplier = playerSwapper.currentReloadMultiplier;
+        }
+        
+        float actualReloadTime = reloadTime * playerMultiplier;
 
-        int ammoNeeded =
-            magazineSize - currentAmmo;
+        // --- REPLACE THE OLD WAIT TIMER WITH THIS ---
+        yield return new WaitForSeconds(actualReloadTime);
 
-        int ammoToLoad =
-            Mathf.Min(
-                ammoNeeded,
-                reserveAmmo);
+        int ammoNeeded =magazineSize - currentAmmo;
+
+        int ammoToLoad =Mathf.Min(ammoNeeded,reserveAmmo);
 
         currentAmmo += ammoToLoad;
         reserveAmmo -= ammoToLoad;
@@ -314,4 +317,11 @@ public class ARFiring : MonoBehaviour
             }
         }
     }
+
+    public void AddAmmo(int amount)
+    {
+        reserveAmmo += amount;
+        UpdateAmmoUI(); 
+    }
+    
 }

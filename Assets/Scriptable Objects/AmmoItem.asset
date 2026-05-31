@@ -10,17 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ac36e058f18f67409dc7f33336cba83, type: 3}
-  m_Name: DamageItem
+  m_Name: AmmoItem
   m_EditorClassIdentifier: Assembly-CSharp::ItemSO
-  itemName: DMG Inc Bullets
-  itemDescription: Special bullets that increase damage by 1
-  icon: {fileID: 2652832817126051637, guid: eae9ace3659c07e40b4c0c2d58e2a0cd, type: 3}
+  itemName: 
+  itemDescription: 
+  icon: {fileID: -7311453707233749354, guid: f17a2817927f16144ad60290ae98ffda, type: 3}
   isCurrency: 0
-  itemCost: 1
+  itemCost: 7
   currentHealth: 0
   maxHealth: 0
   movementSpeed: 0
-  damageBonus: 1
-  reloadSpeed: 0
+  damageBonus: 0
+  reloadSpeedMultiplier: 0
   coinMultiplierBonus: 0
+  ammoRestoreAmount: 15
   duration: 0

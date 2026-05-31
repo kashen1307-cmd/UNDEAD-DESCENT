@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ac36e058f18f67409dc7f33336cba83, type: 3}
   m_Name: SpeedItem
   m_EditorClassIdentifier: Assembly-CSharp::ItemSO
-  itemName: 
-  itemDescription: Increses Movment Speed by 2.5
+  itemName: Energy Drink
+  itemDescription: High caffene energy drink that increase movement speed by 2.5
   icon: {fileID: 9216563884979187710, guid: 838f50c05e79ded469069d4bed643e5c, type: 3}
   isCurrency: 0
   itemCost: 1

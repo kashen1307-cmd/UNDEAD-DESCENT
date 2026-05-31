@@ -5300,15 +5300,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5016197703898515272, guid: 1671f892e57efe0498628926338eb8d9, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 43
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 5016197703898515272, guid: 1671f892e57efe0498628926338eb8d9, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 128.5
+      value: 130.5
       objectReference: {fileID: 0}
     - target: {fileID: 5016197703898515272, guid: 1671f892e57efe0498628926338eb8d9, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -9
+      value: -13
       objectReference: {fileID: 0}
     - target: {fileID: 6007409067152259669, guid: 1671f892e57efe0498628926338eb8d9, type: 3}
       propertyPath: m_Sprite

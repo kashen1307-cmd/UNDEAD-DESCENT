@@ -113,13 +113,16 @@ MonoBehaviour:
   firePoint: {fileID: 869048001795448887}
   bulletPrefab: {fileID: 4925235700993090593, guid: b2f8aa71631cf8344bc7b7eea760f5e5, type: 3}
   fireRate: 2
-  maxAmmo: 12
+  magazineSize: 6
   currentAmmo: 0
+  maxReserveAmmo: 32
+  reserveAmmo: 0
   reloadTime: 1
   gunAudio: {fileID: -6693195097767241568}
   gunshotClip: {fileID: 8300000, guid: 0a591474061cdb14f9df5a14858d3934, type: 3}
   emptyClickClip: {fileID: 8300000, guid: d87775ad26cfe9e429e43694fd4c02b3, type: 3}
   reloadClip: {fileID: 8300000, guid: 09d1d4454bd5f7242a0b232fe8911512, type: 3}
+  reloadSoundDelay: 0.5
 --- !u!114 &6081692904985354301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -265,6 +268,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WeaponData
   floorPickupPrefab: {fileID: 6005769688435824881, guid: 4597b9e92b6a0244daf38c980d323b5d, type: 3}
+  uiIcon: {fileID: 6988615874206328730, guid: d31d4cb04269c3e47b3636932e83a35c, type: 3}
 --- !u!1 &8322188886976125611
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,6 +8,9 @@ public class WeaponSwapper : MonoBehaviour
     public GameObject[] equippedGuns = new GameObject[2]; 
     public GameObject[] floorPrefabs = new GameObject[2];
 
+
+    public float currentReloadMultiplier = 1.0f;
+
     private int currentSlot = 0;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -111,7 +114,14 @@ public class WeaponSwapper : MonoBehaviour
         }
 
         UpdateWeaponVisibility();
-    }
+        
+        WeaponData newGunStats = newWeaponPrefab.GetComponent<WeaponData>();
+        if (WeaponHUD.instance != null) 
+        {
+            WeaponHUD.instance.SwapWeapon(newGunStats.uiIcon);
+        }
+
+    }   
 
     private void ToggleWeaponSlot()
     {
@@ -126,6 +136,17 @@ public class WeaponSwapper : MonoBehaviour
         }
 
         UpdateWeaponVisibility();
+
+        if (equippedGuns[currentSlot] != null)
+        {
+            WeaponData gunStats = equippedGuns[currentSlot].GetComponent<WeaponData>(); 
+        
+        // SAFETY CHECK: Does the UI actually exist in this scene?
+            if (WeaponHUD.instance != null)
+            {
+            WeaponHUD.instance.SwapWeapon(gunStats.uiIcon); 
+            }
+        }
     }
     
     private void UpdateWeaponVisibility()
@@ -133,6 +154,57 @@ public class WeaponSwapper : MonoBehaviour
         // Turn on the gun in the current slot, turn off the other one
         if (equippedGuns[0] != null) equippedGuns[0].SetActive(currentSlot == 0);
         if (equippedGuns[1] != null) equippedGuns[1].SetActive(currentSlot == 1);
+    }
+
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    // 2. Stop listening if the player dies completely
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    // 3. This fires automatically the exact millisecond you enter a new apartment floor!
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        // Check if we actually have a gun in our hands
+        if (equippedGuns[currentSlot] != null)
+        {
+            // Grab the clean icon and force the brand new UI to show it!
+            WeaponData startingGunStats = equippedGuns[currentSlot].GetComponent<WeaponData>();
+            
+            if (WeaponHUD.instance != null)
+            {
+                WeaponHUD.instance.SwapWeapon(startingGunStats.uiIcon);
+            }
+        }
+    }
+
+    public void ApplyReloadBuff(float buffAmount)
+    {
+        // Multiply the current stat by the item's buff. 
+        // If they pick up two 0.85 buffs, they compound perfectly!
+        currentReloadMultiplier *= buffAmount;
+    }
+
+    public void RestoreActiveWeaponAmmo(int amount)
+    {
+        // 1. Make sure we are actually holding a gun!
+        if (equippedGuns[currentSlot] != null)
+        {
+            // 2. Grab your teammate's firing script off the active gun
+            // IMPORTANT: Change 'WeaponFireScript' to whatever your teammate actually named their script!
+            IWeapon activeGunScript = equippedGuns[currentSlot].GetComponent<IWeapon>();
+
+            if (activeGunScript != null)
+            {
+                // 3. Shove the ammo into the gun!
+                activeGunScript.AddAmmo(amount);
+            }
+        }
     }
 }
     

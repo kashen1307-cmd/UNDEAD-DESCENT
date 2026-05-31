@@ -1450,6 +1450,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2708175650119063217, guid: 5d49cd91776f9a245aae30034fa83464, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2708175650119063217, guid: 5d49cd91776f9a245aae30034fa83464, type: 3}
       propertyPath: weaponSocket
       value: 
       objectReference: {fileID: 724768115}

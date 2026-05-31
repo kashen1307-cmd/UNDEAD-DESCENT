@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 177e96f9f564c7a44bf15eacb1f9f0bf
+guid: 614ce56c83246d247828e84490735b94
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7701979557348219945
-    second: HUD Container_0
+      213: 2569267736507837954
+    second: Propmt Box_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,23 +139,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: HUD Container_0
+      name: Propmt Box_0
       rect:
         serializedVersion: 2
-        x: 8
-        y: 34
-        width: 39
-        height: 19
+        x: 39
+        y: 123
+        width: 182
+        height: 66
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 29, y: 13, z: 29, w: 30}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7d360f046621d1590800000000000000
-      internalID: -7701979557348219945
+      spriteID: 20eeb6fc46fd7a320800000000000000
+      internalID: 2569267736507837954
       vertices: []
       indices: 
       edges: []
@@ -164,7 +164,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: cf776475fa2781a4d83b037302e36223
     internalID: 0
     vertices: []
     indices: 
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      HUD Container_0: -7701979557348219945
+      Propmt Box_0: 2569267736507837954
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

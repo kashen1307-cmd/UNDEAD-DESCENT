@@ -301,3 +301,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WeaponData
   floorPickupPrefab: {fileID: 3168093674693564188, guid: ce93e34cc250fa0479637c7dcef0af73, type: 3}
+  uiIcon: {fileID: 6802846391445644936, guid: ae7f216e2e5c9424fa7a71ca6574106b, type: 3}

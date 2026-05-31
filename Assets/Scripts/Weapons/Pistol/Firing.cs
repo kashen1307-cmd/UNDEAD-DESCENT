@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 using TMPro;
 
-public class Firing : MonoBehaviour
+public class Firing : MonoBehaviour, IWeapon
 {
     [Header("Ammo UI")]
     public TMP_Text ammoText;
@@ -208,17 +208,23 @@ public class Firing : MonoBehaviour
             RefreshReloadUI();
         }
 
-        StartCoroutine(
-        PlayReloadSoundDelayed());
+        StartCoroutine(PlayReloadSoundDelayed());
 
-        yield return new WaitForSeconds(reloadTime);
+        float playerMultiplier = 1f;
+        WeaponSwapper playerSwapper = GetComponentInParent<WeaponSwapper>();
+        if (playerSwapper != null)
+        {
+            playerMultiplier = playerSwapper.currentReloadMultiplier;
+        }
+        
+        float actualReloadTime = reloadTime * playerMultiplier;
 
-        int bulletsNeeded =
-            magazineSize - currentAmmo;
+        // --- REPLACE THE OLD WAIT TIMER WITH THIS ---
+        yield return new WaitForSeconds(actualReloadTime);
 
-        int bulletsToLoad =
-            Mathf.Min(bulletsNeeded,
-                      reserveAmmo);
+        int bulletsNeeded =magazineSize - currentAmmo;
+
+        int bulletsToLoad = Mathf.Min(bulletsNeeded, reserveAmmo);
 
         currentAmmo += bulletsToLoad;
         reserveAmmo -= bulletsToLoad;
@@ -321,5 +327,10 @@ public class Firing : MonoBehaviour
         Invoke(nameof(StopGunSound), 0.5f);
     }
 
+    public void AddAmmo(int amount)
+    {
+        reserveAmmo += amount;
+        UpdateAmmoUI(); 
+    }
     
 }
