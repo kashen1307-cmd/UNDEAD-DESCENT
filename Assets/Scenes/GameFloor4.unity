@@ -713,7 +713,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2990154a7308964481f496eb48b40c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VendingMachine
-  shopUI: {fileID: 0}
+  shopUI: {fileID: 1478200955}
   interactPrompt: {fileID: 485096455}
 --- !u!61 &103182606
 BoxCollider2D:
@@ -4767,7 +4767,7 @@ PrefabInstance:
     - target: {fileID: 541930605505774348, guid: 3ef5c42843b7f6c48a5833310bf982f4, type: 3}
       propertyPath: itemSpawnPoint
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 684505028}
     - target: {fileID: 785042340354122388, guid: 3ef5c42843b7f6c48a5833310bf982f4, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -4857,6 +4857,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ef5c42843b7f6c48a5833310bf982f4, type: 3}
+--- !u!1 &1478200955 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4948937844105132300, guid: 3ef5c42843b7f6c48a5833310bf982f4, type: 3}
+  m_PrefabInstance: {fileID: 1478200954}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1488694278
 GameObject:
   m_ObjectHideFlags: 0
