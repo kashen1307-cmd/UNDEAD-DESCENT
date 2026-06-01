@@ -329,6 +329,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1182612508}
     m_Modifications:
     - target: {fileID: 5948129609216178184, guid: c0171b09b4846e94abd5004ca6efbbaa, type: 3}
+      propertyPath: zombieHealth
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5948129609216178184, guid: c0171b09b4846e94abd5004ca6efbbaa, type: 3}
       propertyPath: spitterHealth
       value: 3
       objectReference: {fileID: 0}
@@ -874,6 +878,8 @@ Transform:
   m_Children:
   - {fileID: 168430301}
   - {fileID: 138492695}
+  - {fileID: 1638567081}
+  - {fileID: 563903360}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &138492694
@@ -981,6 +987,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 105823291}
     m_Modifications:
+    - target: {fileID: 300891517050211384, guid: 471b4eaa6c7de8c4586a8c24b3c7ed94, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2846888764574060222, guid: 471b4eaa6c7de8c4586a8c24b3c7ed94, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.75
@@ -1024,6 +1034,10 @@ PrefabInstance:
     - target: {fileID: 5982006072218671647, guid: 471b4eaa6c7de8c4586a8c24b3c7ed94, type: 3}
       propertyPath: m_Name
       value: Wall Light
+      objectReference: {fileID: 0}
+    - target: {fileID: 8518528343519069112, guid: 471b4eaa6c7de8c4586a8c24b3c7ed94, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1158,6 +1172,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1182612508}
     m_Modifications:
+    - target: {fileID: 5948129609216178184, guid: c0171b09b4846e94abd5004ca6efbbaa, type: 3}
+      propertyPath: zombieHealth
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5948129609216178184, guid: c0171b09b4846e94abd5004ca6efbbaa, type: 3}
       propertyPath: spitterHealth
       value: 3
@@ -2048,6 +2066,68 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 562097064}
   m_CullTransparentMesh: 1
+--- !u!1001 &563903359
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 105823291}
+    m_Modifications:
+    - target: {fileID: 3819335616834659856, guid: d5aa134725714a940b24610583e01b68, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 3819335616834659856, guid: d5aa134725714a940b24610583e01b68, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3819335616834659856, guid: d5aa134725714a940b24610583e01b68, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3819335616834659856, guid: d5aa134725714a940b24610583e01b68, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3819335616834659856, guid: d5aa134725714a940b24610583e01b68, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3819335616834659856, guid: d5aa134725714a940b24610583e01b68, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3819335616834659856, guid: d5aa134725714a940b24610583e01b68, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3819335616834659856, guid: d5aa134725714a940b24610583e01b68, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3819335616834659856, guid: d5aa134725714a940b24610583e01b68, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3819335616834659856, guid: d5aa134725714a940b24610583e01b68, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 7378284645798271783, guid: d5aa134725714a940b24610583e01b68, type: 3}
+      propertyPath: m_Name
+      value: Bottom Wall Light (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d5aa134725714a940b24610583e01b68, type: 3}
+--- !u!4 &563903360 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3819335616834659856, guid: d5aa134725714a940b24610583e01b68, type: 3}
+  m_PrefabInstance: {fileID: 563903359}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &592782997
 GameObject:
   m_ObjectHideFlags: 0
@@ -3486,6 +3566,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1182612508}
     m_Modifications:
+    - target: {fileID: 5948129609216178184, guid: c0171b09b4846e94abd5004ca6efbbaa, type: 3}
+      propertyPath: zombieHealth
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5948129609216178184, guid: c0171b09b4846e94abd5004ca6efbbaa, type: 3}
       propertyPath: spitterHealth
       value: 3
@@ -5472,6 +5556,68 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1638567080
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 105823291}
+    m_Modifications:
+    - target: {fileID: 3819335616834659856, guid: d5aa134725714a940b24610583e01b68, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 3819335616834659856, guid: d5aa134725714a940b24610583e01b68, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3819335616834659856, guid: d5aa134725714a940b24610583e01b68, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3819335616834659856, guid: d5aa134725714a940b24610583e01b68, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3819335616834659856, guid: d5aa134725714a940b24610583e01b68, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3819335616834659856, guid: d5aa134725714a940b24610583e01b68, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3819335616834659856, guid: d5aa134725714a940b24610583e01b68, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3819335616834659856, guid: d5aa134725714a940b24610583e01b68, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3819335616834659856, guid: d5aa134725714a940b24610583e01b68, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3819335616834659856, guid: d5aa134725714a940b24610583e01b68, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 7378284645798271783, guid: d5aa134725714a940b24610583e01b68, type: 3}
+      propertyPath: m_Name
+      value: Bottom Wall Light
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d5aa134725714a940b24610583e01b68, type: 3}
+--- !u!4 &1638567081 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3819335616834659856, guid: d5aa134725714a940b24610583e01b68, type: 3}
+  m_PrefabInstance: {fileID: 1638567080}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1663833620
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5480,6 +5626,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1182612508}
     m_Modifications:
+    - target: {fileID: 5948129609216178184, guid: c0171b09b4846e94abd5004ca6efbbaa, type: 3}
+      propertyPath: zombieHealth
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5948129609216178184, guid: c0171b09b4846e94abd5004ca6efbbaa, type: 3}
       propertyPath: spitterHealth
       value: 3

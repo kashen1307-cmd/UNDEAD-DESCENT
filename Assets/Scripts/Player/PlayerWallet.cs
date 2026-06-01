@@ -18,7 +18,10 @@ public class PlayerWallet : MonoBehaviour
     public void AddCoins(int amount)
     {
         
-        int totalToAdd = Mathf.RoundToInt(amount * coinMultiplier);
+        float cappedMultiplier = Mathf.Min(coinMultiplier, 5f);
+
+   
+        int totalToAdd = Mathf.RoundToInt(amount * cappedMultiplier);
         Coins += totalToAdd;
         
         

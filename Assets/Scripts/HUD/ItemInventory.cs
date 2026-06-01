@@ -5,10 +5,22 @@ public class ItemInventory : MonoBehaviour
     
     public GameObject slotPrefab;
     public Transform gridContainer;
+    private bool hasRefreshed = false;
     
     void OnEnable()
     {
-        RefreshInventoryDisplay();
+        hasRefreshed = false;
+    }
+
+    private void Update()
+    {
+        if (!hasRefreshed && GameManager.instance != null)
+        {
+            RefreshInventoryDisplay();
+            
+            
+            hasRefreshed = true; 
+        }
     }
     
     public void RefreshInventoryDisplay()
