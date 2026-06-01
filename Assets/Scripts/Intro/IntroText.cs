@@ -7,7 +7,7 @@ public class IntroText : MonoBehaviour
 {
     public GameObject textObject;
     
-    public float displayTime = 3f;
+    public float displayTime = 8f;
 
     void Start()
     {

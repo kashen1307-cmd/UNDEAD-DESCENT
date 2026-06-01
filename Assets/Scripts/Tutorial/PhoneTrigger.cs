@@ -41,17 +41,17 @@ public class PhoneTrigger : MonoBehaviour
             }
             string[] lines =
             {
-                "Player:   Hello",
-                "Friend:   Thank god youre alive!.",
-                "Player:   What?",
-                "Friend:   Listen carefully.",
-                "Friend:   Something is wrong.",
-                "Friend:   Everyones gone crazy, running around,attacking each other.",
-                "Friend:   I'm pulling up to your place now so get ready.",
-                "Friend:   You got your gun from your security job on you right?.",
-                "Player:   Yea, why?",
-                "Friend:   Good,Take it with you and meet me outside, and be careful. For all we know everyone in the building might have gone crazy too:",
-                "Player:   ...Alright."
+                "Player: Hello",
+                "Sai: Thank god youre alive!.",
+                "Player: What?",
+                "Sai: Listen carefully.",
+                "Sai: Something is wrong.",
+                "Sai: Everyones gone crazy, running around,attacking each other.",
+                "Sai: I'm pulling up to your place now so get ready.",
+                "Sai: You got your gun from your security job on you right?.",
+                "Player: Yea, why?",
+                "Sai: Good,Take it with you and meet me outside, and be careful. For all we know everyone in the building might have gone crazy too:",
+                "Player: ...Alright."
             };
 
             dialogue.StartDialogue(lines);

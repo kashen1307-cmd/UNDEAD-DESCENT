@@ -1102,14 +1102,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 525309396}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.59, y: 9.31, z: 0}
-  m_LocalScale: {x: 7.7365203, y: 7.632919, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -139.67436, y: 387.6517, z: 0}
+  m_LocalScale: {x: 146.62056, y: 195.43684, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1044399096}
   - {fileID: 1771086192}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1354242913}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!68 &525309404
 EdgeCollider2D:
@@ -1207,7 +1207,11 @@ MonoBehaviour:
 
     and your mouse to
 
-    aim and shoot'
+    aim and shoot
+
+
+    Esc
+    to pause game'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0753f6f591a86114dbb173a43d0fdfeb, type: 2}
   m_sharedMaterial: {fileID: 3351157383534101053, guid: 0753f6f591a86114dbb173a43d0fdfeb, type: 2}
@@ -2371,7 +2375,8 @@ Transform:
   m_LocalPosition: {x: -0.22, y: -5.83, z: 0}
   m_LocalScale: {x: 0.052765593, y: 0.03905568, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 525309403}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1402399691
@@ -6589,7 +6594,6 @@ SceneRoots:
   - {fileID: 8600636724062772094}
   - {fileID: 415160807}
   - {fileID: 289316833}
-  - {fileID: 525309403}
   - {fileID: 1203404348}
   - {fileID: 1088684826}
   - {fileID: 2097876882}

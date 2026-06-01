@@ -1284,7 +1284,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee86215d1bb3fd24ebebc59de13d176b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneChanger
-  sceneToLoad: GameFloor7
+  sceneToLoad: GameFloor5
   fadeAnim: {fileID: 21186520}
   fadeime: 0.5
   newPlayerPosition: {x: 0, y: 0}
