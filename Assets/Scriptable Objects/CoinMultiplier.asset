@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ac36e058f18f67409dc7f33336cba83, type: 3}
+  m_Name: CoinMultiplier
+  m_EditorClassIdentifier: Assembly-CSharp::ItemSO
+  itemName: Four Leaf Clover
+  itemDescription: Lucky Item (Increases coin value by 1)
+  icon: {fileID: 8166205348501980199, guid: 261f9fa3365f5074d976c1e9f0dfd413, type: 3}
+  isCurrency: 0
+  itemCost: 15
+  currentHealth: 0
+  maxHealth: 0
+  movementSpeed: 0
+  damageBonus: 0
+  reloadSpeedMultiplier: 0
+  coinMultiplierBonus: 1
+  ammoRestoreAmount: 0
+  dashCooldownReduction: 0
+  duration: 0

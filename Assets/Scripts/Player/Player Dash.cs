@@ -48,19 +48,14 @@ public class PlayerDash : MonoBehaviour
         }
 
         float elapsedTime = 0f;
-        float nextGhostTime = 0f;
+        
         
         // This loop runs every single frame until the time runs out
         while (elapsedTime < dashDuration)
         {
             // Force the speed to stay at maximum the entire time!
             rb.linearVelocity = dashDirection * dashForce;
-            
-            if (elapsedTime >= nextGhostTime)
-        {
-            SpawnGhost();
-            nextGhostTime = elapsedTime + 0.05f; // Drop a new shadow clone every 0.05 seconds
-        }
+               
             // Add the time that just passed to our timer
             elapsedTime += Time.deltaTime;
             
@@ -70,28 +65,29 @@ public class PlayerDash : MonoBehaviour
 
         isDashing = false;
 
+        DashUI dashUI = Object.FindFirstObjectByType<DashUI>();
+        if (dashUI != null)
+        {
+            dashUI.StartCooldown(dashCooldown);
+        }
+
         yield return new WaitForSeconds(dashCooldown);
 
         canDash = true;
 
     }
     
-    private void SpawnGhost()
+    public void ReduceDashCooldown(float reductionAmount)
     {
-        GameObject ghost = new GameObject("DashGhost");
-        ghost.transform.position = transform.position;
-        ghost.transform.localScale = transform.localScale; // Flips the ghost if you are facing left!
+        dashCooldown -= reductionAmount; 
 
-        // 2. Slap a SpriteRenderer on it and copy the player's exact frame
-        SpriteRenderer ghostSprite = ghost.AddComponent<SpriteRenderer>();
-        ghostSprite.sprite = playerSprite.sprite; 
-    
-        // 3. Make it half-transparent and push it behind the player
-        ghostSprite.color = new Color(1f, 1f, 1f, 0.4f); 
-        ghostSprite.sortingOrder = playerSprite.sortingOrder - 1; 
-
-        // 4. Force Unity to delete the ghost after half a second
-        Destroy(ghost, 0.5f);
+        // THE SAFETY NET: Prevent the cooldown from hitting zero or going negative!
+        if (dashCooldown < 0.2f) 
+        {
+            dashCooldown = 0.2f; 
+        }
+        
+        Debug.Log("Dash cooldown is now: " + dashCooldown); 
     }
     
 }

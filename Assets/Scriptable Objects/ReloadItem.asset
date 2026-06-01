@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ac36e058f18f67409dc7f33336cba83, type: 3}
   m_Name: ReloadItem
   m_EditorClassIdentifier: Assembly-CSharp::ItemSO
-  itemName: 
-  itemDescription: 
-  icon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  itemName: 'D.M.G Quick Reload Attachment '
+  itemDescription: A weapon attachment that allows all held weapons to be reloaded
+    faster (Decreases reload time by 20%. Item is stackable)
+  icon: {fileID: -8491615296138890518, guid: 7db9c4c0858acd547988da9e4075ee43, type: 3}
   isCurrency: 0
-  itemCost: 15
+  itemCost: 12
   currentHealth: 0
   maxHealth: 0
   movementSpeed: 0
@@ -24,4 +25,5 @@ MonoBehaviour:
   reloadSpeedMultiplier: 0.8
   coinMultiplierBonus: 0
   ammoRestoreAmount: 0
+  dashCooldownReduction: 0
   duration: 0

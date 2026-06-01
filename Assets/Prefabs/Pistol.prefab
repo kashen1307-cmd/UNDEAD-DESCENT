@@ -115,7 +115,7 @@ MonoBehaviour:
   fireRate: 2
   magazineSize: 6
   currentAmmo: 0
-  maxReserveAmmo: 32
+  maxReserveAmmo: 66
   reserveAmmo: 0
   reloadTime: 1
   gunAudio: {fileID: -6693195097767241568}

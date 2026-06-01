@@ -19,6 +19,8 @@ public class ItemSO : ScriptableObject
     public float reloadSpeedMultiplier;
     public float coinMultiplierBonus;
     public int ammoRestoreAmount;
+    public float dashCooldownReduction;
+    
 
     [Header("Temporary Buffs")]
 

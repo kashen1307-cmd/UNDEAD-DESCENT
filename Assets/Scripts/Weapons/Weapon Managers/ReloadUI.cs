@@ -8,7 +8,7 @@ public class ReloadUI : MonoBehaviour
     public RectTransform leftMarker;
     public RectTransform rightMarker;
     public Canvas myCanvas;
-    public float travelDistance = 340f;
+    public float travelDistance = 30f;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

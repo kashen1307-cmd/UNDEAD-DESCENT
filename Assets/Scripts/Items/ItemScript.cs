@@ -142,7 +142,19 @@ public class ItemScript : MonoBehaviour
                 // We are about to create this method in Step 3!
                 weaponSwapper.RestoreActiveWeaponAmmo(itemSO.ammoRestoreAmount); 
             }
-        }    
+        }  
+
+        if (itemSO.dashCooldownReduction > 0f)
+        {
+            // Ask the player for the PlayerDash script!
+            PlayerDash playerDash = playerObject.GetComponent<PlayerDash>();
+        
+            if (playerDash != null)
+            {
+                playerDash.ReduceDashCooldown(itemSO.dashCooldownReduction);
+            }
+        }
+     
 
     }
 }

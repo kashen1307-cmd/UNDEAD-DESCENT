@@ -356,5 +356,6 @@ public class ShotgunFiring : MonoBehaviour, IWeapon
         UpdateAmmoUI(); 
     }
 
+    
 
 }

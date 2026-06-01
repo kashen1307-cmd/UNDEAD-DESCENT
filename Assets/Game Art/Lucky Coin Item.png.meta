@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 11bcaccfe4d06cc408620b3b7b60b825
+guid: 261f9fa3365f5074d976c1e9f0dfd413
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2755721702093237707
-    second: HUD Container 1_0
+      213: 8166205348501980199
+    second: Lucky Coin Item_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: HUD Container 1_0
+      name: Lucky Coin Item_0
       rect:
         serializedVersion: 2
-        x: 7
-        y: 33
-        width: 41
-        height: 21
+        x: 5
+        y: 6
+        width: 22
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 532d5ee56b5b1c9d0800000000000000
-      internalID: -2755721702093237707
+      spriteID: 7240b508f70345170800000000000000
+      internalID: 8166205348501980199
       vertices: []
       indices: 
       edges: []
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      HUD Container 1_0: -2755721702093237707
+      Lucky Coin Item_0: 8166205348501980199
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

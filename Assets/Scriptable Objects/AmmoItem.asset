@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ac36e058f18f67409dc7f33336cba83, type: 3}
   m_Name: AmmoItem
   m_EditorClassIdentifier: Assembly-CSharp::ItemSO
-  itemName: 
-  itemDescription: 
+  itemName: Ammo Box
+  itemDescription: Conveniently placed Ammo Box. (Contain 15 bullets)
   icon: {fileID: -7311453707233749354, guid: f17a2817927f16144ad60290ae98ffda, type: 3}
   isCurrency: 0
-  itemCost: 7
+  itemCost: 5
   currentHealth: 0
   maxHealth: 0
   movementSpeed: 0
@@ -24,4 +24,5 @@ MonoBehaviour:
   reloadSpeedMultiplier: 0
   coinMultiplierBonus: 0
   ammoRestoreAmount: 15
+  dashCooldownReduction: 0
   duration: 0
