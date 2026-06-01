@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ac36e058f18f67409dc7f33336cba83, type: 3}
   m_Name: DashCDReduction
   m_EditorClassIdentifier: Assembly-CSharp::ItemSO
-  itemName: Prototype D.M.G Inc. Sneakers
+  itemName: Prototype D.M.G Inc. Winged Sneakers
   itemDescription: D.M.G has been working on these sneakers that allow the user to
     dash more often (Decreases Dash Cooldown by 0.5s. Item is stackable)
   icon: {fileID: 7193599046793069055, guid: ee2effff9efa4c249bf7d817052f6de4, type: 3}

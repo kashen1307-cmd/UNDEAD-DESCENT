@@ -1629,7 +1629,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1923715409326517162, guid: 3ef5c42843b7f6c48a5833310bf982f4, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 78.5
       objectReference: {fileID: 0}
     - target: {fileID: 1923715409326517162, guid: 3ef5c42843b7f6c48a5833310bf982f4, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1665,7 +1665,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2103971068528861829, guid: 3ef5c42843b7f6c48a5833310bf982f4, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 14.5
+      value: 46.5
       objectReference: {fileID: 0}
     - target: {fileID: 2103971068528861829, guid: 3ef5c42843b7f6c48a5833310bf982f4, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1678,7 +1678,19 @@ PrefabInstance:
     - target: {fileID: 2217475419507074125, guid: 3ef5c42843b7f6c48a5833310bf982f4, type: 3}
       propertyPath: itemInSlot
       value: 
-      objectReference: {fileID: 11400000, guid: edd9bcd07c3b2a6469ea26c2445f98af, type: 2}
+      objectReference: {fileID: 0}
+    - target: {fileID: 2217475419507074125, guid: 3ef5c42843b7f6c48a5833310bf982f4, type: 3}
+      propertyPath: manualName
+      value: D.M.G Inc. Burst Assault Rifle
+      objectReference: {fileID: 0}
+    - target: {fileID: 2217475419507074125, guid: 3ef5c42843b7f6c48a5833310bf982f4, type: 3}
+      propertyPath: useManualText
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2217475419507074125, guid: 3ef5c42843b7f6c48a5833310bf982f4, type: 3}
+      propertyPath: manualDescription
+      value: Fires bursts of 3 bullets
+      objectReference: {fileID: 0}
     - target: {fileID: 2381372586039734350, guid: 3ef5c42843b7f6c48a5833310bf982f4, type: 3}
       propertyPath: itemData
       value: 
@@ -1721,7 +1733,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3209039020803348663, guid: 3ef5c42843b7f6c48a5833310bf982f4, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3267716644159162269, guid: 3ef5c42843b7f6c48a5833310bf982f4, type: 3}
       propertyPath: m_sharedMaterial
@@ -1758,7 +1770,7 @@ PrefabInstance:
     - target: {fileID: 4444106689308535377, guid: 3ef5c42843b7f6c48a5833310bf982f4, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 8166205348501980199, guid: 261f9fa3365f5074d976c1e9f0dfd413, type: 3}
+      objectReference: {fileID: 348757803278748842, guid: e7a317155d54ecd4cb98b6cb8bc71d08, type: 3}
     - target: {fileID: 4444106689308535377, guid: 3ef5c42843b7f6c48a5833310bf982f4, type: 3}
       propertyPath: m_PreserveAspect
       value: 1
@@ -1862,11 +1874,15 @@ PrefabInstance:
     - target: {fileID: 6575588750840287478, guid: 3ef5c42843b7f6c48a5833310bf982f4, type: 3}
       propertyPath: itemData
       value: 
-      objectReference: {fileID: 11400000, guid: edd9bcd07c3b2a6469ea26c2445f98af, type: 2}
+      objectReference: {fileID: 0}
+    - target: {fileID: 6575588750840287478, guid: 3ef5c42843b7f6c48a5833310bf982f4, type: 3}
+      propertyPath: manualPrice
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 6575588750840287478, guid: 3ef5c42843b7f6c48a5833310bf982f4, type: 3}
       propertyPath: prefabToDispense
       value: 
-      objectReference: {fileID: 626066117116177352, guid: 817405692227f3346b3a241184c303f6, type: 3}
+      objectReference: {fileID: 5691627612217871358, guid: f836d0612d6a84d4c91420986c7e2eae, type: 3}
     - target: {fileID: 6811387531119428264, guid: 3ef5c42843b7f6c48a5833310bf982f4, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
@@ -1961,7 +1977,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7471307385798574346, guid: 3ef5c42843b7f6c48a5833310bf982f4, type: 3}
       propertyPath: manualDescription
-      value: An old shotgun that fires a spread of 5 bullets... double pump?
+      value: An old shotgun that fires a spread of 5 bullets... double pump? (Increases
+        enemy coin drop amount)
       objectReference: {fileID: 0}
     - target: {fileID: 7627206674714189442, guid: 3ef5c42843b7f6c48a5833310bf982f4, type: 3}
       propertyPath: m_LocalScale.x
@@ -1993,11 +2010,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7729480204827238745, guid: 3ef5c42843b7f6c48a5833310bf982f4, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 14.5
       objectReference: {fileID: 0}
     - target: {fileID: 7729480204827238745, guid: 3ef5c42843b7f6c48a5833310bf982f4, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -47.5
+      value: -80.5
       objectReference: {fileID: 0}
     - target: {fileID: 7741978508131960747, guid: 3ef5c42843b7f6c48a5833310bf982f4, type: 3}
       propertyPath: m_AnchorMax.y
@@ -2017,7 +2034,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7741978508131960747, guid: 3ef5c42843b7f6c48a5833310bf982f4, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 14.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7741978508131960747, guid: 3ef5c42843b7f6c48a5833310bf982f4, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2820,7 +2837,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &835063023
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2839,7 +2856,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 46.5, y: -80.5}
+  m_AnchoredPosition: {x: 78.5, y: -80.5}
   m_SizeDelta: {x: 29, y: 29}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &835063024
@@ -4305,6 +4322,17 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1157792984 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 541930605505774348, guid: 3ef5c42843b7f6c48a5833310bf982f4, type: 3}
+  m_PrefabInstance: {fileID: 690294558}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 690294559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d30261dc2e99d44887662a97cd65514, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShopManager
 --- !u!1 &1193071417
 GameObject:
   m_ObjectHideFlags: 0
@@ -7491,7 +7519,7 @@ MonoBehaviour:
   manualPrice: 30
   prefabToDispense: {fileID: 5691627612217871358, guid: f836d0612d6a84d4c91420986c7e2eae, type: 3}
   priceText: {fileID: 1601926426}
-  shopManager: {fileID: 0}
+  shopManager: {fileID: 1157792984}
 --- !u!114 &2083199130
 MonoBehaviour:
   m_ObjectHideFlags: 0

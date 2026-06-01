@@ -3882,7 +3882,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7471307385798574346, guid: 3ef5c42843b7f6c48a5833310bf982f4, type: 3}
       propertyPath: manualDescription
-      value: An old shotgun that fires a spread of 5 bullets... double pump?
+      value: An old shotgun that fires a spread of 5 bullets... double pump? (Increases
+        enemy coin drop amount)
       objectReference: {fileID: 0}
     - target: {fileID: 7729480204827238745, guid: 3ef5c42843b7f6c48a5833310bf982f4, type: 3}
       propertyPath: m_AnchorMax.y

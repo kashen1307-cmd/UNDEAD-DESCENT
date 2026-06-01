@@ -6937,6 +6937,7 @@ MonoBehaviour:
   useManualText: 1
   manualName: Shotgun
   manualDescription: An old shotgun that fires a spread of 5 bullets... double pump?
+    (Increases enemy coin drop amount)
 --- !u!1 &2062678869
 GameObject:
   m_ObjectHideFlags: 0

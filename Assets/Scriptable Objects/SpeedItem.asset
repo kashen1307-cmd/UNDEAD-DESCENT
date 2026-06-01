@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: SpeedItem
   m_EditorClassIdentifier: Assembly-CSharp::ItemSO
   itemName: Energy Drink
-  itemDescription: High caffene energy drink (Increase movement speed by 2.5. Item
+  itemDescription: High caffene energy drink (Increase movement speed by 1.25. Item
     is stackable)
   icon: {fileID: 9216563884979187710, guid: 838f50c05e79ded469069d4bed643e5c, type: 3}
   isCurrency: 0
   itemCost: 15
   currentHealth: 0
   maxHealth: 0
-  movementSpeed: 2.5
+  movementSpeed: 1.25
   damageBonus: 0
   reloadSpeedMultiplier: 0
   coinMultiplierBonus: 0
