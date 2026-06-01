@@ -24,7 +24,7 @@ public class DashUI : MonoBehaviour
 
     private IEnumerator AnimateCooldown(float time)
     {
-        // 1. Instantly cover the icon with the dark shadow
+        
         cooldownOverlay.fillAmount = 1f; 
         
         float elapsedTime = 0f;
@@ -33,13 +33,13 @@ public class DashUI : MonoBehaviour
         {
             elapsedTime += Time.deltaTime;
             
-            // 2. Smoothly shrink the shadow over the cooldown time
+            
             cooldownOverlay.fillAmount = Mathf.Lerp(1f, 0f, elapsedTime / time);
             
             yield return null; 
         }
 
-        // 3. Ensure it is perfectly clean when finished
+        
         cooldownOverlay.fillAmount = 0f; 
     }
 }

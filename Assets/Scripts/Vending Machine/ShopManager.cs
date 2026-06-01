@@ -10,15 +10,15 @@ public class ShopManager : MonoBehaviour
     
     public void BuyItem(int price, GameObject itemPrefab)
     {
-        // 1. Find the player's wallet
+        
         PlayerWallet playerWallet = FindFirstObjectByType<PlayerWallet>();
 
         if (playerWallet != null)
         {
-            // 2. Try to spend the money
+            
             if (playerWallet.SpendCoins(price))
             {
-                // 3. Purchase successful! Spit the item onto the floor.
+                
                 Vector2 randomOffset = Random.insideUnitCircle * spawnRadius;
                 Vector3 finalDropPosition = itemSpawnPoint.position + new Vector3(randomOffset.x, randomOffset.y, 0f);
                 Instantiate(itemPrefab, finalDropPosition, Quaternion.identity);

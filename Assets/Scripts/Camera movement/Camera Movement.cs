@@ -9,7 +9,7 @@ public class CameraMovement : MonoBehaviour
     {
         GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
         
-        // 2. Lock the camera onto it!
+        
         if (playerObj != null)
         {
             target = playerObj.transform;

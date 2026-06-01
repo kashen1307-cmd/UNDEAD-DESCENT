@@ -5,13 +5,13 @@ public class CrosshairScript : MonoBehaviour
     void Start()
     {
         Cursor.visible = false; 
-        //Cursor.lockState = CursorLockMode.Confined;
+        
     }
     
     
     void Awake()
     {
-        //Cursor.visible = false; 
+         
         Cursor.lockState = CursorLockMode.Confined;
     }
 

@@ -46,7 +46,7 @@ public class SpitterAttack : MonoBehaviour
         }
     }
 
-    // called by animation event
+    
     public void Shoot()
     {
         GameObject proj = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity);

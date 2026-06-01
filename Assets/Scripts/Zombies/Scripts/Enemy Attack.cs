@@ -1,54 +1,71 @@
-
-
 using UnityEngine;
 
 public class EnemyAttack : MonoBehaviour
 {
     [SerializeField] private float _damageAmount;
-    [SerializeField] private float _attackCooldown = 1f;
-    [SerializeField] private Animator _animator;
 
-    private bool _playerInRange;
+    [SerializeField]
+    private float _attackCooldown = 1f;
+
+    [SerializeField]
+    private float _attackRange = 1.5f;
+
+    [SerializeField]
+    private Animator _animator;
+
     private float _lastAttackTime;
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            _playerInRange = true;
-        }
-    }
+    private Transform _player;
 
-    private void OnCollisionExit2D(Collision2D collision)
+    void Start()
     {
-        if (collision.gameObject.CompareTag("Player"))
+        GameObject playerObj =
+            GameObject.FindGameObjectWithTag("Player");
+
+        if (playerObj != null)
         {
-            _playerInRange = false;
+            _player = playerObj.transform;
         }
     }
 
     private void Update()
     {
-        if (_playerInRange && Time.time >= _lastAttackTime + _attackCooldown)
+        if (_player == null)
+            return;
+
+        float distance =
+            Vector2.Distance(
+                transform.position,
+                _player.position);
+
+        if (distance <= _attackRange &&
+            Time.time >=
+            _lastAttackTime + _attackCooldown)
         {
             _animator.SetTrigger("Attack");
             _lastAttackTime = Time.time;
         }
     }
 
-    // Called from animation event
+   
     public void DealDamage()
     {
-        if (_playerInRange)
+        if (_player == null)
+            return;
+
+        float distance =
+            Vector2.Distance(
+                transform.position,
+                _player.position);
+
+        if (distance <= _attackRange)
         {
-            GameObject player = GameObject.FindGameObjectWithTag("Player");
-            if (player != null)
+            PlayerHealthController health =
+                _player.GetComponent<PlayerHealthController>();
+
+            if (health != null)
             {
-                var health = player.GetComponent<PlayerHealthController>();
-                if (health != null)
-                {
-                    health.TakeDamage(_damageAmount);
-                }
+                health.TakeDamage(_damageAmount);
             }
         }
     }

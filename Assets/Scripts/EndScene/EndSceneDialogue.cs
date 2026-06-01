@@ -85,7 +85,7 @@ public class EndSceneDialogue : MonoBehaviour
                 promptObj.GetComponent<TMP_Text>();
         }
 
-        // START DIALOGUE AFTER 1 SECOND
+        
         StartCoroutine(StartSceneDialogue());
     }
 

@@ -173,7 +173,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 282e24c40c6a5954089316c338d4f798, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpitterMovement
-  speed: 2
+  speed: 3
   minDistance: 2
   maxDistance: 5
   firePoint: {fileID: 1512500958642930668}

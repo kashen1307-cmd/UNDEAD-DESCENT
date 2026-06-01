@@ -75,7 +75,7 @@ public class EnemySpawner : MonoBehaviour
 
             _totalSpawned++;
 
-            // Tell enemy who spawned it
+            
             var normal = enemy.GetComponent<EnemyMovement>();
             if (normal != null)
             {

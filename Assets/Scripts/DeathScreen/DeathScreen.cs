@@ -10,7 +10,7 @@ public class DeathScreen : MonoBehaviour
     {
         GameManager.instance.ResetRun();
 
-        // Starter pistol on retry
+        // keep pistol cause we want need to spawn with da ting
         GameManager.instance.savedWeaponPrefabs[0] =
             GameManager.instance.defaultPistolPrefab;
 
@@ -28,7 +28,7 @@ public class DeathScreen : MonoBehaviour
 
     public void ExitToMainMenu()
     {
-        // Destroy persistent player
+        
         if (KeepPlayerAlive.instance != null)
         {
             Destroy(KeepPlayerAlive.instance.gameObject);

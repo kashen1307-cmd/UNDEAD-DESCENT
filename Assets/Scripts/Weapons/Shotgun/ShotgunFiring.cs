@@ -13,10 +13,10 @@ public class ShotgunFiring : MonoBehaviour, IWeapon
     public float fireRate = 1f;
 
     [Header("Ammo")]
-    public int maxAmmo = 2;  // shells in gun
+    public int maxAmmo = 2;  
     public int currentAmmo;
 
-    public int reserveAmmo = 12; // carried ammo
+    public int reserveAmmo = 12; 
     public int maxReserveAmmo = 12;
 
     public float reloadTime = 2f;
@@ -124,7 +124,7 @@ public class ShotgunFiring : MonoBehaviour, IWeapon
         }
 
 
-        // Empty magazine
+        // Empty mag
         if (currentAmmo <= 0)
         {
             if (reloadText != null)
@@ -201,7 +201,7 @@ public class ShotgunFiring : MonoBehaviour, IWeapon
 
         if (playerSwapper != null)
         {
-            // Ask the Player to find the Canvas attached to it, instead of the gun looking for it!
+            
             ReloadUI playerReloadUI = playerSwapper.GetComponentInChildren<ReloadUI>();
             
             if (playerReloadUI != null)
@@ -214,7 +214,7 @@ public class ShotgunFiring : MonoBehaviour, IWeapon
             }
         }
 
-        // --- REPLACE THE OLD WAIT TIMER WITH THIS ---
+       
         yield return new WaitForSeconds(actualReloadTime);
 
         int ammoNeeded = maxAmmo - currentAmmo;
@@ -258,10 +258,7 @@ public class ShotgunFiring : MonoBehaviour, IWeapon
         if (reloadText == null)
             return;
 
-        /*if (isReloading)
-        {
-            reloadText.text = "Reloading...";
-        }*/
+       
         else if (currentAmmo <= 0)
         {
             if (reserveAmmo > 0)

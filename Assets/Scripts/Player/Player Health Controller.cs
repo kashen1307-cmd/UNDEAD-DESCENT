@@ -32,11 +32,15 @@ public class PlayerHealthController : MonoBehaviour
 
     public bool isNewRun = true;
 
-    public SpriteRenderer playerSprite; // Drag your player's SpriteRenderer here!
-    public Material whiteFlashMaterial; // We will create this in Unity next!
+    public SpriteRenderer playerSprite; 
+
+    public Material whiteFlashMaterial;
+
     private Material defaultMaterial;
-    public float invincibilityDuration = 1.5f; // Total time they are safe
-    public float blinkInterval = 0.1f; // How fast the flash is
+
+    public float invincibilityDuration = 1.5f; 
+
+    public float blinkInterval = 0.1f; 
 
     public void ResetRun()
     {

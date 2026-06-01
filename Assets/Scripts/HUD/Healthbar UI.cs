@@ -16,7 +16,7 @@ public class HealthbarUI : MonoBehaviour
         if (player != null)
         {
             player.OnHealthChanged.AddListener(UpdateHealthBar);
-            UpdateHealthBar(player); // initial fill
+            UpdateHealthBar(player); 
         }
     }
 

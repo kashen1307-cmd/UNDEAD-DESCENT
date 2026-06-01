@@ -137,7 +137,7 @@ public class DialogueManager : MonoBehaviour
         if (dialogueText != null)
         {
             typingRoutine =
-    StartCoroutine(TypeSentence(dialogueLines[currentLine]));
+            StartCoroutine(TypeSentence(dialogueLines[currentLine]));
         }
 
         if (player != null)

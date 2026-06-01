@@ -124,7 +124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62c960a655d1a3c499094d6672147419, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyMovement
-  _speed: 1
+  _speed: 2
   isStunned: 0
   isDead: 0
   _spriteRenderer: {fileID: 2238186027867914736}
@@ -140,8 +140,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c62398c0fda35184ea24f6a2cad7fab8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAttack
-  _damageAmount: 40
-  _attackCooldown: 3
+  _damageAmount: 45
+  _attackCooldown: 1.37
+  _attackRange: 2.5
   _animator: {fileID: 3733483957782259824}
 --- !u!114 &8499839372350360757
 MonoBehaviour:
@@ -155,7 +156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a8ca40f5db7ecf42b66f81b3e6a4d90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAwarenessController
-  playerAwarenessDistance: 15
+  playerAwarenessDistance: 30
 --- !u!114 &-594401265478390239
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,7 +169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3bdecb0f83c94e40bbe1bcd490391c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
-  maxHealth: 100
+  maxHealth: 40
   coinPrefab: {fileID: 799283753208812504, guid: 2fc3a21e77912d14fb19a45272bfe4c8, type: 3}
   minCoinsToDrop: 1
   maxCoinsToDrop: 3

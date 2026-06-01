@@ -17,11 +17,11 @@ public class PlayerWallet : MonoBehaviour
 
     public void AddCoins(int amount)
     {
-        // Apply the passive item multiplier and round to the nearest whole number
+        
         int totalToAdd = Mathf.RoundToInt(amount * coinMultiplier);
         Coins += totalToAdd;
         
-        // Update the GameManager so it survives the next floor transition!
+        
         if (GameManager.instance != null) GameManager.instance.currentCoins = Coins;
         
         Debug.Log("Picked up coins! Total Wallet: " + Coins);

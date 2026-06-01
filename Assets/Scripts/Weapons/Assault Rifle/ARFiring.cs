@@ -115,12 +115,12 @@ public class ARFiring : MonoBehaviour, IWeapon
         FindAmmoUI();
         FindReloadUI();
 
-        RefreshReloadUI(); // ALWAYS runs
+        RefreshReloadUI(); 
 
         if (isShooting)
             return;
 
-        // Reload input still allowed
+        
         if (Input.GetKeyDown(KeyCode.R)
             && currentAmmo < magazineSize
             && reserveAmmo > 0)
@@ -129,7 +129,7 @@ public class ARFiring : MonoBehaviour, IWeapon
             return;
         }
 
-        // Empty mag logic
+        // Empty mag
         if (currentAmmo <= 0)
         {
             if (Input.GetButtonDown("Fire1"))
@@ -161,7 +161,7 @@ public class ARFiring : MonoBehaviour, IWeapon
     {
         isShooting = true;
 
-        // Play once when Fire1 is pressed
+       
         if (gunshotClip != null)
         {
             gunAudio.PlayOneShot(gunshotClip);
@@ -238,7 +238,7 @@ public class ARFiring : MonoBehaviour, IWeapon
 
        if (playerSwapper != null)
         {
-            // Ask the Player to find the Canvas attached to it, instead of the gun looking for it!
+           
             ReloadUI playerReloadUI = playerSwapper.GetComponentInChildren<ReloadUI>();
             
             if (playerReloadUI != null)
@@ -251,7 +251,7 @@ public class ARFiring : MonoBehaviour, IWeapon
             }
         }
 
-        // --- REPLACE THE OLD WAIT TIMER WITH THIS ---
+       
         yield return new WaitForSeconds(actualReloadTime);
 
         int ammoNeeded =magazineSize - currentAmmo;
@@ -271,10 +271,7 @@ public class ARFiring : MonoBehaviour, IWeapon
         if (reloadText == null)
             return;
 
-        /*if (isReloading)
-        {
-            reloadText.text = "Reloading...";
-        }*/
+        
         else if (currentAmmo <= 0)
         {
             if (reserveAmmo > 0)

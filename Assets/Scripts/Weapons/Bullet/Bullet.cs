@@ -9,7 +9,7 @@ public class Bullet : MonoBehaviour
 
     public int damage = 1;
 
-    //private bool isDead = false;
+    
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     
@@ -35,11 +35,10 @@ public class Bullet : MonoBehaviour
 
         if (hitInfo.CompareTag("Wall"))
         {
-            // Because the bullet is a Trigger, we just tell the right-facing 
-            // spark animation to flip 180 degrees so it bounces backwards!
+            
             Quaternion bounceRotation = transform.rotation * Quaternion.Euler(0, 0, 0);
 
-            // Spawn the sparks at the bullet's exact location
+            
             Instantiate(impactPrefab, transform.position, bounceRotation);
         }
 

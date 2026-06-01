@@ -27,7 +27,7 @@ public class ReloadUI : MonoBehaviour
 
     private IEnumerator PushMarkersOutward(float time)
     {
-        myCanvas.enabled = true; // Turn the drawing component back on
+        myCanvas.enabled = true;
         
         float elapsedTime = 0f;
 

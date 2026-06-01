@@ -33,18 +33,17 @@ public class PlayerFlip : MonoBehaviour
             Vector3 centerPoint = transform.position + rotateOffset;
             Vector3 aimDirection = (mousePos - centerPoint).normalized;
             
-            // --- THE NEW CODE ---
-            // 1. Default to the player's radius setting
+            
             float currentRadius = rotateRadius; 
 
-            // 2. Ask the current gun if it has a custom radius
+            
             WeaponDirectionManager gunScript = weaponSocket.GetComponentInChildren<WeaponDirectionManager>();
             if (gunScript != null)
             {
-                currentRadius = gunScript.weaponOrbitRadius; // Use the gun's radius instead!
+                currentRadius = gunScript.weaponOrbitRadius; 
             }
 
-            // 3. Move the socket using the correct radius
+            
             Vector3 newPosition = centerPoint + (aimDirection * currentRadius);
             newPosition.z = weaponSocket.position.z; 
             

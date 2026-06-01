@@ -50,16 +50,16 @@ public class PlayerDash : MonoBehaviour
         float elapsedTime = 0f;
         
         
-        // This loop runs every single frame until the time runs out
+        
         while (elapsedTime < dashDuration)
         {
-            // Force the speed to stay at maximum the entire time!
+            
             rb.linearVelocity = dashDirection * dashForce;
                
-            // Add the time that just passed to our timer
+            
             elapsedTime += Time.deltaTime;
             
-            // Tell Unity to wait for the next frame before looping again
+            
             yield return null; 
         }
 
@@ -81,7 +81,7 @@ public class PlayerDash : MonoBehaviour
     {
         dashCooldown -= reductionAmount; 
 
-        // THE SAFETY NET: Prevent the cooldown from hitting zero or going negative!
+       
         if (dashCooldown < 0.2f) 
         {
             dashCooldown = 0.2f; 

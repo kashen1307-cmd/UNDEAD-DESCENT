@@ -9,10 +9,10 @@ public class ItemSlotUI : MonoBehaviour
     
     public void Setup(ItemSO item, int amount)
     {
-        // Set the picture
+        
         iconDisplay.sprite = item.icon;
         iconDisplay.preserveAspect = true;
-        // If we only have 1, hide the number. If we have more, show the stack count!
+        
         if (amount > 1)
         {
             countText.text = amount.ToString();

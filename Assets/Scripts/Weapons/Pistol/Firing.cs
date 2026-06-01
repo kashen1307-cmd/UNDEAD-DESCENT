@@ -139,7 +139,7 @@ public class Firing : MonoBehaviour, IWeapon
             return;
         }
 
-        // Empty magazine
+        // Empty mag
         if (currentAmmo <= 0)
         {
             if (reloadText != null)
@@ -157,7 +157,7 @@ public class Firing : MonoBehaviour, IWeapon
             if (Input.GetButtonDown("Fire1") && Time.time > nextEmptyClickTime)
             {
                 PlayEmptyClick();
-                nextEmptyClickTime = Time.time + 0.3f; // small cooldown
+                nextEmptyClickTime = Time.time + 0.3f; 
             }
 
             return;
@@ -221,7 +221,7 @@ public class Firing : MonoBehaviour, IWeapon
 
       if (playerSwapper != null)
         {
-            // Ask the Player to find the Canvas attached to it, instead of the gun looking for it!
+            
             ReloadUI playerReloadUI = playerSwapper.GetComponentInChildren<ReloadUI>();
             
             if (playerReloadUI != null)
@@ -233,7 +233,7 @@ public class Firing : MonoBehaviour, IWeapon
                 Debug.LogWarning("The Player couldn't find the ReloadUI script!");
             }
         }
-        // --- REPLACE THE OLD WAIT TIMER WITH THIS ---
+        
         yield return new WaitForSeconds(actualReloadTime);
 
         int bulletsNeeded =magazineSize - currentAmmo;
@@ -272,10 +272,7 @@ public class Firing : MonoBehaviour, IWeapon
         if (reloadText == null)
             return;
 
-        /*if (isReloading)
-        {
-            reloadText.text = "Reloading...";
-        }*/
+        
         else if (currentAmmo <= 0)
         {
             if (reserveAmmo > 0)

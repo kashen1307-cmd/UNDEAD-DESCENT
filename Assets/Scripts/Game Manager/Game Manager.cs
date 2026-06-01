@@ -31,17 +31,17 @@ public class GameManager : MonoBehaviour
 
     public void AddItemToInventory(ItemSO newItem)
     {
-        // Check if we already have this item
+        
         foreach (InventorySlot slot in playerInventory)
         {
             if (slot.itemData == newItem)
             {
-                slot.count++; // Stack it!
+                slot.count++; 
                 return;
             }
         }
 
-        // If we don't have it, add a brand new slot to the list
+        
         InventorySlot newSlot = new InventorySlot();
         newSlot.itemData = newItem;
         newSlot.count = 1;
@@ -66,11 +66,11 @@ public class GameManager : MonoBehaviour
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
-            Debug.Log("Floor 1 Manager is active and surviving.");
+            
         }
         else if (instance != this)
         {
-            Debug.Log("Floor 2 Manager woke up and destroyed itself.");
+            
             Destroy(gameObject);
         }
     }
@@ -87,7 +87,7 @@ public class GameManager : MonoBehaviour
 
     void OnLevelWasLoaded(int level)
     {
-        // This fires the exact millisecond the new scene finishes booting up
-        Debug.Log("🚪 SCENE LOADED! The current GameManager has exactly " + playerInventory.Count + " items.");
+        
+        
     }
 }

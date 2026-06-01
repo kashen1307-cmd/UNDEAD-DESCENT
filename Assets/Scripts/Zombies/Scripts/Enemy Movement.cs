@@ -96,13 +96,13 @@ public class EnemyMovement : MonoBehaviour
         if (_changeDirectionCooldown <= 0)
         {
             PickNewRandomDirection();
-            _changeDirectionCooldown = Random.Range(0.5f, 2f); // shorter = more natural
+            _changeDirectionCooldown = Random.Range(0.5f, 2f); 
         }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        // Only wander if NOT chasing player
+       
         if (!_playerAwarenessController.AwareOfPlayer)
         {
             float randomAngleOffset = Random.Range(-90f, 90f);
@@ -118,7 +118,7 @@ public class EnemyMovement : MonoBehaviour
         {
             Vector2 normal = collision.GetContact(0).normal;
 
-            // reflect direction off wall
+            
             _targetDirection = Vector2.Reflect(_targetDirection, normal).normalized;
         }
     }

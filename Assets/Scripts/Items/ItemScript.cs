@@ -4,9 +4,15 @@ public class ItemScript : MonoBehaviour
 {
     public ItemSO itemSO;
     public SpriteRenderer spriteRenderer;
-    public Animator animator; 
+    public Animator animator;
 
-    //public int quantity;
+    [SerializeField]
+    private AudioSource pickupAudio;
+
+    [SerializeField]
+    private AudioClip pickupClip;
+
+    
 
     private PlayerMovement playerStats;
 
@@ -21,7 +27,7 @@ public class ItemScript : MonoBehaviour
         {
             spriteRenderer.sprite = itemSO.icon;
         }
-        //this.name = itemSO.itemName;
+        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -39,6 +45,16 @@ public class ItemScript : MonoBehaviour
             if (animator != null)
             {
                 animator.Play("PickupAnimation"); 
+            }
+
+            if (pickupAudio != null &&
+                pickupClip != null)
+            {
+                pickupAudio.clip = pickupClip;
+                pickupAudio.Play();
+
+                CancelInvoke(nameof(StopPickupSound));
+                Invoke(nameof(StopPickupSound), 0.5f);
             }
 
             Destroy(gameObject, 0.5f);
@@ -82,7 +98,7 @@ public class ItemScript : MonoBehaviour
 
         if (itemSO.damageBonus != 0)
         {
-            // We grab the PlayerMovement script because that is where our currentTotalDamage variable lives right now!
+            
             PlayerMovement playerStats = playerObject.GetComponent<PlayerMovement>();
             if (playerStats != null)
             {
@@ -99,7 +115,7 @@ public class ItemScript : MonoBehaviour
         
         if (inventory != null)
         {
-            // Hand the blueprint (ItemSO) over to the backpack to remember it
+            
             inventory.AddItemToInventory(itemSO); 
         }
         else
@@ -112,7 +128,7 @@ public class ItemScript : MonoBehaviour
             PlayerWallet wallet = playerObject.GetComponent<PlayerWallet>();
             if (wallet != null)
             {
-            // If the item gives 0.5f, the player now gets 1.5x coins!
+            
             wallet.coinMultiplier += itemSO.coinMultiplierBonus; 
             }
             }
@@ -139,14 +155,14 @@ public class ItemScript : MonoBehaviour
         
             if (weaponSwapper != null)
             {
-                // We are about to create this method in Step 3!
+                
                 weaponSwapper.RestoreActiveWeaponAmmo(itemSO.ammoRestoreAmount); 
             }
         }  
 
         if (itemSO.dashCooldownReduction > 0f)
         {
-            // Ask the player for the PlayerDash script!
+            
             PlayerDash playerDash = playerObject.GetComponent<PlayerDash>();
         
             if (playerDash != null)
@@ -156,5 +172,13 @@ public class ItemScript : MonoBehaviour
         }
      
 
+    }
+
+    void StopPickupSound()
+    {
+        if (pickupAudio != null)
+        {
+            pickupAudio.Stop();
+        }
     }
 }

@@ -33,7 +33,7 @@ public class PhoneTrigger : MonoBehaviour
             Input.GetKeyDown(KeyCode.E))
         {
             IntroTutorialManager intro =
-    FindAnyObjectByType<IntroTutorialManager>();
+            FindAnyObjectByType<IntroTutorialManager>();
 
             if (intro != null)
             {

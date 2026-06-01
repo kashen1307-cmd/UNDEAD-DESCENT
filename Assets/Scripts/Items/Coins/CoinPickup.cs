@@ -3,9 +3,14 @@ using System.Collections;
 
 public class CoinPickup : MonoBehaviour
 {
+    [SerializeField]
+    private AudioSource pickupAudio;
+
+    [SerializeField]
+    private AudioClip coinPickupClip;
 
     public int baseCoinValue = 1;
-     public Animator animator;
+    public Animator animator;
 
     
     void Start()
@@ -22,7 +27,17 @@ public class CoinPickup : MonoBehaviour
             if (wallet != null)
             {
                 wallet.AddCoins(baseCoinValue);
-               
+
+                if (pickupAudio != null &&
+                    coinPickupClip != null)
+                {
+                    pickupAudio.clip = coinPickupClip;
+                    pickupAudio.Play();
+
+                    CancelInvoke(nameof(StopPickupSound));
+                    Invoke(nameof(StopPickupSound), 0.5f);
+                }
+
                 StartCoroutine(PickupRoutine());
             }
 
@@ -36,10 +51,18 @@ public class CoinPickup : MonoBehaviour
             animator.SetBool("IsPickedUp", true);
         }
 
-        // Wait for a fraction of a second (adjust this 0.5f to match exactly how long your animation is!)
+        
         yield return new WaitForSeconds(1f);
 
-        // NOW destroy the coin
+        
         Destroy(gameObject);
+    }
+
+    void StopPickupSound()
+    {
+        if (pickupAudio != null)
+        {
+            pickupAudio.Stop();
+        }
     }
 }
