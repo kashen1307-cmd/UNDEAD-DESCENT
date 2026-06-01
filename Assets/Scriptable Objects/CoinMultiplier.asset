@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: CoinMultiplier
   m_EditorClassIdentifier: Assembly-CSharp::ItemSO
   itemName: Four Leaf Clover
-  itemDescription: Lucky Item (Increases coin value by 1)
+  itemDescription: Lucky Item (Increases coin value by 1, Stacks up to 5 times)
   icon: {fileID: 8166205348501980199, guid: 261f9fa3365f5074d976c1e9f0dfd413, type: 3}
   isCurrency: 0
-  itemCost: 15
+  itemCost: 20
   currentHealth: 0
   maxHealth: 0
   movementSpeed: 0

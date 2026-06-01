@@ -16,11 +16,13 @@ MonoBehaviour:
   itemDescription: Special pill that heals 25 hp
   icon: {fileID: -4064344591082207688, guid: bdd439043f36a5344acc8f716b5f4d10, type: 3}
   isCurrency: 0
-  itemCost: 10
+  itemCost: 5
   currentHealth: 25
   maxHealth: 0
   movementSpeed: 0
   damageBonus: 0
-  reloadSpeed: 0
+  reloadSpeedMultiplier: 0
   coinMultiplierBonus: 0
+  ammoRestoreAmount: 0
+  dashCooldownReduction: 0
   duration: 0

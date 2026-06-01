@@ -181,14 +181,14 @@ MonoBehaviour:
   - {fileID: -1516459012515495203, guid: 8d26c544dc40690409c938afbcb26207, type: 3}
   weaponOrbitRadius: 0.83
   firePointPositions:
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
+  - {x: 0.12, y: 0.015}
+  - {x: 0.08, y: 0.08}
+  - {x: -0.015, y: 0.12}
+  - {x: -0.08, y: 0.08}
+  - {x: -0.12, y: 0.015}
+  - {x: -0.08, y: -0.08}
+  - {x: 0.015, y: -0.12}
+  - {x: 0.08, y: -0.08}
   sortingOrderFront: 30
   sortingOrderBehind: 5
 --- !u!82 &4167051417862038809

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ItemSO
   itemName: D.M.G Inc. Bullets
   itemDescription: Special bullets developed by D.M.G Inc. (Increase damage by 1.
-    Item is stackable)
+    Stacks up to 5 times)
   icon: {fileID: -1596869087842316420, guid: 94b6f67cd97e166419333ea7aa25bdec, type: 3}
   isCurrency: 0
   itemCost: 20

@@ -16,7 +16,7 @@ MonoBehaviour:
   itemDescription: Conveniently placed Ammo Box. (Contain 15 bullets)
   icon: {fileID: -7311453707233749354, guid: f17a2817927f16144ad60290ae98ffda, type: 3}
   isCurrency: 0
-  itemCost: 7
+  itemCost: 5
   currentHealth: 0
   maxHealth: 0
   movementSpeed: 0

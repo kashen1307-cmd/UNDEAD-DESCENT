@@ -56,6 +56,11 @@ public class GameManager : MonoBehaviour
 
         savedWeaponPrefabs = new GameObject[2];
         savedDropPrefabs = new GameObject[2];
+
+        if (playerInventory != null)
+        {
+            playerInventory.Clear();
+        }
     }
 
     private void Awake()

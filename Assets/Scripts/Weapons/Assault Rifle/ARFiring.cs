@@ -281,10 +281,10 @@ public class ARFiring : MonoBehaviour, IWeapon
         if (reloadText == null)
             return;
 
-        if (isReloading)
+        /*if (isReloading)
         {
             reloadText.text = "Reloading...";
-        }
+        }*/
         else if (currentAmmo <= 0)
         {
             if (reserveAmmo > 0)

@@ -103,6 +103,12 @@ public class ItemScript : MonoBehaviour
             if (playerStats != null)
             {
                 playerStats.currentTotalDamage += itemSO.damageBonus;
+               
+               if (playerStats.currentTotalDamage > 5) 
+                {
+                    playerStats.currentTotalDamage = 5;
+                }
+
                 Debug.Log("Damage Upgraded! New Damage: " + playerStats.currentTotalDamage);
             }
             else
