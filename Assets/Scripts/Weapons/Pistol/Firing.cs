@@ -98,6 +98,9 @@ public class Firing : MonoBehaviour, IWeapon
         }
 
         CancelInvoke();
+        StopAllCoroutines();
+
+        isReloading = false;
 
         if (gunAudio != null)
         {
@@ -246,6 +249,7 @@ public class Firing : MonoBehaviour, IWeapon
         isReloading = false;
 
         UpdateAmmoUI();
+        RefreshReloadUI();
     }
 
     void FindReloadUI()
@@ -272,7 +276,10 @@ public class Firing : MonoBehaviour, IWeapon
         if (reloadText == null)
             return;
 
-        
+        if (isReloading)
+        {
+            reloadText.text = "Reloading...";
+        }
         else if (currentAmmo <= 0)
         {
             if (reserveAmmo > 0)

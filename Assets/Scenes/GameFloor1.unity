@@ -6354,6 +6354,30 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4548237573503617799, guid: 1671f892e57efe0498628926338eb8d9, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1.2467
+      objectReference: {fileID: 0}
+    - target: {fileID: 4548237573503617799, guid: 1671f892e57efe0498628926338eb8d9, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1.1863
+      objectReference: {fileID: 0}
+    - target: {fileID: 4548237573503617799, guid: 1671f892e57efe0498628926338eb8d9, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4548237573503617799, guid: 1671f892e57efe0498628926338eb8d9, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4548237573503617799, guid: 1671f892e57efe0498628926338eb8d9, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -807.62427
+      objectReference: {fileID: 0}
+    - target: {fileID: 4548237573503617799, guid: 1671f892e57efe0498628926338eb8d9, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -472.3872
+      objectReference: {fileID: 0}
     - target: {fileID: 4725099239806878156, guid: 1671f892e57efe0498628926338eb8d9, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -6429,6 +6453,14 @@ PrefabInstance:
     - target: {fileID: 7823541393774066925, guid: 1671f892e57efe0498628926338eb8d9, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8887763837558378295, guid: 1671f892e57efe0498628926338eb8d9, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -292
+      objectReference: {fileID: 0}
+    - target: {fileID: 8887763837558378295, guid: 1671f892e57efe0498628926338eb8d9, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 482
       objectReference: {fileID: 0}
     - target: {fileID: 9120920886418999999, guid: 1671f892e57efe0498628926338eb8d9, type: 3}
       propertyPath: m_Pivot.x

@@ -96,6 +96,7 @@ public class ARFiring : MonoBehaviour, IWeapon
             reloadText.text = "";
         }
 
+        CancelInvoke();
         StopAllCoroutines();
 
         isReloading = false;
@@ -115,12 +116,18 @@ public class ARFiring : MonoBehaviour, IWeapon
         FindAmmoUI();
         FindReloadUI();
 
-        RefreshReloadUI(); 
+        RefreshReloadUI();
+
+        if (isReloading)
+        {
+            RefreshReloadUI();
+            return;
+        }
 
         if (isShooting)
             return;
 
-        
+
         if (Input.GetKeyDown(KeyCode.R)
             && currentAmmo < magazineSize
             && reserveAmmo > 0)
@@ -263,7 +270,10 @@ public class ARFiring : MonoBehaviour, IWeapon
 
         isReloading = false;
 
+        isReloading = false;
+
         UpdateAmmoUI();
+        RefreshReloadUI();
     }
 
     void RefreshReloadUI()
@@ -271,7 +281,10 @@ public class ARFiring : MonoBehaviour, IWeapon
         if (reloadText == null)
             return;
 
-        
+        if (isReloading)
+        {
+            reloadText.text = "Reloading...";
+        }
         else if (currentAmmo <= 0)
         {
             if (reserveAmmo > 0)

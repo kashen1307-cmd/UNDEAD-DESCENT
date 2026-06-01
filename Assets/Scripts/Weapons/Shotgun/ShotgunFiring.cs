@@ -92,6 +92,9 @@ public class ShotgunFiring : MonoBehaviour, IWeapon
         }
 
         CancelInvoke();
+        StopAllCoroutines();
+
+        isReloading = false;
 
         if (gunAudio != null)
         {
@@ -107,7 +110,10 @@ public class ShotgunFiring : MonoBehaviour, IWeapon
             return;
 
         if (isReloading)
+        {
+            RefreshReloadUI();
             return;
+        }
 
         if (reloadText != null && currentAmmo > 0)
         {
@@ -227,11 +233,7 @@ public class ShotgunFiring : MonoBehaviour, IWeapon
         isReloading = false;
 
         UpdateAmmoUI();
-
-        if (reloadText != null)
-        {
-            reloadText.text = "";
-        }
+        RefreshReloadUI();
     }
 
     void FindReloadUI()
@@ -258,7 +260,10 @@ public class ShotgunFiring : MonoBehaviour, IWeapon
         if (reloadText == null)
             return;
 
-       
+        if (isReloading)
+        {
+            reloadText.text = "Reloading...";
+        }
         else if (currentAmmo <= 0)
         {
             if (reserveAmmo > 0)
