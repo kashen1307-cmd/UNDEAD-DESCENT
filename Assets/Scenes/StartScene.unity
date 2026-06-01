@@ -340,6 +340,22 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8725994197397896631, guid: 4597b9e92b6a0244daf38c980d323b5d, type: 3}
+      propertyPath: m_Size.x
+      value: 0.37690252
+      objectReference: {fileID: 0}
+    - target: {fileID: 8725994197397896631, guid: 4597b9e92b6a0244daf38c980d323b5d, type: 3}
+      propertyPath: m_Size.y
+      value: 0.45359945
+      objectReference: {fileID: 0}
+    - target: {fileID: 8725994197397896631, guid: 4597b9e92b6a0244daf38c980d323b5d, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.038451254
+      objectReference: {fileID: 0}
+    - target: {fileID: 8725994197397896631, guid: 4597b9e92b6a0244daf38c980d323b5d, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.07679972
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1583,6 +1599,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -890260956920621552, guid: 5d49cd91776f9a245aae30034fa83464, type: 3}
+    - {fileID: -7223717623335990903, guid: 5d49cd91776f9a245aae30034fa83464, type: 3}
     m_RemovedGameObjects:
     - {fileID: 2583494348755888354, guid: 5d49cd91776f9a245aae30034fa83464, type: 3}
     m_AddedGameObjects:
@@ -3758,7 +3775,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4.59
+  orthographic size: 5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -4289,7 +4306,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -738.2, y: 280.6}
+  m_AnchoredPosition: {x: -683.76, y: 280.6}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1362329408
