@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class KeepPlayerAlive : MonoBehaviour
 {
@@ -6,16 +7,30 @@ public class KeepPlayerAlive : MonoBehaviour
 
     private void Awake()
     {
-        
         if (instance == null)
         {
             instance = this;
-            
-          
-            DontDestroyOnLoad(gameObject); 
+            DontDestroyOnLoad(gameObject);
+
+            SceneManager.sceneLoaded += OnSceneLoaded;
         }
-       
         else
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    private void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        
+        if (scene.name == "Main Menu"
+            || scene.name == "DeathScreen"
+            || scene.name == "EndOfGame")
         {
             Destroy(gameObject);
         }

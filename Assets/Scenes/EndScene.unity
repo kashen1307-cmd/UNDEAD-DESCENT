@@ -1737,7 +1737,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 6.2
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -3439,7 +3439,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 498, y: 480.6}
+  m_AnchoredPosition: {x: 465.25, y: 437.6}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2062433877
@@ -3576,8 +3576,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 231.8408, y: 230.38}
-  m_SizeDelta: {x: 2316.3145, y: 1540.8}
+  m_AnchoredPosition: {x: 659.4362, y: 302.31787}
+  m_SizeDelta: {x: 3432.8477, y: 2575.4404}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2092905023
 CanvasRenderer:
